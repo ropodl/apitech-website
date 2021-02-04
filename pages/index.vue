@@ -98,25 +98,26 @@
         </v-col>
         <v-col v-for="i in 3" :key="i" cols="12" md="4">
           <v-hover v-slot="{ hover }">
-            <v-card height="400" class="rounded-0 overflow-hidden" link to="/">
+            <!-- <nuxt-link > -->
+            <v-card :ripple="false" class="rounded-0" link to="/" elevation="0">
               <v-img
-                style="width:100%;height:100%;"
-                class="align-end"
+                height="200"
                 src="https://www.apitechnepal.com/wp-content/uploads/2020/10/security_system-min-1-scaled.jpg"
-              >
-                <div style="background-color:rgba(0,0,0,0.6)">
-                  <v-card-title class="white--text"
-                    >Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Culpa, ut!</v-card-title
-                  >
-                  <v-card-text class="white--text" v-if="hover">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Culpa veniam quod mollitia dolores in deleniti magnam
-                    perspiciatis eaque sit a.
-                  </v-card-text>
-                </div>
-              </v-img>
+              ></v-img>
+              <!-- </v-card>
+              <v-card elevation="0"> -->
+              <v-card-title class="px-0">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Aliquam, tempore.
+              </v-card-title>
+              <v-card-text class="px-0">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius
+                nulla dignissimos adipisci itaque inventore aperiam, numquam
+                reiciendis nemo modi facilis ut maxime ullam ducimus nihil,
+                sequi perspiciatis cupiditate odit voluptatum.
+              </v-card-text>
             </v-card>
+            <!-- </nuxt-link> -->
           </v-hover>
         </v-col>
       </v-row>

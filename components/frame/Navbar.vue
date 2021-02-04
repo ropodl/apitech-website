@@ -10,9 +10,6 @@
             src="https://i0.wp.com/www.apitechnepal.com/wp-content/uploads/2019/10/apitech.png"
           ></v-img>
         </nuxt-link>
-        <!-- </v-col> -->
-        <!-- <v-col cols="12" md="7"> -->
-        <!-- <div class="d-flex flex-row-reverse"> -->
         <v-spacer></v-spacer>
         <div>
           <v-tabs
@@ -30,17 +27,13 @@
               :class="$vuetify.theme.dark ? 'white--text' : 'black--text'"
               text
             >
-              <!-- <v-icon left>{{ link.icon }}</v-icon> -->
               {{ link.name }}
             </v-tab>
           </v-tabs>
         </div>
-        <!-- </div> -->
-        <!-- </v-col> -->
-        <!-- </v-row> -->
       </v-container>
     </v-app-bar>
-    <v-divider></v-divider>
+    <!-- <v-divider></v-divider> -->
   </div>
 </template>
 
