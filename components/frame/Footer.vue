@@ -3,12 +3,12 @@
     <v-container class="mb-5">
       <v-row>
         <v-col cols="12" md="4">
-          <img
+          <v-img
             class="mx-auto d-flex mb-2"
-            style="height:50px;"
+            width="100%"
             src="https://i0.wp.com/www.apitechnepal.com/wp-content/uploads/2019/10/apitech.png"
             alt="api technology logo"
-          />
+          ></v-img>
           API Technology offer you a business to business service in the Web,
           Mobile, Networking, ICT and Electronics Hardware platform.
         </v-col>
@@ -16,13 +16,16 @@
           <Cattitle :first="'Services'" />
           <ul class="service-info-list">
             <li>
-              <v-icon class="mr-3">fas fa-map-marker-alt</v-icon>Mid Baneshwor,
-              Kathmandu
+              <v-icon class="mr-3 primary--text">fal fa-map-marker-alt</v-icon
+              >Mid Baneshwor, Kathmandu
             </li>
             <li>
-              <v-icon class="mr-3">fas fa-envelope</v-icon>info@apitechnepal.com
+              <v-icon class="mr-3 primary--text">fal fa-envelope</v-icon
+              >info@apitechnepal.com
             </li>
-            <li><v-icon class="mr-3">fas fa-phone</v-icon>01-4472774</li>
+            <li>
+              <v-icon class="mr-3 primary--text">fal fa-phone</v-icon>01-4472774
+            </li>
           </ul>
         </v-col>
         <v-col cols="12" md="4">
@@ -44,7 +47,7 @@
           </ul>
           <!-- </div> -->
           <Cattitle :first="'Special'" :second="'Partner'" />
-          <v-img width="250" src="/Certified-partner-logo.webp"></v-img>
+          <v-img eager width="250" src="/Certified-partner-logo.webp"></v-img>
         </v-col>
       </v-row>
     </v-container>

@@ -1,9 +1,10 @@
 <template>
-  <div class="services">
-    <Pagesection />
+  <div class="gallery-show">
     <v-container>
       <v-row>
-        <v-col cols="12" md="4"> </v-col>
+        <v-col cols="12">
+          {{ id }}
+        </v-col>
       </v-row>
     </v-container>
   </div>
@@ -13,7 +14,7 @@
 export default {
   data() {
     return {
-      msg: "this is a test"
+      id: this.$route.params.id
     };
   }
 };

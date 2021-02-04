@@ -1,11 +1,11 @@
 <template>
   <v-app>
     <Gotop />
+    <Thememode />
     <Topbar />
     <Navbar />
     <v-main>
       <nuxt keep-alive />
-      <div style="height:10000px"></div>
     </v-main>
     <Footer />
   </v-app>

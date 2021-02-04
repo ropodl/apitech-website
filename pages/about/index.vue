@@ -1,5 +1,6 @@
 <template>
-  <div class="about-page">
+  <div class="about">
+    <Pagesection />
     <v-container>
       <v-row>
         <v-col cols="12" md="4">

@@ -1,5 +1,6 @@
 <template>
-  <div class="contact-page">
+  <div class="contact">
+    <Pagesection />
     <v-container>
       <v-row>
         <v-col cols="12" md="4">

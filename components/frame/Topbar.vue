@@ -1,30 +1,16 @@
 <template>
   <v-toolbar max-height="50px" dense elevation="0" color="primary">
     <v-container>
-      <v-row class="d-flex align-center">
-        <v-col cols="12" md="8">
-          <ul class="topbar-info-list">
-            <li><v-icon>fal fa-envelope</v-icon> info@apitech.com.np</li>
-            <li>
-              <v-icon>fal fa-map-marker-alt</v-icon> Mid Baneshwor, Kathmandu
-            </li>
-          </ul>
-        </v-col>
-        <v-col
-          cols="12"
-          md="4"
-          class="d-flex justify-center"
-          style="background-color: white;"
-        >
-          <v-btn
-            class="mx-auto"
-            icon
-            v-for="social in socialLinks"
-            :key="social.id"
-          >
-            <v-icon color="primary">{{ social.icon }}</v-icon>
-          </v-btn>
-        </v-col>
+      <v-row class="d-flex align-center flex-wrap">
+        <ul class="topbar-info-list">
+          <li v-for="info in topinfo" :key="info.id" class="topinfo">
+            <v-icon>{{ info.icon }}</v-icon> info@apitech.com.np
+          </li>
+        </ul>
+        <v-spacer></v-spacer>
+        <v-btn class="mx-auto" icon v-for="social in socials" :key="social.id">
+          <v-icon color="white">{{ social.icon }}</v-icon>
+        </v-btn>
       </v-row>
     </v-container>
   </v-toolbar>
@@ -34,17 +20,29 @@
 export default {
   data() {
     return {
-      socialLinks: [
+      topinfo: [
+        {
+          id: "0",
+          icon: "fal fa-envelope",
+          info: "info@apitech.com.np"
+        },
+        {
+          id: "1",
+          icon: "fal fa-map-marker-alt",
+          info: "Mid Baneshwor, Kathmandu"
+        }
+      ],
+      socials: [
         {
           id: "1",
           title: "Facebook",
-          icon: "fab fa-facebook",
+          icon: "fab fa-facebook-square",
           link: "https://www.facebook.com/apitechnepal"
         },
         {
           id: "2",
           title: "Twitter",
-          icon: "fab fa-twitter",
+          icon: "fab fa-twitter-square",
           link: "https://www.twitter.com/apitechnepal"
         },
         {
