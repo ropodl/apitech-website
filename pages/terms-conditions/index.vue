@@ -1,5 +1,5 @@
 <template>
-  <div class="gallery">
+  <div class="terms">
     <Pagesection />
     <v-container class="pt-0 mt-n16">
       <v-row>
@@ -10,10 +10,10 @@
             <v-container>
               <v-row>
                 <v-col cols="12">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
-                  aperiam quo mollitia consequatur nam iusto cum itaque
-                  suscipit, ea qui dicta ad, impedit exercitationem laboriosam
-                  non, minima est! Dolore, unde.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
+                  delectus provident commodi voluptatem sunt consequuntur totam
+                  similique vel, eaque officia eligendi maiores amet eum rem!
+                  Sunt officiis voluptatem sint excepturi.
                 </v-col>
               </v-row>
             </v-container>

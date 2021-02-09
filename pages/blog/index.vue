@@ -1,5 +1,5 @@
 <template>
-  <div class="gallery">
+  <div class="blog-index">
     <Pagesection />
     <v-container class="pt-0 mt-n16">
       <v-row>
@@ -10,10 +10,10 @@
             <v-container>
               <v-row>
                 <v-col cols="12">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
-                  aperiam quo mollitia consequatur nam iusto cum itaque
-                  suscipit, ea qui dicta ad, impedit exercitationem laboriosam
-                  non, minima est! Dolore, unde.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Excepturi error neque totam adipisci velit voluptatibus natus
+                  animi quis assumenda voluptatem dolores quae iusto distinctio,
+                  exercitationem doloremque doloribus. Atque, nostrum numquam.
                 </v-col>
               </v-row>
             </v-container>

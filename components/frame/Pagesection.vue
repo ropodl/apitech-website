@@ -1,7 +1,7 @@
 <template>
   <v-parallax
     height="300"
-    src="https://geniuscript.com/serity-kit/wp-content/uploads/2020/12/pager-bg.jpg"
+    src="https://images.unsplash.com/photo-1566060475410-1159300f046f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=100"
   >
     <v-overlay absolute color="rgba(0,0,0,1)">
       <span

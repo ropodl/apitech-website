@@ -1,59 +1,65 @@
 <template>
-  <div>
-    <v-container class="mb-5">
-      <v-row>
-        <v-col cols="12" md="4">
-          <v-img
-            class="mx-auto d-flex mb-2"
-            width="100%"
-            src="https://i0.wp.com/www.apitechnepal.com/wp-content/uploads/2019/10/apitech.png"
-            alt="api technology logo"
-          ></v-img>
-          API Technology offer you a business to business service in the Web,
-          Mobile, Networking, ICT and Electronics Hardware platform.
-        </v-col>
-        <v-col cols="12" md="4">
-          <Cattitle :first="'Services'" />
-          <ul class="service-info-list">
-            <li>
-              <v-icon class="mr-3 primary--text">fal fa-map-marker-alt</v-icon
-              >Mid Baneshwor, Kathmandu
-            </li>
-            <li>
-              <v-icon class="mr-3 primary--text">fal fa-envelope</v-icon
-              >info@apitechnepal.com
-            </li>
-            <li>
-              <v-icon class="mr-3 primary--text">fal fa-phone</v-icon>01-4472774
-            </li>
-          </ul>
-        </v-col>
-        <v-col cols="12" md="4">
-          <Cattitle :first="'Follow'" :second="'Us'" />
-          <!-- <div class="mb-4"> -->
-          <ul
-            class="d-flex flex-wrap list-style-none pa-0"
-            style="list-style:none;"
-          >
-            <li
-              v-for="social in footerSocial"
-              :key="social.id"
-              class="mr-2 mb-2"
+  <div class="mt-16">
+    <v-footer dark>
+      <v-container class="my-10">
+        <v-row>
+          <v-col cols="12" md="4">
+            <v-img
+              eager
+              class="mx-auto d-flex mb-2"
+              width="100%"
+              src="/apitech.webp"
+              alt="api technology logo"
+            ></v-img>
+            API Technology offer you a business to business service in the Web,
+            Mobile, Networking, ICT and Electronics Hardware platform.
+          </v-col>
+          <v-col cols="12" md="2"></v-col>
+          <v-col cols="12" md="3">
+            <Cattitle :first="'Quick'" :second="'Links'" />
+            <ul class="quick-link-list">
+              <li v-for="(quick, i) in quickLinks" :key="i">
+                <NuxtLink :to="quick.link">{{ quick.title }}</NuxtLink>
+              </li>
+            </ul>
+          </v-col>
+          <v-col cols="12" md="3">
+            <Cattitle :first="'Contact'" :second="'Us'" />
+            <!-- <div class="mb-4"> -->
+            <ul
+              class="d-flex flex-wrap list-style-none pa-0"
+              style="list-style:none;"
             >
-              <v-btn width="30px" text class="rounded-0" :class="social.title">
-                <v-icon color="white">{{ social.icon }}</v-icon>
-              </v-btn>
-            </li>
-          </ul>
-          <!-- </div> -->
-          <Cattitle :first="'Special'" :second="'Partner'" />
-          <v-img eager width="250" src="/Certified-partner-logo.webp"></v-img>
-        </v-col>
-      </v-row>
-    </v-container>
-    <v-footer class="text-overline d-flex justify-center text-center" dark>
-      Copyright © {{ new Date().getFullYear() }}, API Technology. All Right
-      Reserved
+              <li
+                v-for="social in footerSocial"
+                :key="social.id"
+                class="mr-2 mb-2"
+              >
+                <v-btn
+                  width="30px"
+                  text
+                  class="rounded-0"
+                  :class="social.title"
+                >
+                  <v-icon color="white">{{ social.icon }}</v-icon>
+                </v-btn>
+              </li>
+            </ul>
+            <Cattitle :first="'Special'" :second="'Partner'" />
+            <v-img eager width="250" src="/Certified-partner-logo.webp"></v-img>
+          </v-col>
+        </v-row>
+      </v-container>
+      <v-container>
+        <v-row>
+          <v-col class="d-flex justify-center text--center" cols="12">
+            <!-- <div class="text-center"> -->
+            Copyright © {{ new Date().getFullYear() }}, API Technology. All
+            Right Reserved
+            <!-- </div> -->
+          </v-col>
+        </v-row>
+      </v-container>
     </v-footer>
   </div>
 </template>
@@ -62,6 +68,16 @@
 export default {
   data() {
     return {
+      quickLinks: [
+        {
+          title: "Term & Conditions",
+          link: "/terms-conditions"
+        },
+        {
+          title: "Privacy Policy",
+          link: "/privacy-policy"
+        }
+      ],
       footerSocial: [
         {
           id: "1",
@@ -100,6 +116,24 @@ export default {
 </script>
 
 <style lang="scss">
+ul.quick-link-list {
+  margin-top: 20px;
+  padding-left: 0px;
+  li {
+    font-size: 18px;
+    margin-bottom: 1.2rem;
+    a {
+      color: white;
+      text-decoration: none;
+      &:hover {
+        color: var(--v-primary-lighten4);
+      }
+      &.nuxt-link-exact-active {
+        color: var(--v-primary-lighten2);
+      }
+    }
+  }
+}
 .Facebook {
   background-color: #3b5999;
 }
@@ -121,13 +155,5 @@ export default {
 }
 .Youtube {
   background-color: #cd201f;
-}
-ul.service-info-list {
-  list-style: none;
-  margin-top: 20px;
-  padding: 0px;
-  li {
-    margin-bottom: 1.2rem;
-  }
 }
 </style>

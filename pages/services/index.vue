@@ -3,14 +3,17 @@
     <Pagesection />
     <v-container class="pt-0 mt-n16">
       <v-row>
-        <v-col cols="12" md="4">
-          <v-card elevation="3" class="rounded-0">
+        <v-col cols="12">
+          <v-card class="rounded-0">
+            <div class="card-top-border"></div>
+            <div class="card-bottom-border"></div>
             <v-container>
               <v-row>
                 <v-col cols="12">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Facilis, optio est. Perferendis minima sed, quia quam quo
-                  expedita aspernatur consequuntur.
+                  Voluptates ipsum veniam explicabo dolor iusto officiis quas,
+                  est et. Assumenda ea quasi iste nemo ab sapiente blanditiis
+                  dolorum aspernatur, sit dolore!
                 </v-col>
               </v-row>
             </v-container>

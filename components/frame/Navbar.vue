@@ -2,13 +2,11 @@
   <div style="position:sticky;top:0;z-index:9;">
     <v-app-bar elevate-on-scroll height="70" max-height="70">
       <v-container class="d-flex justify-center align-center">
-        <nuxt-link link to="/">
-          <v-img
-            width="300"
-            src="https://i0.wp.com/www.apitechnepal.com/wp-content/uploads/2019/10/apitech.png"
-          ></v-img>
-        </nuxt-link>
+        <NuxtLink link to="/">
+          <v-img width="300" src="/apitech.webp"></v-img>
+        </NuxtLink>
         <v-spacer></v-spacer>
+        <v-app-bar-nav-icon class="hidden-md-and-up"></v-app-bar-nav-icon>
         <div>
           <v-tabs
             height="70"
@@ -40,40 +38,34 @@ export default {
     return {
       links: [
         {
-          id: "1",
           name: "Home",
           icon: "home",
           route: "/"
         },
         {
-          id: "2",
           name: "Services",
           icon: "room_service",
           route: "/services"
         },
         {
-          id: "3",
           name: "About Us",
           icon: "info",
           route: "/about"
         },
         {
-          id: "4",
-          name: "Contact Us",
-          icon: "call",
-          route: "/contact"
+          name: "Our Team",
+          icon: "",
+          route: "/team"
         },
         {
-          id: "5",
           name: "Gallery",
           icon: "",
           route: "/gallery"
         },
         {
-          id: "6",
-          name: "Our Team",
-          icon: "",
-          route: "/team"
+          name: "Contact Us",
+          icon: "call",
+          route: "/contact"
         }
       ]
     };

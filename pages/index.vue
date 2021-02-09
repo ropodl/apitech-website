@@ -2,13 +2,57 @@
   <div class="home-page">
     <Carousel />
     <v-container class="pt-0 mt-n16">
-      <v-row>
+      <v-row class="mb-16">
+        <v-col cols="12" md="4" v-for="(card, i) in supportCard" :key="i">
+          <v-card
+            height="150"
+            class="d-flex align-center justify-center"
+            :class="i == 1 ? 'primary white--text' : ''"
+            style="overflow:hidden;"
+          >
+            <v-icon
+              :class="i == 1 ? 'white--text' : ''"
+              style="font-size:130px;position:absolute;bottom:-10px;right:-10px;"
+            >
+              {{ card.bgicon }}
+            </v-icon>
+            <v-list color="transparent">
+              <v-list-item class="white--text">
+                <v-list-item-avatar size="64" class="rounded-0">
+                  <v-icon
+                    :class="i == 1 ? 'white--text' : ''"
+                    style="font-size:64px;"
+                    >{{ card.icon }}</v-icon
+                  >
+                </v-list-item-avatar>
+                <v-list-item-content>
+                  <v-list-item-title
+                    class="text-h5 font-weight-bold"
+                    :class="i == 1 ? 'white--text' : ''"
+                  >
+                    {{ card.title }}
+                  </v-list-item-title>
+                  <v-list-item-subtitle
+                    class="text-h5 font-weight-light"
+                    :class="i == 1 ? 'white--text' : ''"
+                  >
+                    {{ card.content }}
+                  </v-list-item-subtitle>
+                </v-list-item-content>
+              </v-list-item>
+            </v-list>
+            <!-- </div> -->
+          </v-card>
+        </v-col>
+      </v-row>
+      <v-row no-gutters>
         <v-col cols="12">
-          <v-card elevation="3" class="rounded-0">
-            <!-- <v-card-text class=""> -->
+          <v-card class="rounded-0">
+            <div class="card-top-border"></div>
+            <div class="card-bottom-border"></div>
             <v-container>
               <v-row>
-                <v-col cols="12" md="6" style="margin-top:-28px;">
+                <v-col cols="12" md="6" class="pl-0" style="margin-top:-28px;">
                   <v-parallax
                     height="700"
                     class="border"
@@ -67,15 +111,20 @@
                   <div class="mb-10 text-h4 font-weight-black">
                     +977-01-4472774
                   </div>
-                  <div>
+                  <div class="d-flex">
+                    <v-btn link to="/about" color="primary" class="px-10 py-6">
+                      More about us
+                    </v-btn>
                     <v-btn
-                      outlined
+                      text
                       link
-                      to="/about"
-                      color="primary"
+                      download
                       class="px-10 py-6"
-                      >More about us</v-btn
+                      href="https://www.apitechnepal.com/wp-content/uploads/2020/09/brochure.pdf"
+                      target="_blank"
                     >
+                      View Brochure
+                    </v-btn>
                   </div>
                 </v-col>
               </v-row>
@@ -116,13 +165,20 @@
         <v-col v-for="i in 3" :key="i" cols="12" md="4">
           <v-hover v-slot="{ hover }">
             <!-- <nuxt-link > -->
-            <v-card :ripple="false" class="rounded-0" link to="/" elevation="0">
-              <v-img
-                height="200"
-                src="https://www.apitechnepal.com/wp-content/uploads/2020/10/security_system-min-1-scaled.jpg"
-              ></v-img>
-              <!-- </v-card>
-              <v-card elevation="0"> -->
+            <v-card
+              :ripple="false"
+              class="rounded-0"
+              link
+              :to="'/blog/1'"
+              elevation="0"
+            >
+              <div style="position:relative;">
+                <v-img
+                  eager
+                  height="200"
+                  src="https://www.apitechnepal.com/wp-content/uploads/2020/10/security_system-min-1-scaled.jpg"
+                ></v-img>
+              </div>
               <v-card-title class="px-0">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Aliquam, tempore.
@@ -146,6 +202,26 @@
 export default {
   data() {
     return {
+      supportCard: [
+        {
+          icon: "fas fa-clock",
+          bgicon: "fal fa-clock",
+          title: "Support Hours",
+          content: "Sun-Fri 9am-6pm"
+        },
+        {
+          icon: "fas fa-user-headset",
+          bgicon: "fal fa-user-headset",
+          title: "Call Us",
+          content: "9849808471"
+        },
+        {
+          icon: "fas fa-map-marker-alt",
+          bgicon: "fal fa-map-marker-alt",
+          title: "Mid Baneshwor",
+          content: "3000, Nepal"
+        }
+      ],
       whies: [
         {
           id: "1",
