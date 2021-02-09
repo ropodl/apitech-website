@@ -2,8 +2,6 @@
   <div style="position:sticky;top:0;z-index:9;">
     <v-app-bar elevate-on-scroll height="70" max-height="70">
       <v-container class="d-flex justify-center align-center">
-        <!-- <v-row class="d-flex align-center"> -->
-        <!-- <v-col cols="12" md="4"> -->
         <nuxt-link link to="/">
           <v-img
             width="300"
@@ -33,7 +31,6 @@
         </div>
       </v-container>
     </v-app-bar>
-    <!-- <v-divider></v-divider> -->
   </div>
 </template>
 
