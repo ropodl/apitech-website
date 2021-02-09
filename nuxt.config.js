@@ -69,6 +69,17 @@ export default {
   pwa: {
     manifest: {
       lang: 'en'
+    },
+    icon: {
+      source: "/icon.png"
+    },
+    meta: {
+      charset: "utf-8",
+      viewport: "width=device-width, initial-scale=1",
+      title: "API Technology",
+      author: "erskull",
+      icon: "/icon.png",
+      theme_color: "#1976d2"
     }
   },
 
