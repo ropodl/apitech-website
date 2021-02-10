@@ -1,6 +1,7 @@
 <template>
   <div class="mt-16">
     <v-footer dark>
+      <v-spacer></v-spacer>
       <v-container class="my-10">
         <v-row>
           <v-col cols="12" md="4">
@@ -50,9 +51,12 @@
           </v-col>
         </v-row>
       </v-container>
+      <v-spacer></v-spacer>
+    </v-footer>
+    <v-footer dark>
       <v-container>
         <v-row>
-          <v-col class="d-flex justify-center text--center" cols="12">
+          <v-col class="d-flex justify-center text--center" cols="12" md="12">
             <!-- <div class="text-center"> -->
             Copyright © {{ new Date().getFullYear() }}, API Technology. All
             Right Reserved

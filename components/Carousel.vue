@@ -1,5 +1,5 @@
 <template>
-  <v-parallax eager :src="titles[currentSlide].image">
+  <v-parallax height="440" eager :src="titles[currentSlide].image">
     <v-overlay
       absolute
       color="rgba(0,0,0,1)"
@@ -7,6 +7,7 @@
     >
       <v-carousel
         v-model="currentSlide"
+        height="100%"
         vertical
         cycle
         continuous
