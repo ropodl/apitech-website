@@ -1,6 +1,6 @@
 <template>
   <div class="terms">
-    <Pagesection />
+    <Pagesection :imageSrc="''" :title="'Terms and Conditions'" />
     <v-container class="pt-0 mt-n16">
       <v-row>
         <v-col cols="12">

@@ -1,6 +1,6 @@
 <template>
   <div class="privacy">
-    <Pagesection />
+    <Pagesection :imageSrc="''" :title="'Privacy Policy'" />
     <v-container class="pt-0 mt-n16">
       <v-row>
         <v-col cols="12">

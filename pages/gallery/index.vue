@@ -1,6 +1,6 @@
 <template>
   <div class="gallery">
-    <Pagesection />
+    <Pagesection :imageSrc="''" :title="'Gallery'" />
     <v-container class="pt-0 mt-n16">
       <v-row>
         <v-col cols="12">

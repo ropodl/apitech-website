@@ -3,12 +3,12 @@
     <v-container>
       <v-row class="d-flex align-center flex-wrap">
         <ul class="topbar-info-list">
-          <li v-for="info in topinfo" :key="info.id" class="topinfo">
+          <li v-for="(info, i) in topinfo" :key="i" class="topinfo">
             <v-icon>{{ info.icon }}</v-icon> info@apitech.com.np
           </li>
         </ul>
         <v-spacer></v-spacer>
-        <v-btn class="mx-auto" icon v-for="social in socials" :key="social.id">
+        <v-btn class="mx-auto" icon v-for="(social, i) in socials" :key="i">
           <v-icon color="white">{{ social.icon }}</v-icon>
         </v-btn>
       </v-row>
@@ -22,14 +22,16 @@ export default {
     return {
       topinfo: [
         {
-          id: "0",
           icon: "fal fa-envelope",
           info: "info@apitech.com.np"
         },
         {
-          id: "1",
           icon: "fal fa-map-marker-alt",
           info: "Mid Baneshwor, Kathmandu"
+        },
+        {
+          icon: "fal fa-phone-alt",
+          info: "01-4472774"
         }
       ],
       socials: [

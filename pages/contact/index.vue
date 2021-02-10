@@ -1,6 +1,11 @@
 <template>
   <div class="contact">
-    <Pagesection />
+    <Pagesection
+      :imageSrc="
+        'https://images.unsplash.com/photo-1534536281715-e28d76689b4d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80'
+      "
+      :title="'Contact Us'"
+    />
     <v-container class="pt-0 mt-n16">
       <v-row>
         <v-col cols="12">
