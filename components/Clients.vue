@@ -1,8 +1,33 @@
 <template>
   <div class="clients">
-    <v-row>
-      <v-col v-for="(client, i) in clients" :key="i" cols="12" md="2">
-        <v-img eager contain height="128" :src="client.src"></v-img>
+    <v-row class="mt-6">
+      <v-col cols="12" md="12">
+        <div class="text-h4 font-weight-black text-center">
+          Our Clients
+        </div>
+      </v-col>
+      <v-col cols="12" md="12">
+        <client-only>
+          <carousel
+            :lazyLoad="true"
+            :autoplay="true"
+            :items="5"
+            :loop="true"
+            :nav="false"
+            :dots="false"
+            :autoplayTimeout="2000"
+            :smartSpeed="2000"
+          >
+            <v-card
+              outlined
+              class="ma-1 d-flex justify-center align-center"
+              v-for="(client, i) in clients"
+              :key="i"
+            >
+              <img class="rounded-0" width="64" height="64" :src="client.src" />
+            </v-card>
+          </carousel>
+        </client-only>
       </v-col>
     </v-row>
   </div>
@@ -59,4 +84,14 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss">
+div.owl-carousel {
+  div.owl-item {
+    img {
+      object-fit: contain;
+      width: 128px !important;
+      height: 128px !important;
+    }
+  }
+}
+</style>

@@ -2,7 +2,7 @@
   <div class="mt-16">
     <v-footer dark>
       <v-spacer></v-spacer>
-      <v-container class="my-10">
+      <v-container class="mt-10 mb-5">
         <v-row>
           <v-col cols="12" md="4">
             <v-img
@@ -26,7 +26,6 @@
           </v-col>
           <v-col cols="12" md="3">
             <Cattitle :first="'Contact'" :second="'Us'" />
-            <!-- <div class="mb-4"> -->
             <ul
               class="d-flex flex-wrap list-style-none pa-0"
               style="list-style:none;"
@@ -56,11 +55,13 @@
     <v-footer dark>
       <v-container>
         <v-row>
-          <v-col class="d-flex justify-center text--center" cols="12" md="12">
-            <!-- <div class="text-center"> -->
+          <v-col
+            class="d-flex justify-center text--center text-overline"
+            cols="12"
+            md="12"
+          >
             Copyright © {{ new Date().getFullYear() }}, API Technology. All
             Right Reserved
-            <!-- </div> -->
           </v-col>
         </v-row>
       </v-container>
@@ -121,6 +122,7 @@ export default {
 
 <style lang="scss">
 ul.quick-link-list {
+  list-style: none;
   margin-top: 20px;
   padding-left: 0px;
   li {

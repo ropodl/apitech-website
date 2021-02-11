@@ -13,12 +13,16 @@
           satisfaction are proof of our success. We have a MIA license to
           perform technical protection activities.
         </div>
-        <div class="mb-4 text-h5 font-weight-medium">
+        <div class="mb-6 text-h5 font-weight-medium">
           We are engaged in the following activities:
         </div>
         <ul class="activities">
-          <li v-for="(activity, i) in activities" :key="i">
-            <v-icon color="primary">{{ activity.icon }}</v-icon>
+          <li class="d-flex" v-for="(activity, i) in activities" :key="i">
+            <span
+              style="display:flex;justify-content:center;width:50px;height:100%;"
+            >
+              <v-icon size="32" color="primary">{{ activity.icon }}</v-icon>
+            </span>
             <span class="text-subtitle-1 font-weight-medium">{{
               activity.title
             }}</span>
@@ -57,19 +61,39 @@ export default {
       activities: [
         {
           icon: "fal fa-cctv",
-          title: "Video Surveillance"
+          title: "IP/HD/Analog/Wireless CCTV"
         },
         {
           icon: "fal fa-sensor-fire",
-          title: "Fire Alarm"
+          title: "Fire resistance system"
         },
         {
           icon: "fal fa-walkie-talkie",
           title: "Intercom"
         },
         {
+          icon: "fal fa-network-wired",
+          title: "Optical Fiber/Wired/Wireless Networking"
+        },
+        {
+          icon: "fal fa-location-arrow",
+          title: "GPS Tracking"
+        },
+        {
           icon: "mdi-access-point-network",
-          title: "Access Control"
+          title: "Time Attendance, Access Control"
+        },
+        {
+          icon: "fal fa-user-robot",
+          title: "Internet of Things(IOT) & Automation"
+        },
+        {
+          icon: "fal fa-phone-office",
+          title: "EPABX/KTS & Phones"
+        },
+        {
+          icon: "fal fa-mobile",
+          title: "Web and Android Apps Design"
         }
       ]
     };

@@ -1,11 +1,16 @@
 <template>
   <v-row>
     <v-col cols="12" md="6" class="pl-0" style="margin-top:-28px;">
-      <v-parallax
-        height="600"
-        class="border"
-        src="https://geniuscript.com/serity/assets/images/resources/img3.jpg"
-      ></v-parallax>
+      <div style="position:relative;">
+        <div
+          style="position:absolute;top:-20px;left:-20px;height:200px;width:200px;border: 1px dashed black;"
+        ></div>
+        <v-parallax
+          height="600"
+          class="border"
+          src="https://geniuscript.com/serity/assets/images/resources/img3.jpg"
+        ></v-parallax>
+      </div>
     </v-col>
     <v-col cols="12" md="6">
       <div class="text-overline mb-2 mt-16" style="font-size:1rem !important;">

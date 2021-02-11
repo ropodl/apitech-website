@@ -1,17 +1,19 @@
 <template>
   <div class="home-page">
-    <Carousel />
+    <TopCarousel />
     <!-- Card Container -->
     <v-container class="pt-0 mt-n16">
       <SupportCard />
       <v-row>
         <v-col cols="12">
-          <v-card class="rounded-0">
+          <v-card elevation="0" class="rounded-0">
             <div class="card-top-border"></div>
             <div class="card-bottom-border"></div>
             <v-container>
               <AboutBanner />
+              <Message />
             </v-container>
+            change this design<v-icon class="ml-2">fal fa-chevron-down</v-icon>
             <WhyAPI />
             <v-container>
               <AboutPara />
@@ -23,7 +25,7 @@
     <!-- Out Side Card Container -->
     <v-container>
       <Clients />
-      <BlogCard />
+      <!-- <BlogCard /> -->
     </v-container>
   </div>
 </template>

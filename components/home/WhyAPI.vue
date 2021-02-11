@@ -1,5 +1,8 @@
 <template>
-  <div class="primary">
+  <v-parallax
+    src="https://i0.wp.com/www.apitechnepal.com/wp-content/uploads/2020/10/security_system-min-1-scaled.jpg"
+  >
+    <!-- <div class="primary"> -->
     <v-container>
       <v-row class="my-16">
         <v-col cols="12" md="6">
@@ -9,15 +12,16 @@
             </li>
           </ul>
         </v-col>
-        <v-col class="d-flex align-center justify-center" cols="12" md="6">
+        <v-cal class="d-flex align-center justify-center" cols="12" md="6">
           <div class="text-h3 font-weight-black white--text">
             Why
             <span class="font-weight-light">API Technology?</span>
           </div>
-        </v-col>
+        </v-cal>
       </v-row>
     </v-container>
-  </div>
+    <!-- </div> -->
+  </v-parallax>
 </template>
 
 <script>
