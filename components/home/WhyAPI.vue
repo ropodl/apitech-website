@@ -12,12 +12,12 @@
             </li>
           </ul>
         </v-col>
-        <v-cal class="d-flex align-center justify-center" cols="12" md="6">
+        <v-col class="d-flex align-center justify-center" cols="12" md="6">
           <div class="text-h3 font-weight-black white--text">
             Why
             <span class="font-weight-light">API Technology?</span>
           </div>
-        </v-cal>
+        </v-col>
       </v-row>
     </v-container>
     <!-- </div> -->

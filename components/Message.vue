@@ -2,14 +2,15 @@
   <div class="message">
     <v-row class="d-flex my-10">
       <v-spacer></v-spacer>
-      <v-col cols="12" md="7">
+      <v-col class="d-flex" cols="12" md="7">
         <div style="position:relative;">
           <div style="height:100px;width:100px;border: 1px dashed black;"></div>
           <div
             style="position:absolute;bottom:-190px;left:-170px;height:100px;width:200px;border: 1px dashed black;"
           ></div>
         </div>
-        <v-card style="position:relative;">
+        <v-spacer></v-spacer>
+        <v-card class="mt-16" style="position:relative;">
           <v-card
             class="rounded-0"
             width="256"
@@ -64,6 +65,7 @@
             </v-col>
           </v-row>
         </v-card>
+        <v-spacer></v-spacer>
       </v-col>
       <v-spacer></v-spacer>
     </v-row>

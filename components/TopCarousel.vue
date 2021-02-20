@@ -1,32 +1,41 @@
 <template>
-  <v-parallax height="440" eager :src="titles[currentSlide].image">
-    <v-overlay
-      absolute
-      color="rgba(0,0,0,1)"
-      class="d-flex justify-start align-start"
+  <div class="d-flex">
+    <v-spacer></v-spacer>
+    <v-parallax
+      height="550"
+      eager
+      :src="titles[currentSlide].image"
+      style="width:1400px"
     >
-      <v-carousel
-        v-model="currentSlide"
-        height="100%"
-        vertical
-        cycle
-        continuous
-        hide-delimiters
+      <v-overlay
+        absolute
+        color="rgba(0,0,0,1)"
+        class="d-flex justify-start align-start"
       >
-        <v-carousel-item v-for="(title, i) in titles" :key="i">
-          <v-container>
-            <v-row class="d-flex align-center">
-              <v-col cols="12" md="8">
-                <div class="text-h2 font-weight-black">
-                  {{ title.title }}
-                </div>
-              </v-col>
-            </v-row>
-          </v-container>
-        </v-carousel-item>
-      </v-carousel>
-    </v-overlay>
-  </v-parallax>
+        <v-carousel
+          v-model="currentSlide"
+          height="100%"
+          vertical
+          cycle
+          continuous
+          hide-delimiters
+        >
+          <v-carousel-item v-for="(title, i) in titles" :key="i">
+            <v-container>
+              <v-row class="d-flex align-center">
+                <v-col cols="12" md="8">
+                  <div class="text-h2 font-weight-black">
+                    {{ title.title }}
+                  </div>
+                </v-col>
+              </v-row>
+            </v-container>
+          </v-carousel-item>
+        </v-carousel>
+      </v-overlay>
+    </v-parallax>
+    <v-spacer></v-spacer>
+  </div>
 </template>
 
 <script>

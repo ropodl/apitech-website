@@ -69,7 +69,7 @@ export default {
         },
         {
           icon: "fal fa-walkie-talkie",
-          title: "Intercom"
+          title: "Intercom/Radio Systems"
         },
         {
           icon: "fal fa-network-wired",
@@ -80,7 +80,7 @@ export default {
           title: "GPS Tracking"
         },
         {
-          icon: "mdi-access-point-network",
+          icon: "fal fa-fingerprint",
           title: "Time Attendance, Access Control"
         },
         {

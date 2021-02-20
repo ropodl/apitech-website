@@ -6,7 +6,7 @@
       <SupportCard />
       <v-row>
         <v-col cols="12">
-          <v-card elevation="0" class="rounded-0">
+          <v-card elevation="1" class="rounded-0">
             <div class="card-top-border"></div>
             <div class="card-bottom-border"></div>
             <v-container>

@@ -58,21 +58,21 @@ export default {
           src:
             "https://i0.wp.com/apitechnepal.com/wp-content/uploads/2019/10/janaki.jpg"
         },
-        {
-          name: "Mix ERP",
-          src:
-            "https://i0.wp.com/apitechnepal.com/wp-content/uploads/2019/10/mixerp.jpg"
-        },
+        // {
+        //   name: "Mix ERP",
+        //   src:
+        //     "https://i0.wp.com/apitechnepal.com/wp-content/uploads/2019/10/mixerp.jpg"
+        // },
         {
           name: "KIEC",
           src:
             "https://i0.wp.com/apitechnepal.com/wp-content/uploads/2019/10/kiec1.jpg"
         },
-        {
-          name: "The Hut",
-          src:
-            "https://i0.wp.com/apitechnepal.com/wp-content/uploads/2020/09/logo_001.jpg"
-        },
+        // {
+        //   name: "The Hut",
+        //   src:
+        //     "https://i0.wp.com/apitechnepal.com/wp-content/uploads/2020/09/logo_001.jpg"
+        // },
         {
           name: "Forum for Women",
           src:

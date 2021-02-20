@@ -1,13 +1,13 @@
 <template>
   <v-app>
-    <Gotop />
-    <Thememode />
-    <Topbar />
-    <Navbar />
+    <FrameGotop />
+    <FrameThememode />
+    <FrameTopbar class="hidden-md-and-down" />
+    <FrameNavbar />
     <v-main>
       <nuxt keep-alive />
     </v-main>
-    <Footer />
+    <FrameFooter />
   </v-app>
 </template>
 

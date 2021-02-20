@@ -7,15 +7,29 @@
           <v-col cols="12" md="4">
             <v-img
               eager
-              class="mx-auto d-flex mb-2"
-              width="100%"
+              class="mx-auto d-flex mb-4"
+              width="350"
               src="/apitech.webp"
               alt="api technology logo"
             ></v-img>
-            API Technology offer you a business to business service in the Web,
-            Mobile, Networking, ICT and Electronics Hardware platform.
+            <div class="mb-4">
+              API Technology offer you a business to business service in the
+              Web, Mobile, Networking, ICT and Electronics Hardware platform.
+            </div>
+            <ul class="footer-social">
+              <li v-for="(social, i) in footerSocial" :key="i">
+                <a
+                  :href="social.link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <v-icon>
+                    {{ social.icon }}
+                  </v-icon>
+                </a>
+              </li>
+            </ul>
           </v-col>
-          <v-col cols="12" md="2"></v-col>
           <v-col cols="12" md="3">
             <Cattitle :first="'Quick'" :second="'Links'" />
             <ul class="quick-link-list">
@@ -45,6 +59,8 @@
                 </v-btn>
               </li>
             </ul>
+          </v-col>
+          <v-col cols="12" md="2">
             <Cattitle :first="'Special'" :second="'Partner'" />
             <v-img eager width="250" src="/Certified-partner-logo.webp"></v-img>
           </v-col>
@@ -121,6 +137,19 @@ export default {
 </script>
 
 <style lang="scss">
+ul.footer-social {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  padding-left: 0px;
+  list-style: none;
+  li {
+    margin-right: 20px;
+    a {
+      text-decoration: none;
+    }
+  }
+}
 ul.quick-link-list {
   list-style: none;
   margin-top: 20px;
