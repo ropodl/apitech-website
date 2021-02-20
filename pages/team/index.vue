@@ -1,6 +1,6 @@
 <template>
   <div class="team">
-    <Pagesection :imageSrc="''" :title="'Our Team'" />
+    <FramePagesection :imageSrc="''" :title="'Our Team'" />
     <v-container class="pt-0 mt-n16">
       <v-row>
         <v-col cols="12">

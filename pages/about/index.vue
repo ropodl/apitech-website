@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <Pagesection :imageSrc="''" :title="'About Us'" />
+    <FramePagesection :imageSrc="''" :title="'About Us'" />
     <v-container class="pt-0 mt-n16">
       <v-row>
         <v-col cols="12">

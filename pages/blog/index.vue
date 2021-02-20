@@ -1,6 +1,6 @@
 <template>
   <div class="blog-index">
-    <Pagesection :imageSrc="''" :title="'Blogs'" />
+    <FramePagesection :imageSrc="''" :title="'Blogs'" />
     <v-container class="pt-0 mt-n16">
       <v-row>
         <v-col cols="12">
