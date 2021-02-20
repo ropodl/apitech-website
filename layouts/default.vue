@@ -7,6 +7,9 @@
     <v-main>
       <nuxt keep-alive />
     </v-main>
+    <v-container>
+      <Clients />
+    </v-container>
     <FrameFooter />
   </v-app>
 </template>

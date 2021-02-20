@@ -4,16 +4,27 @@
     <v-container class="pt-0 mt-n16">
       <v-row>
         <v-col cols="12">
-          <v-card class="rounded-0">
+          <v-card outlined elevation="0" class="rounded-0">
             <div class="card-top-border"></div>
             <div class="card-bottom-border"></div>
             <v-container>
               <v-row class="py-16">
                 <v-col cols="12" md="6">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa
-                  quia voluptatem quod. Beatae dolorum sunt, suscipit facere
-                  omnis ad corporis? Vitae reprehenderit praesentium totam!
-                  Porro placeat cum ut doloremque enim!
+                  <v-img
+                    eager
+                    class="mx-auto d-flex mb-4"
+                    width="350"
+                    src="/apitech.webp"
+                    alt="api technology logo"
+                  ></v-img>
+                  <div
+                    style="font-size: 1.25rem !important;font-weight: 300 !important;"
+                  >
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Ipsa quia voluptatem quod. Beatae dolorum sunt, suscipit
+                    facere omnis ad corporis? Vitae reprehenderit praesentium
+                    totam! Porro placeat cum ut doloremque enim!
+                  </div>
                 </v-col>
                 <v-col cols="12" md="6">
                   <div

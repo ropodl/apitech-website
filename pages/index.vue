@@ -3,10 +3,10 @@
     <TopCarousel />
     <!-- Card Container -->
     <v-container class="pt-0 mt-n16">
-      <SupportCard />
+      <HomeSupportCard />
       <v-row>
         <v-col cols="12">
-          <v-card elevation="1" class="rounded-0">
+          <v-card outlined elevation="0" class="rounded-0">
             <div class="card-top-border"></div>
             <div class="card-bottom-border"></div>
             <v-container>
@@ -14,9 +14,9 @@
               <Message />
             </v-container>
             change this design<v-icon class="ml-2">fal fa-chevron-down</v-icon>
-            <WhyAPI />
+            <HomeWhyAPI />
             <v-container>
-              <AboutPara />
+              <HomeAboutPara />
             </v-container>
           </v-card>
         </v-col>
@@ -24,7 +24,7 @@
     </v-container>
     <!-- Out Side Card Container -->
     <v-container>
-      <Clients />
+      <!-- <Clients /> -->
       <!-- <BlogCard /> -->
     </v-container>
   </div>

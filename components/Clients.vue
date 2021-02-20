@@ -2,9 +2,10 @@
   <div class="clients">
     <v-row class="mt-6">
       <v-col cols="12" md="12">
-        <div class="text-h4 font-weight-black text-center">
-          Our Clients
-        </div>
+        <Cattitle :first="'Our Valued'" :second="'Clients'" />
+        <!-- <div class="text-h4 font-weight-black text-center">
+          Our <span class="primary--text"> Valued</span> Clients
+        </div> -->
       </v-col>
       <v-col cols="12" md="12">
         <client-only>

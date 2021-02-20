@@ -4,7 +4,7 @@
       <v-col cols="12" md="6">
         <Cattitle class="mb-6" :first="'Solutions'" :second="'we provide'" />
         <div
-          class="text-justify mb-4"
+          class="mb-4"
           style="font-size: 1.25rem !important;font-weight: 300 !important;"
         >
           Serity Solutions was established in 2019 with the aim of providing
@@ -31,10 +31,7 @@
       </v-col>
       <v-col cols="12" md="6">
         <Cattitle class="mb-6" :first="'Our'" :second="'Vision'" />
-        <div
-          class="text-justify"
-          style="font-size: 1.25rem !important;font-weight: 300 !important;"
-        >
+        <div style="font-size: 1.25rem !important;font-weight: 300 !important;">
           <p>
             Serity Solutions, in its many years of work, pays special attention
             to professionalism of business, quality and reliability of equipment

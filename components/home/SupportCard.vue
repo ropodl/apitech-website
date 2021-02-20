@@ -7,6 +7,7 @@
       md="4"
       v-for="(card, i) in supportCard"
       :key="i"
+      :class="i == 3 ? 'hidden-md-and-up' : ''"
     >
       <v-card
         height="150"
@@ -93,7 +94,7 @@ div.v-card.support-card {
   }
   i.v-icon.bg-icon {
     position: absolute;
-    bottom: -20px;
+    bottom: -25px;
     right: -20px;
     font-size: 110px;
   }
