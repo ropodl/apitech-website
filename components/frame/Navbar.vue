@@ -1,12 +1,15 @@
 <template>
-  <div style="position:sticky;top:0;z-index:9;">
+  <nav app v-resize="onResize" style="position:sticky;top:0;z-index:9;">
     <v-app-bar elevate-on-scroll height="70" max-height="70">
       <v-container class="d-flex justify-center align-center">
         <NuxtLink link to="/">
           <v-img width="300" src="/apitech.webp"></v-img>
         </NuxtLink>
         <v-spacer></v-spacer>
-        <v-app-bar-nav-icon class="hidden-md-and-up"></v-app-bar-nav-icon>
+        <v-app-bar-nav-icon
+          class="hidden-md-and-up"
+          @click="drawer = !drawer"
+        ></v-app-bar-nav-icon>
         <div>
           <v-tabs
             height="70"
@@ -30,13 +33,41 @@
       </v-container>
     </v-app-bar>
     <v-divider></v-divider>
-  </div>
+
+    <v-card tile>
+      <!-- fixed -->
+      <v-navigation-drawer bottom height="auto" temporary app v-model="drawer">
+        <v-list dense>
+          <v-list-item
+            router
+            link
+            v-for="link in links"
+            :key="link.id"
+            :to="link.route"
+            color="primary"
+          >
+            <v-list-item-icon>
+              <v-icon>{{ link.icon }}</v-icon>
+            </v-list-item-icon>
+            <v-list-item-content>
+              <v-list-item-title>{{ link.name }}</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list>
+      </v-navigation-drawer>
+    </v-card>
+  </nav>
 </template>
 
 <script>
 export default {
   data() {
     return {
+      drawer: false,
+      windowSize: {
+        x: 0,
+        y: 0
+      },
       links: [
         {
           name: "Home",
@@ -55,12 +86,12 @@ export default {
         },
         {
           name: "Our Team",
-          icon: "",
+          icon: "groups",
           route: "/team"
         },
         {
           name: "Gallery",
-          icon: "",
+          icon: "collections",
           route: "/gallery"
         },
         {
@@ -70,6 +101,22 @@ export default {
         }
       ]
     };
+  },
+  mounted() {
+    this.onResize();
+  },
+  methods: {
+    onResize() {
+      if (process.client) {
+        this.windowSize = {
+          x: window.innerWidth,
+          y: window.innerHeight
+        };
+        if (this.windowSize.x >= 961) {
+          this.drawer = false;
+        }
+      }
+    }
   }
 };
 </script>
