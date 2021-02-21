@@ -29,6 +29,7 @@
         </div>
       </v-container>
     </v-app-bar>
+    <v-divider></v-divider>
   </div>
 </template>
 
@@ -81,10 +82,10 @@ div.v-tabs {
 }
 .theme--light.v-app-bar.v-toolbar.v-sheet {
   background-color: rgba(255, 255, 255, 0.8) !important;
-  backdrop-filter: blur(3px);
+  backdrop-filter: saturate(180%) blur(3px);
 }
 .theme--dark.v-app-bar.v-toolbar.v-sheet {
   background-color: rgba(39, 39, 39, 0.8) !important;
-  backdrop-filter: blur(3px);
+  backdrop-filter: saturate(180%) blur(3px);
 }
 </style>

@@ -4,7 +4,7 @@
       <v-spacer></v-spacer>
       <v-container class="mt-10 mb-5">
         <v-row>
-          <v-col cols="12" md="4">
+          <v-col cols="12" xs="12" sm="12" md="4">
             <v-img
               eager
               class="mx-auto d-flex mb-4"
@@ -30,7 +30,7 @@
               </li>
             </ul>
           </v-col>
-          <v-col cols="12" md="3">
+          <v-col cols="12" xs="12" sm="6" md="3">
             <Cattitle :first="'Quick'" :second="'Links'" />
             <ul class="quick-link-list">
               <li v-for="(quick, i) in quickLinks" :key="i">
@@ -38,29 +38,18 @@
               </li>
             </ul>
           </v-col>
-          <v-col cols="12" md="3">
+          <v-col cols="12" xs="12" sm="6" md="3">
             <Cattitle :first="'Contact'" :second="'Us'" />
-            <ul
-              class="d-flex flex-wrap list-style-none pa-0"
-              style="list-style:none;"
-            >
-              <li
-                v-for="social in footerSocial"
-                :key="social.id"
-                class="mr-2 mb-2"
-              >
-                <v-btn
-                  width="30px"
-                  text
-                  class="rounded-0"
-                  :class="social.title"
-                >
-                  <v-icon color="white">{{ social.icon }}</v-icon>
-                </v-btn>
+            <ul class="contact-us-list">
+              <li v-for="(contact, i) in contactList" :key="i" class="d-flex">
+                <span>
+                  <v-icon>{{ contact.icon }}</v-icon>
+                </span>
+                {{ contact.title }}
               </li>
             </ul>
           </v-col>
-          <v-col cols="12" md="2">
+          <v-col cols="12" xs="12" sm="12" md="2">
             <Cattitle :first="'Special'" :second="'Partner'" />
             <v-img eager width="250" src="/Certified-partner-logo.webp"></v-img>
           </v-col>
@@ -130,6 +119,20 @@ export default {
           icon: "fab fa-youtube",
           link: "https://www.youtube.com/apitechnepal"
         }
+      ],
+      contactList: [
+        {
+          title: "New Baneshwor",
+          icon: "fal fa-map-marker"
+        },
+        {
+          title: "9849808471",
+          icon: "fal fa-phone"
+        },
+        {
+          title: "sarox14@gmail.com",
+          icon: "fal fa-envelope"
+        }
       ]
     };
   }
@@ -155,7 +158,7 @@ ul.quick-link-list {
   margin-top: 20px;
   padding-left: 0px;
   li {
-    font-size: 18px;
+    font-size: 20px;
     margin-bottom: 1.2rem;
     a {
       color: white;
@@ -169,26 +172,20 @@ ul.quick-link-list {
     }
   }
 }
-.Facebook {
-  background-color: #3b5999;
-}
-.Twitter {
-  background-color: #55acee;
-}
-.Instagram {
-  background: radial-gradient(
-    circle at 30% 107%,
-    #fdf497 0%,
-    #fdf497 5%,
-    #fd5949 45%,
-    #d6249f 60%,
-    #285aeb 90%
-  );
-}
-.LinkedIn {
-  background-color: #0077b5;
-}
-.Youtube {
-  background-color: #cd201f;
+ul.contact-us-list {
+  list-style: none;
+  margin-top: 20px;
+  padding-left: 0px;
+  li {
+    font-size: 20px;
+    margin-bottom: 1.2rem;
+    span {
+      display: flex;
+      justify-content: center;
+      width: 30px;
+      height: 100%;
+      margin-right: 20px;
+    }
+  }
 }
 </style>

@@ -1,29 +1,48 @@
 <template>
   <div class="message">
     <v-row no-gutters class="d-flex my-16">
-      <!-- <v-spacer></v-spacer> -->
+      <v-spacer></v-spacer>
       <v-col cols="12" md="3" class="mr-0">
-        <v-card
-          elevation="0"
-          class="rounded-0"
-          max-width="300"
-          height="256"
-          style="position:sticky;top:90px !important;"
-        >
-          <v-img
-            class="d-flex align-end"
-            height="100%"
-            src="https://i0.wp.com/www.apitechnepal.com/wp-content/uploads/2020/10/security_system-min-1-scaled.jpg"
+        <v-hover v-slot="{ hover }">
+          <v-card
+            elevation="0"
+            class="rounded-0"
+            max-width="300"
+            height="300"
+            style="position:sticky;top:90px !important;"
           >
-            <div style="background-color:rgba(0,0,0,0.5)">
-              <v-card-title class="white--text">Pratirodh Subedi </v-card-title>
-            </div>
-          </v-img>
-        </v-card>
+            <v-img
+              class="d-flex align-end"
+              height="100%"
+              src="https://i0.wp.com/www.apitechnepal.com/wp-content/uploads/2020/10/security_system-min-1-scaled.jpg"
+            >
+              <div class="overlay" style="background-color:rgba(0,0,0,0.5)">
+                <v-card-title class="white--text"
+                  >Pratirodh Subedi
+                </v-card-title>
+                <v-card-subtitle class="white--text">CEO</v-card-subtitle>
+                <div v-if="hover">
+                  <v-divider></v-divider>
+                  <v-card-subtitle>
+                    <ul class="">
+                      <li>
+                        <v-icon>fab fa-facebook</v-icon>
+                      </li>
+                      if ok
+                    </ul>
+                  </v-card-subtitle>
+                </div>
+              </div>
+            </v-img>
+          </v-card>
+        </v-hover>
       </v-col>
-      <v-col cols="12" md="9" class="pl-0">
+      <v-col cols="12" md="6" class="pl-0">
         <v-card elevation="0" class="rounded-0">
-          <v-card-text class="pt-0 text-h6 font-weight-light">
+          <v-card-title>
+            <Cattitle :first="'Message from'" :second="'CEO'" />
+          </v-card-title>
+          <v-card-text class="pt-0 text-justify">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
             aspernatur ea laudantium suscipit veritatis at ad libero aperiam
             debitis, optio maxime? Magnam consequatur eius enim, illum
@@ -52,27 +71,7 @@
           </v-card-text>
         </v-card>
       </v-col>
-      <!-- <v-col class="d-flex" cols="12" md="7">
-        <div style="position:relative;">
-          <div style="height:100px;width:100px;border: 1px dashed black;"></div>
-          <div
-            style="position:absolute;bottom:-190px;left:-170px;height:100px;width:200px;border: 1px dashed black;"
-          ></div>
-        </div>
-        <v-spacer></v-spacer>
-        <v-card class="mt-16" style="position:relative;">
-          <v-row>
-            <v-col cols="12" md="1"></v-col>
-            <v-col cols="12" md="11">
-              <v-card-title>Message from CEO</v-card-title>
-              <v-divider></v-divider>
-              <v-card-text> </v-card-text>
-            </v-col>
-          </v-row>
-        </v-card>
-        <v-spacer></v-spacer>
-      </v-col> -->
-      <!-- <v-spacer></v-spacer> -->
+      <v-spacer></v-spacer>
     </v-row>
   </div>
 </template>
@@ -81,4 +80,9 @@
 export default {};
 </script>
 
-<style></style>
+<style lang="scss">
+div.overlay {
+  height: auto;
+  transition: all 10s linear;
+}
+</style>

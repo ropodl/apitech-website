@@ -105,5 +105,29 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+  workbox: {
+    runtimeCaching: [
+      {
+        urlPattern: "https://fonts.googleapis.com/.*",
+        handler: "cacheFirst",
+        method: "GET",
+        strategyOptions: {
+          cacheableResponse: {
+            statuses: [0, 200]
+          }
+        }
+      },
+      {
+        urlPattern: "https://www.apitechnepal.com/*",
+        handler: "cacheFirst",
+        method: "GET",
+        strategyOptions: {
+          cacheableResponse: {
+            statuses: [0, 200]
+          }
+        }
+      }
+    ]
   }
 }
