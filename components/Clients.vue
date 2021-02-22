@@ -1,5 +1,5 @@
 <template>
-  <div class="clients">
+  <div v-resize="onResize" class="clients">
     <v-row class="mt-6">
       <v-col cols="12" md="12">
         <Cattitle :first="'Our Valued'" :second="'Clients'" />
@@ -19,12 +19,14 @@
             :autoplayTimeout="2000"
             :smartSpeed="2000"
             :responsive="{
-              0: { items: 1, nav: false },
+              0: { items: 1 },
               360: { items: 2 },
-              600: { items: 2, nav: true }
+              600: { items: 3 },
+              900: { items: 4 },
+              1264: { items: 5 }
             }"
           >
-            {{ x }}
+            <!-- {{ windowSize.x }} -->
             <v-card
               outlined
               class="ma-1 d-flex justify-center align-center"
@@ -85,15 +87,35 @@ export default {
           src:
             "https://i0.wp.com/apitechnepal.com/wp-content/uploads/2020/09/fwld-logo.png"
         }
-      ]
+      ],
+      windowSize: {
+        x: 0,
+        y: 0
+      }
     };
   },
-  computed: {
-    x: function() {
-      if (process.client) {
-        return window.innerWidth;
-      } else return "awdaw";
+  mounted() {
+    this.onResize();
+  },
+  methods: {
+    onResize() {
+      this.windowSize = {
+        x: window.innerWidth,
+        y: window.innerHeight
+      };
     }
+  },
+  // computed: {
+  //   x: function() {
+  //     if (process.client) {
+  //       return window.innerWidth;
+  //     } else return "awdaw";
+  //   }
+  // },
+  watch: {
+    // x: function(val) {
+    //   val = process.client ? windows.client : "awdawd";
+    // }
   }
 };
 </script>
