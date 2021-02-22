@@ -29,6 +29,10 @@ export default {
       },{
           rel: "stylesheet", 
           href: "https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+      }],
+      script: [{
+        async: true,
+        src: 'https://www.googletagmanager.com/gtag/js?id=G-1KDFS20N0H'
       }]
   },
 
@@ -41,6 +45,10 @@ export default {
     {
       src: '~/plugins/owl.js',
       ssr: false
+    },
+    {
+      src: '~/plugins/ga.js',
+      ssr: false
     }
   ],
 
@@ -50,7 +58,7 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/vuetify
-    '@nuxtjs/vuetify',
+    '@nuxtjs/vuetify'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -59,6 +67,7 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    '@nuxtjs/sitemap'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -81,7 +90,10 @@ export default {
       theme_color: "#1976d2"
     }
   },
-
+  sitemap: {
+    hostname: "https://www.apitechnepal.com/",
+    gzip: true
+  },
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
