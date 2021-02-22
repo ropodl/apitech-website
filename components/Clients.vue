@@ -18,7 +18,13 @@
             :dots="false"
             :autoplayTimeout="2000"
             :smartSpeed="2000"
+            :responsive="{
+              0: { items: 1, nav: false },
+              360: { items: 2 },
+              600: { items: 2, nav: true }
+            }"
           >
+            {{ x }}
             <v-card
               outlined
               class="ma-1 d-flex justify-center align-center"
@@ -81,6 +87,13 @@ export default {
         }
       ]
     };
+  },
+  computed: {
+    x: function() {
+      if (process.client) {
+        return window.innerWidth;
+      } else return "awdaw";
+    }
   }
 };
 </script>

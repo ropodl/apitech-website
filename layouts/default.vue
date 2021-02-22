@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <FrameGotop />
-    <FrameThememode />
+    <!-- <FrameThememode /> -->
     <FrameTopbar class="hidden-md-and-down" />
     <FrameNavbar />
     <v-main>

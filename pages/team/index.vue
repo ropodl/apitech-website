@@ -15,6 +15,7 @@
             <v-container>
               <v-row>
                 <v-col cols="12">
+                  <cattitle :first="'Our special'" :second="'Expert Team'" />
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
                   at adipisci nulla ipsum unde ducimus repellat. Soluta vel
                   veritatis eum quidem. Ipsum harum sed laudantium dolor iure

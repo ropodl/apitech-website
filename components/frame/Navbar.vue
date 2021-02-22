@@ -3,9 +3,28 @@
     <v-app-bar elevate-on-scroll height="70" max-height="70">
       <v-container class="d-flex justify-center align-center">
         <NuxtLink link to="/">
-          <v-img width="300" src="/apitech.webp"></v-img>
+          <v-img min-width="170" max-width="280" src="/apitech.webp"></v-img>
         </NuxtLink>
         <v-spacer></v-spacer>
+        <!-- color="primary" -->
+        <!-- style="border-radius:50px;" -->
+        <v-btn
+          icon
+          elevation="0"
+          @click="$vuetify.theme.dark = !$vuetify.theme.dark"
+        >
+          <v-icon>{{
+            $vuetify.theme.dark ? "light_mode" : "dark_mode"
+          }}</v-icon>
+          <!-- <div>
+            <span class="ml-4" v-if="!$vuetify.theme.dark">
+              Dark Mode
+            </span>
+            <span class="ml-4" v-else>
+              Light Mode
+            </span>
+          </div> -->
+        </v-btn>
         <v-app-bar-nav-icon
           class="hidden-md-and-up"
           @click="drawer = !drawer"

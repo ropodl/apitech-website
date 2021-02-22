@@ -56,19 +56,21 @@
         </span>
       </div>
       <div class="mb-10 text-h5 font-weight-bold"></div>
-      <div class="d-flex mb-10">
+      <div class="d-flex flex-wrap mb-10">
+        <v-spacer></v-spacer>
         <v-btn link to="/about" color="primary" class="px-10 py-6">
           More about us
         </v-btn>
         <v-btn
           text
           link
-          class="px-10 py-6 ml-4"
+          class="px-10 py-6 ml-md-4"
           href="https://www.apitechnepal.com/wp-content/uploads/2020/09/brochure.pdf"
           target="_blank"
         >
           View Brochure
         </v-btn>
+        <v-spacer></v-spacer>
       </div>
     </v-col>
   </v-row>

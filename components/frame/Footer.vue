@@ -123,11 +123,11 @@ export default {
       contactList: [
         {
           title: "New Baneshwor",
-          icon: "fal fa-map-marker"
+          icon: "fal fa-map-marker-alt"
         },
         {
           title: "9849808471",
-          icon: "fal fa-phone"
+          icon: "fal fa-phone-alt"
         },
         {
           title: "sarox14@gmail.com",
@@ -158,7 +158,7 @@ ul.quick-link-list {
   margin-top: 20px;
   padding-left: 0px;
   li {
-    font-size: 20px;
+    font-size: 16px;
     margin-bottom: 1.2rem;
     a {
       color: white;
@@ -177,7 +177,7 @@ ul.contact-us-list {
   margin-top: 20px;
   padding-left: 0px;
   li {
-    font-size: 20px;
+    font-size: 16px;
     margin-bottom: 1.2rem;
     span {
       display: flex;
