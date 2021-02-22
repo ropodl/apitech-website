@@ -48,8 +48,7 @@ export default {
     },
     {
       src: '~/plugins/ga.js',
-      ssr: false,
-      mode: 'client'
+      ssr: false
     }
   ],
 
@@ -142,9 +141,9 @@ export default {
         }
       }
     ]
-  },
-  server:{
-    host: "192.168.0.112",
-    port: 8000
   }
 }
+  // server:{
+  //   host: "192.168.0.112",
+  //   port: 8000
+  // }

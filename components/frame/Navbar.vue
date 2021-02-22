@@ -3,16 +3,16 @@
     <v-app-bar elevate-on-scroll height="70" max-height="70">
       <v-container class="d-flex justify-center align-center">
         <NuxtLink link to="/">
-          <v-img min-width="170" max-width="280" src="/apitech.webp"></v-img>
+          <v-img
+            min-width="170"
+            max-width="280"
+            :src="require('~/assets/apitech.webp')"
+          ></v-img>
         </NuxtLink>
         <v-spacer></v-spacer>
         <!-- color="primary" -->
         <!-- style="border-radius:50px;" -->
-        <v-btn
-          icon
-          elevation="0"
-          @click="$vuetify.theme.dark = !$vuetify.theme.dark"
-        >
+        <v-btn icon elevation="0" @click="theme">
           <v-icon>{{
             $vuetify.theme.dark ? "light_mode" : "dark_mode"
           }}</v-icon>
@@ -125,6 +125,11 @@ export default {
     this.onResize();
   },
   methods: {
+    theme() {
+      this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
+      localStorage.setItem("dark_theme", this.$vuetify.theme.dark.toString());
+    },
+
     onResize() {
       if (process.client) {
         this.windowSize = {
