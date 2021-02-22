@@ -9,7 +9,7 @@
               eager
               class="mx-auto d-flex mb-4"
               width="350"
-              src="/apitech.webp"
+              :src="require('~/assets/image/apitech.webp')"
               alt="api technology logo"
             ></v-img>
             <div class="mb-4">

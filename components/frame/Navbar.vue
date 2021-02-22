@@ -6,7 +6,7 @@
           <v-img
             min-width="170"
             max-width="280"
-            :src="require('~/assets/apitech.webp')"
+            :src="require('~/assets/image/apitech.webp')"
           ></v-img>
         </NuxtLink>
         <v-spacer></v-spacer>
