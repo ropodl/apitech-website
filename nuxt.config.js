@@ -32,7 +32,7 @@ export default {
       }],
       script: [{
         async: true,
-        src: 'https://www.googletagmanager.com/gtag/js?id=G-1KDFS20N0H'
+        src: "https://www.googletagmanager.com/gtag/js?id=G-1KDFS20N0H"
       }]
   },
 
@@ -48,7 +48,8 @@ export default {
     },
     {
       src: '~/plugins/ga.js',
-      ssr: false
+      ssr: false,
+      mode: 'client'
     }
   ],
 

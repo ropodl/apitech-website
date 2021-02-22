@@ -42,7 +42,7 @@
           <v-card-title>
             <Cattitle :first="'Message from'" :second="'CEO'" />
           </v-card-title>
-          <v-card-text class="pt-0 text-justify">
+          <v-card-text class="py-0 text-justify">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
             aspernatur ea laudantium suscipit veritatis at ad libero aperiam
             debitis, optio maxime? Magnam consequatur eius enim, illum
