@@ -84,7 +84,7 @@ export default {
     meta: {
       charset: "utf-8",
       viewport: "width=device-width, initial-scale=1",
-      title: "API Technology",
+      name: "API Technology",
       author: "erskull",
       icon: "./static/icon.png",
       theme_color: "#1976d2"
