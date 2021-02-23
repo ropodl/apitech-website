@@ -37,6 +37,7 @@
                   </div>
                 </v-col>
               </v-row>
+              <AboutBanner />
             </v-container>
           </v-card>
         </v-col>

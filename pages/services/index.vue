@@ -13,14 +13,7 @@
             <div class="card-top-border"></div>
             <div class="card-bottom-border"></div>
             <v-container>
-              <v-row>
-                <v-col cols="12">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptates ipsum veniam explicabo dolor iusto officiis quas,
-                  est et. Assumenda ea quasi iste nemo ab sapiente blanditiis
-                  dolorum aspernatur, sit dolore!
-                </v-col>
-              </v-row>
+              <HomeAboutPara />
             </v-container>
           </v-card>
         </v-col>
