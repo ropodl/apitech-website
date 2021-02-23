@@ -1,13 +1,13 @@
 <template>
   <div class="contact-form">
     <v-row class="d-flex my-10">
-      <v-col cols="12" md="8">
+      <v-col cols="12" xs="12" sm="12" md="8" lg="8" xl="8">
         <v-form v-model="formvalid" lazy-validation>
           <v-row>
             <v-col cols="12" md="12">
               <Cattitle :first="'Send us'" :second="'a message'" />
             </v-col>
-            <v-col cols="12" md="6">
+            <v-col class="py-0" cols="12" md="6">
               <v-text-field
                 filled
                 v-model="fullname"
@@ -17,7 +17,7 @@
                 required
               ></v-text-field>
             </v-col>
-            <v-col cols="12" md="6">
+            <v-col class="py-0" cols="12" md="6">
               <v-text-field
                 filled
                 v-model="email"
@@ -46,7 +46,7 @@
                 required
               ></v-text-field>
             </v-col>
-            <v-col cols="12" md="12">
+            <v-col class="py-0" cols="12" md="12">
               <v-textarea
                 filled
                 class="rounded-0"
@@ -61,30 +61,46 @@
           </v-btn>
         </v-form>
       </v-col>
-      <v-col class="d-flex justify-center align-center" cols="12" md="4">
-        <div style="Width:100%;">
-          <v-card
-            class="d-flex justify-center my-4"
-            color="primary"
+      <v-col
+        class="d-flex justify-center align-center pr-md-0"
+        cols="12"
+        sm="12"
+        md="4"
+        lg="4"
+        xl="4"
+      >
+        <v-row class="mr-md-n8">
+          <v-col
+            cols="12"
+            xs="12"
+            sm="12"
+            md="12"
             v-for="(info, i) in infoList"
             :key="i"
-            style="width:100%;border-top-left-radius:50px;border-top-right-radius:0px;border-bottom-left-radius:50px;border-bottom-right-radius:0px;"
           >
-            <v-list-item two-line class="my-2">
-              <v-avatar tile class="ml-4 mr-4">
-                <v-icon x-large color="white">{{ info.icon }}</v-icon>
-              </v-avatar>
-              <v-list-item-content>
-                <v-list-item-title class="white--text text-h6">{{
-                  info.title
-                }}</v-list-item-title>
-                <v-list-item-subtitle class="white--text text-subtitle-1">{{
-                  info.content
-                }}</v-list-item-subtitle>
-              </v-list-item-content>
-            </v-list-item>
-          </v-card>
-        </div>
+            <v-card
+              elevation="4"
+              class="d-flex justify-center"
+              color="primary"
+              style="width:100%;border-top-left-radius:50px;border-top-right-radius:0px;border-bottom-left-radius:50px;border-bottom-right-radius:0px;"
+            >
+              <v-list-item two-line class="my-2">
+                <v-avatar tile class="mr-4">
+                  <v-icon x-large color="white">{{ info.icon }}</v-icon>
+                </v-avatar>
+                <v-list-item-content>
+                  <v-list-item-title class="white--text text-h6">{{
+                    info.title
+                  }}</v-list-item-title>
+                  <v-list-item-subtitle class="white--text text-subtitle-1">{{
+                    info.content
+                  }}</v-list-item-subtitle>
+                </v-list-item-content>
+              </v-list-item>
+            </v-card>
+          </v-col>
+        </v-row>
+        <!-- <div style="Width:100%;"></div> -->
       </v-col>
     </v-row>
   </div>
