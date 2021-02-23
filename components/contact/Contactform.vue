@@ -1,8 +1,17 @@
 <template>
   <div class="contact-form">
+    <v-snackbar v-model="snackbar">
+      {{ text }}
+
+      <template v-slot:action="{ attrs }">
+        <v-btn color="primary" text v-bind="attrs" @click="snackbar = false">
+          Close
+        </v-btn>
+      </template>
+    </v-snackbar>
     <v-row class="d-flex my-10">
-      <v-col cols="12" xs="12" sm="12" md="8" lg="8" xl="8">
-        <v-form v-model="formvalid" lazy-validation>
+      <v-col cols="12" xs="12" sm="12" md="12" lg="12" xl="12">
+        <v-form v-model="formvalid" ref="contactform" lazy-validation>
           <v-row>
             <v-col cols="12" md="12">
               <Cattitle :first="'Send us'" :second="'a message'" />
@@ -56,51 +65,15 @@
               ></v-textarea>
             </v-col>
           </v-row>
-          <v-btn large class="d-flex px-10 ml-auto" color="primary">
+          <v-btn
+            large
+            class="d-flex px-10 ml-auto"
+            @click="formSubmit"
+            color="primary"
+          >
             Submit
           </v-btn>
         </v-form>
-      </v-col>
-      <v-col
-        class="d-flex justify-center align-center pr-md-0"
-        cols="12"
-        sm="12"
-        md="4"
-        lg="4"
-        xl="4"
-      >
-        <v-row class="mr-md-n8">
-          <v-col
-            cols="12"
-            xs="12"
-            sm="12"
-            md="12"
-            v-for="(info, i) in infoList"
-            :key="i"
-          >
-            <v-card
-              elevation="4"
-              class="d-flex justify-center"
-              color="primary"
-              style="width:100%;border-top-left-radius:50px;border-top-right-radius:0px;border-bottom-left-radius:50px;border-bottom-right-radius:0px;"
-            >
-              <v-list-item two-line class="my-2">
-                <v-avatar tile class="mr-4">
-                  <v-icon x-large color="white">{{ info.icon }}</v-icon>
-                </v-avatar>
-                <v-list-item-content>
-                  <v-list-item-title class="white--text text-h6">{{
-                    info.title
-                  }}</v-list-item-title>
-                  <v-list-item-subtitle class="white--text text-subtitle-1">{{
-                    info.content
-                  }}</v-list-item-subtitle>
-                </v-list-item-content>
-              </v-list-item>
-            </v-card>
-          </v-col>
-        </v-row>
-        <!-- <div style="Width:100%;"></div> -->
       </v-col>
     </v-row>
   </div>
@@ -111,6 +84,8 @@ export default {
   data() {
     return {
       formvalid: false,
+      snackbar: false,
+      text: "",
       fullname: "",
       email: "",
       phone: "",
@@ -156,6 +131,15 @@ export default {
         }
       ]
     };
+  },
+  methods: {
+    formSubmit() {
+      if (this.$refs.contactform.validate()) {
+        alert("123");
+      } else {
+        (this.text = "Error"), (this.snackbar = true);
+      }
+    }
   }
 };
 </script>

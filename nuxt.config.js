@@ -6,7 +6,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s | API Technology',
+    titleTemplate: 'API Technology',
     title: 'API Technology',
     meta: [
       { charset: 'utf-8' },
@@ -85,9 +85,16 @@ export default {
       charset: "utf-8",
       viewport: "width=device-width, initial-scale=1",
       name: "API Technology",
+      title: 'test',
       author: "erskull",
       icon: "./static/icon.png",
       theme_color: "#1976d2"
+    },
+    manifest: {
+      name: 'Api Technology',
+      short_name: 'Api Technology',
+      description: ' API Technology offer you a business to business service in the Web, Mobile, Networking, ICT and Electronics Hardware platform.',
+      background_color: '#000000'
     }
   },
   sitemap: {
