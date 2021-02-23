@@ -13,7 +13,7 @@
             <div class="card-top-border"></div>
             <div class="card-bottom-border"></div>
             <v-container>
-              <Contactform />
+              <ContactContactform />
             </v-container>
           </v-card>
         </v-col>
