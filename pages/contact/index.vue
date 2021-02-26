@@ -25,7 +25,7 @@
                   ></iframe>
                 </v-col>
                 <v-col cols="12" md="6">
-                  <div class="text-h3 font-weight-black mb-6">
+                  <div class="text-h2 font-weight-black mb-6">
                     Excited about the project? <br />
                     Please <span class="primary--text">get in touch.</span>
                   </div>
@@ -51,7 +51,7 @@
                             outlined
                             large
                           >
-                            <v-icon>
+                            <v-icon small>
                               {{ social.icon }}
                             </v-icon>
                           </v-btn>

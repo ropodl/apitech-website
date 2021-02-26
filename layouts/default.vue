@@ -11,16 +11,43 @@
       <Clients />
     </v-container>
     <FrameFooter />
+    <v-snackbar v-model="snackbar">
+      This website uses cookies. Handle with care.
+      {{ text }}
+
+      <template v-slot:action="{ attrs }">
+        <v-btn
+          color="primary"
+          text
+          :timeout="timeout"
+          v-bind="attrs"
+          @click="snackbar = false"
+        >
+          Close
+        </v-btn>
+      </template>
+    </v-snackbar>
   </v-app>
 </template>
 
 <script>
 export default {
   data() {
-    return {};
+    return {
+      timeout: -1,
+      snackbar: true
+    };
   },
   mounted() {
+    const consent = localStorage.getItem("privacy_consent");
     const theme = localStorage.getItem("dark_theme");
+    if (consent) {
+      if (consent == "true") {
+        this.snackbar = true;
+      } else {
+        this.snackbar = false;
+      }
+    }
     if (theme) {
       if (theme == "true") {
         this.$vuetify.theme.dark = true;

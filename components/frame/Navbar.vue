@@ -12,19 +12,6 @@
         <v-spacer></v-spacer>
         <!-- color="primary" -->
         <!-- style="border-radius:50px;" -->
-        <v-btn icon elevation="0" @click="theme">
-          <v-icon>{{
-            $vuetify.theme.dark ? "light_mode" : "dark_mode"
-          }}</v-icon>
-          <!-- <div>
-            <span class="ml-4" v-if="!$vuetify.theme.dark">
-              Dark Mode
-            </span>
-            <span class="ml-4" v-else>
-              Light Mode
-            </span>
-          </div> -->
-        </v-btn>
         <v-app-bar-nav-icon
           class="hidden-md-and-up"
           @click="drawer = !drawer"
@@ -49,6 +36,11 @@
             </v-tab>
           </v-tabs>
         </div>
+        <v-btn class="theme-mode" icon elevation="0" @click="theme">
+          <v-icon>{{
+            $vuetify.theme.dark ? "light_mode" : "dark_mode"
+          }}</v-icon>
+        </v-btn>
       </v-container>
     </v-app-bar>
     <v-divider></v-divider>
@@ -157,5 +149,10 @@ div.v-tabs {
 .theme--dark.v-app-bar.v-toolbar.v-sheet {
   background-color: rgba(39, 39, 39, 0.8) !important;
   backdrop-filter: saturate(180%) blur(3px);
+}
+button.theme-mode {
+  padding: 0px;
+  height: 70px !important;
+  border-radius: 0px;
 }
 </style>

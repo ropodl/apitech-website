@@ -13,19 +13,12 @@
               <AboutBanner />
               <Message />
             </v-container>
-            change this design<v-icon class="ml-2">fal fa-chevron-down</v-icon>
-            <HomeWhyAPI />
             <v-container>
               <HomeAboutPara />
             </v-container>
           </v-card>
         </v-col>
       </v-row>
-    </v-container>
-    <!-- Out Side Card Container -->
-    <v-container>
-      <!-- <Clients /> -->
-      <!-- <BlogCard /> -->
     </v-container>
   </div>
 </template>

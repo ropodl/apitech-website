@@ -67,7 +67,7 @@
           </v-row>
           <v-btn
             large
-            class="d-flex px-10 ml-auto"
+            class="d-flex px-16 ml-auto rounded-0"
             @click="formSubmit"
             color="primary"
           >

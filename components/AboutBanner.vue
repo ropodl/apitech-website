@@ -34,17 +34,6 @@
         voluptates quae. Obcaecati esse dolores magnam optio molestias sapiente
         quia nam dicta consectetur!
       </div>
-      <div class="mb-10">
-        <ul class="pl-0">
-          <li
-            v-for="i in 3"
-            :key="i"
-            style="font-size:20px;font-weight:300;list-style:none;"
-          >
-            <span>0{{ i }}.</span>
-          </li>
-        </ul>
-      </div>
       <div class="mb-4 d-flex">
         <span class="text-h5 font-weight-bold" style="line-height:1.2em;">
           For Fast and Reliable
