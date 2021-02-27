@@ -30,7 +30,7 @@
                   {{ otherError }}
                 </h1>
               </div>
-              <v-btn color="primary" x-large text link to="/">
+              <v-btn color="primary" x-large link to="/">
                 Go to Home page
               </v-btn>
             </div>

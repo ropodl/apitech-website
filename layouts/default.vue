@@ -13,12 +13,12 @@
     <FrameFooter />
     <v-snackbar v-model="snackbar">
       This website uses cookies. Handle with care.
-      {{ text }}
+      <!-- {{ text }} -->
 
       <template v-slot:action="{ attrs }">
         <v-btn
-          color="primary"
           text
+          color="primary"
           :timeout="timeout"
           v-bind="attrs"
           @click="snackbar = false"
@@ -34,7 +34,7 @@
 export default {
   data() {
     return {
-      timeout: -1,
+      timeout: 0,
       snackbar: true
     };
   },

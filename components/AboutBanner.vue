@@ -1,6 +1,11 @@
 <template>
   <v-row>
-    <v-col cols="12" md="6" class="pl-0" style="margin-top:-28px;">
+    <v-col
+      cols="12"
+      md="6"
+      class="pl-0 hidden-sm-and-down"
+      style="margin-top:-28px;"
+    >
       <div style="position:relative;">
         <div
           style="position:absolute;top:-20px;left:-20px;height:200px;width:200px;border: 1px dashed black;"
@@ -12,12 +17,13 @@
         ></v-parallax>
       </div>
     </v-col>
-    <v-col cols="12" md="6">
+    <v-col cols="12" xs="12" sm="12" md="6" lg="6" xl="6">
       <div class="text-overline mb-2 mt-16" style="font-size:1rem !important;">
         About Us
       </div>
       <div class="text-h4 font-weight-bold" style="line-height:1.3em;">
-        We Provide Service with<br />
+        We Provide Service with
+        <br class="hidden-sm-and-down" />
         5 Years of Experience
       </div>
       <div class="d-flex mt-4 mb-8">
@@ -36,12 +42,9 @@
       </div>
       <div class="mb-4 d-flex">
         <span class="text-h5 font-weight-bold" style="line-height:1.2em;">
-          For Fast and Reliable
+          For Fast and Reliable Service
           <br />
-          Service
-        </span>
-        <span class="ml-6 text-h5 font-weight-bold" style="line-height:1.2em;">
-          +977-01-4472774
+          01-4472774
         </span>
       </div>
       <div class="mb-10 text-h5 font-weight-bold"></div>
