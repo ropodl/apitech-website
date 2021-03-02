@@ -8,13 +8,13 @@
     />
     <v-container class="pt-0 mt-n16">
       <v-row>
-        <v-col cols="12">
+        <v-col cols="12" class="pl-0">
           <v-card class="rounded-0">
             <div class="card-top-border"></div>
             <div class="card-bottom-border"></div>
             <v-container>
-              <v-row class="pt-10">
-                <v-col cols="12" md="6">
+              <v-row>
+                <v-col cols="12" md="6" class="pl-0 py-0">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.7098031715627!2d85.33517031442436!3d27.69536273262684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1999ced66967%3A0x712d9cdbe5edab7e!2sApi%20Technology%20Pvt.%20Ltd.!5e0!3m2!1sen!2snp!4v1612344942698!5m2!1sen!2snp"
                     frameborder="0"
@@ -24,7 +24,7 @@
                     allowfullscreen
                   ></iframe>
                 </v-col>
-                <v-col cols="12" md="6">
+                <v-col cols="12" md="6" class="py-10">
                   <div class="text-h2 font-weight-black mb-6">
                     Excited about the project? <br />
                     Please <span class="primary--text">get in touch.</span>
@@ -39,7 +39,7 @@
                     >
                       <div class="text-overline">{{ info.title }}</div>
                       <div class="text-subtitle-1">
-                        <span v-if="i != 2">
+                        <span v-if="i != 3">
                           {{ info.content }}
                         </span>
                         <span v-else>
@@ -82,6 +82,10 @@ export default {
         {
           title: "General Inquiry",
           content: "info@apitechnepal.com"
+        },
+        {
+          title: "Phone Number",
+          content: "01-4472774 "
         },
         {
           title: "Social Media",

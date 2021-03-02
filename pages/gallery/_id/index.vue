@@ -29,7 +29,7 @@
                   md="4"
                 >
                   <v-card class="rounded-0 mb-2" @click="index = thumbIndex">
-                    <v-img height="300" :src="thumb.url"></v-img>
+                    <v-img eager height="300" :src="thumb.url"></v-img>
                   </v-card>
                 </v-col>
               </v-row>

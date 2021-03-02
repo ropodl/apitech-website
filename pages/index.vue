@@ -17,6 +17,28 @@
               <HomeAboutPara />
             </v-container>
           </v-card>
+
+          <v-row class="mt-16 mb-6">
+            <v-col v-for="(exp, i) in experience" :key="i" cols="12" md="4">
+              <v-list color="transparent">
+                <v-list-item three-line>
+                  <v-list-item-icon>
+                    <v-icon size="64">
+                      {{ exp.icon }}
+                    </v-icon>
+                  </v-list-item-icon>
+                  <v-list-item-content>
+                    <v-list-item-title>{{ exp.title }}</v-list-item-title>
+                    <v-list-item-subtitle
+                      class="primary--text text-h4 font-weight-black"
+                    >
+                      {{ exp.content }}
+                    </v-list-item-subtitle>
+                  </v-list-item-content>
+                </v-list-item>
+              </v-list>
+            </v-col>
+          </v-row>
         </v-col>
       </v-row>
     </v-container>
@@ -26,7 +48,25 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      experience: [
+        {
+          icon: "fal fa-house",
+          title: "Residental Clients",
+          content: "100+"
+        },
+        {
+          icon: "fal fa-car-building",
+          title: "Commerical Clients",
+          content: "1000+"
+        },
+        {
+          icon: "fal fa-smile-wink",
+          title: "Happy Clients",
+          content: "1100+"
+        }
+      ]
+    };
   }
 };
 </script>

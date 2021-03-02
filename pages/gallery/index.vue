@@ -18,6 +18,8 @@
                   <!-- <NuxtLink to="/"> -->
                   <v-card class="rounded-0" :ripple="false" link to="gallery/1">
                     <v-img
+                      eager
+                      height="300"
                       src="https://images.unsplash.com/photo-1500051638674-ff996a0ec29e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1392&q=80"
                     ></v-img>
                     <v-card-title>
