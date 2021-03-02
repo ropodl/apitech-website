@@ -36,14 +36,9 @@
             </v-tab>
           </v-tabs>
         </div>
-        <v-btn class="theme-mode" icon elevation="0" @click="theme">
-          <v-icon>{{
-            $vuetify.theme.dark ? "light_mode" : "dark_mode"
-          }}</v-icon>
-        </v-btn>
       </v-container>
     </v-app-bar>
-    <v-divider></v-divider>
+    <!-- <v-divider></v-divider> -->
 
     <v-card tile>
       <!-- fixed -->
@@ -117,10 +112,6 @@ export default {
     this.onResize();
   },
   methods: {
-    theme() {
-      this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
-      localStorage.setItem("dark_theme", this.$vuetify.theme.dark.toString());
-    },
     onResize() {
       if (process.client) {
         this.windowSize = {
@@ -142,17 +133,12 @@ div.v-tabs {
     text-transform: none;
   }
 }
-.theme--light.v-app-bar.v-toolbar.v-sheet {
-  background-color: rgba(255, 255, 255, 0.8) !important;
-  backdrop-filter: saturate(180%) blur(3px);
-}
-.theme--dark.v-app-bar.v-toolbar.v-sheet {
-  background-color: rgba(39, 39, 39, 0.8) !important;
-  backdrop-filter: saturate(180%) blur(3px);
-}
-button.theme-mode {
-  padding: 0px;
-  height: 70px !important;
-  border-radius: 0px;
-}
+// .theme--light.v-app-bar.v-toolbar.v-sheet {
+//   background-color: rgba(255, 255, 255, 0.8) !important;
+//   backdrop-filter: saturate(180%) blur(3px);
+// }
+// .theme--dark.v-app-bar.v-toolbar.v-sheet {
+//   background-color: rgba(39, 39, 39, 0.8) !important;
+//   backdrop-filter: saturate(180%) blur(3px);
+// }
 </style>

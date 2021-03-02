@@ -2,7 +2,7 @@
   <v-parallax height="300" :src="imageSrc">
     <v-overlay absolute color="rgba(0,0,0,1)">
       <div
-        class="text-h1 font-weight-black text-uppercase d-flex align-center justify-center"
+        class="text-h2 font-weight-bold text-uppercase d-flex align-center justify-center"
         style="height:100%;"
       >
         {{ title }}

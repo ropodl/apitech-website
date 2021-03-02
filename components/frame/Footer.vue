@@ -126,11 +126,11 @@ export default {
           icon: "fal fa-map-marker-alt"
         },
         {
-          title: "9849808471",
+          title: "01-4472774",
           icon: "fal fa-phone-alt"
         },
         {
-          title: "sarox14@gmail.com",
+          title: "info@apitech.com.np",
           icon: "fal fa-envelope"
         }
       ]

@@ -4,12 +4,26 @@
       <v-row class="d-flex align-center flex-wrap">
         <ul class="topbar-info-list">
           <li v-for="(info, i) in topinfo" :key="i" class="topinfo">
-            <v-icon>{{ info.icon }}</v-icon> info@apitech.com.np
+            <v-icon>{{ info.icon }}</v-icon> {{ info.info }}
           </li>
         </ul>
         <v-spacer></v-spacer>
         <v-btn class="mx-auto" icon v-for="(social, i) in socials" :key="i">
           <v-icon color="white">{{ social.icon }}</v-icon>
+        </v-btn>
+        <v-divider vertical></v-divider>
+        <v-btn
+          color="transparent"
+          class="theme-mode white--text"
+          elevation="0"
+          @click="theme"
+        >
+          <v-icon color="white">{{
+            $vuetify.theme.dark ? "fal fa-lightbulb" : "fal fa-lightbulb-on"
+          }}</v-icon>
+          <span class="ml-2">
+            Dark Mode
+          </span>
         </v-btn>
       </v-row>
     </v-container>
@@ -67,6 +81,12 @@ export default {
         }
       ]
     };
+  },
+  methods: {
+    theme() {
+      this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
+      localStorage.setItem("dark_theme", this.$vuetify.theme.dark.toString());
+    }
   }
 };
 </script>
@@ -85,5 +105,10 @@ ul.topbar-info-list {
       margin-right: 10px;
     }
   }
+}
+button.theme-mode {
+  padding: 0px;
+  height: 70px !important;
+  border-radius: 0px;
 }
 </style>

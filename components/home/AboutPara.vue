@@ -7,7 +7,7 @@
           class="mb-4"
           style="font-size: 1.25rem !important;font-weight: 300 !important;"
         >
-          Serity Solutions was established in 2019 with the aim of providing
+          Api Technology was established in 2019 with the aim of providing
           technical protection services. We offer state-of-the-art technical
           protection system solutions. Many years of experience and customer
           satisfaction are proof of our success. We have a MIA license to
@@ -33,7 +33,7 @@
         <Cattitle class="mb-6" :first="'Our'" :second="'Vision'" />
         <div style="font-size: 1.25rem !important;font-weight: 300 !important;">
           <p>
-            Serity Solutions, in its many years of work, pays special attention
+            Api Technologies, in its many years of work, pays special attention
             to professionalism of business, quality and reliability of equipment
             with the purpose of greater satisfaction of clients in designing,
             installing and servicing the system of technical protection of

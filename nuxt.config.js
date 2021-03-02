@@ -49,6 +49,10 @@ export default {
     {
       src: '~/plugins/ga.js',
       ssr: false
+    },
+    {
+      src: '~/plugins/lg.js',
+      ssr: false
     }
   ],
 
