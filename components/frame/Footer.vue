@@ -41,9 +41,13 @@
           <v-col cols="12" xs="12" sm="6" md="3">
             <Cattitle :first="'Contact'" :second="'Us'" />
             <ul class="contact-us-list">
-              <li v-for="(contact, i) in contactList" :key="i" class="d-flex">
+              <li
+                v-for="(contact, i) in contactList"
+                :key="i"
+                class="d-flex align-center"
+              >
                 <span>
-                  <v-icon>{{ contact.icon }}</v-icon>
+                  <v-icon small>{{ contact.icon }}</v-icon>
                 </span>
                 {{ contact.title }}
               </li>

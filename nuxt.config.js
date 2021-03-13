@@ -88,13 +88,14 @@ export default {
     meta: {
       charset: "utf-8",
       viewport: "width=device-width, initial-scale=1",
-      name: "API Technology",
+      name: "Api Technology",
       title: 'test',
       author: "erskull",
       icon: "./static/icon.png",
       theme_color: "#1976d2"
     },
     manifest: {
+      lang: 'en',
       name: 'Api Technology',
       short_name: 'Api Technology',
       description: ' API Technology offer you a business to business service in the Web, Mobile, Networking, ICT and Electronics Hardware platform.',

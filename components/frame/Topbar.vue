@@ -19,11 +19,11 @@
           @click="theme"
         >
           <v-icon color="white">{{
-            $vuetify.theme.dark ? "fal fa-lightbulb" : "fal fa-lightbulb-on"
+            $vuetify.theme.dark ? "invert_colors_off" : "invert_colors"
           }}</v-icon>
-          <span class="ml-2">
+          <!-- <span class="ml-2">
             Dark Mode
-          </span>
+          </span> -->
         </v-btn>
       </v-row>
     </v-container>

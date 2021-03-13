@@ -8,7 +8,7 @@
             <div class="card-top-border"></div>
             <div class="card-bottom-border"></div>
             <v-container>
-              <v-row class="py-16">
+              <v-row class="pt-6">
                 <v-col cols="12" md="6">
                   <v-img
                     eager
