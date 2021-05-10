@@ -13,7 +13,7 @@
     "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/sitemap": "^2.4.0",
     "core-js": "^3.9.1",
-    "nuxt": "^2.15.2",
+    "nuxt": "^2.15.5",
     "v-owl-carousel": "^1.0.8",
     "vue-light-gallery": "^1.0.1",
     "vue-owl-carousel": "^2.0.3"
