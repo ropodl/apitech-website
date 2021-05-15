@@ -26,19 +26,9 @@
         <br class="hidden-sm-and-down" />
         5 Years of Experience
       </div>
-      <div class="d-flex mt-4 mb-8">
-        <span class="primary" style="width:60px;height:5px;"></span>
-        <span
-          class="black"
-          style="margin-left:5px;width:30px;height:5px;"
-        ></span>
-      </div>
       <div class="mb-10" style="font-size:20px;font-weight:300;">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum libero
-        aliquid iusto accusantium corporis distinctio, alias magni doloribus
-        similique qui temporibus nemo nobis esse sequi eaque doloremque
-        voluptates quae. Obcaecati esse dolores magnam optio molestias sapiente
-        quia nam dicta consectetur!
+        API Technology offer you a business to business service in the Web,
+        Mobile, Networking, ICT and Electronics Hardware platform.
       </div>
       <div class="mb-4 d-flex">
         <span class="text-h5 font-weight-bold" style="line-height:1.2em;">
@@ -48,9 +38,15 @@
         </span>
       </div>
       <div class="mb-10 text-h5 font-weight-bold"></div>
-      <div class="d-flex flex-wrap mb-10">
-        <v-spacer></v-spacer>
-        <v-btn link to="/about" color="primary" class="px-10 py-6">
+      <div class="d-flex mb-10">
+        <!-- <v-spacer></v-spacer> -->
+        <v-btn
+          v-if="this.$route.path != '/about'"
+          link
+          to="/about"
+          color="primary"
+          class="px-10 py-6"
+        >
           More about us
         </v-btn>
         <v-btn
@@ -62,7 +58,7 @@
         >
           View Brochure
         </v-btn>
-        <v-spacer></v-spacer>
+        <!-- <v-spacer></v-spacer>n -->
       </div>
     </v-col>
   </v-row>

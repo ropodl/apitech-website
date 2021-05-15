@@ -54,31 +54,31 @@ export default {
           title: "Facebook",
           icon: "fab fa-facebook-square",
           link: "https://www.facebook.com/apitechnepal"
-        },
-        {
-          id: "2",
-          title: "Twitter",
-          icon: "fab fa-twitter-square",
-          link: "https://www.twitter.com/apitechnepal"
-        },
-        {
-          id: "3",
-          title: "Instagram",
-          icon: "fab fa-instagram",
-          link: "https://www.instagram.com/apitechnepal"
-        },
-        {
-          id: "4",
-          title: "LinkedIn",
-          icon: "fab fa-linkedin",
-          link: "https://www.linkedin.com/apitechnepal"
-        },
-        {
-          id: "5",
-          title: "Youtube",
-          icon: "fab fa-youtube",
-          link: "https://www.youtube.com/apitechnepal"
         }
+        // {
+        //   id: "2",
+        //   title: "Twitter",
+        //   icon: "fab fa-twitter-square",
+        //   link: "https://www.twitter.com/apitechnepal"
+        // },
+        // {
+        //   id: "3",
+        //   title: "Instagram",
+        //   icon: "fab fa-instagram",
+        //   link: "https://www.instagram.com/apitechnepal"
+        // },
+        // {
+        //   id: "4",
+        //   title: "LinkedIn",
+        //   icon: "fab fa-linkedin",
+        //   link: "https://www.linkedin.com/apitechnepal"
+        // },
+        // {
+        //   id: "5",
+        //   title: "Youtube",
+        //   icon: "fab fa-youtube",
+        //   link: "https://www.youtube.com/apitechnepal"
+        // }
       ]
     };
   },

@@ -16,7 +16,7 @@
               API Technology offer you a business to business service in the
               Web, Mobile, Networking, ICT and Electronics Hardware platform.
             </div>
-            <ul class="footer-social">
+            <!-- <ul class="footer-social">
               <li v-for="(social, i) in footerSocial" :key="i">
                 <a
                   :href="social.link"
@@ -28,7 +28,7 @@
                   </v-icon>
                 </a>
               </li>
-            </ul>
+            </ul> -->
           </v-col>
           <v-col cols="12" xs="12" sm="6" md="3">
             <Cattitle :first="'Quick'" :second="'Links'" />
@@ -126,7 +126,7 @@ export default {
       ],
       contactList: [
         {
-          title: "New Baneshwor",
+          title: "Mid Baneshwor, Kathmandu",
           icon: "fal fa-map-marker-alt"
         },
         {

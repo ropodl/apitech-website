@@ -16,7 +16,6 @@
               <v-row>
                 <v-col v-for="i in 9" :key="i" cols="12" md="4">
                   <v-hover v-slot="{ hover }">
-                    <!-- <NuxtLink to="/"> -->
                     <v-card
                       height="250"
                       class="rounded-0 align-end elevation-0"
@@ -37,14 +36,10 @@
                           <v-card-title class="white--text">
                             Gallery Title
                           </v-card-title>
-                          <!-- <v-card-subtitle class="white--text">
-                          Gallery Meta
-                        </v-card-subtitle> -->
                         </div>
                       </v-img>
                     </v-card>
                   </v-hover>
-                  <!-- </NuxtLink> -->
                 </v-col>
               </v-row>
               <v-row>

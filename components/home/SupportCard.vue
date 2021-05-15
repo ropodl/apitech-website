@@ -60,7 +60,7 @@ export default {
           icon: "fas fa-clock",
           bgicon: "fal fa-clock",
           title: "Support Hours",
-          content: "Sun-Fri 9am-6pm"
+          content: "Sun-Fri 10am-6pm"
         },
         {
           icon: "fas fa-user-headset",

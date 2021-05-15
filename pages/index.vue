@@ -11,7 +11,7 @@
             <div class="card-bottom-border"></div>
             <v-container>
               <AboutBanner />
-              <Message />
+              <!-- <Message /> -->
             </v-container>
             <v-container>
               <HomeAboutPara />
@@ -53,17 +53,17 @@ export default {
         {
           icon: "fal fa-house",
           title: "Residental Clients",
-          content: "100+"
+          content: "600+"
         },
         {
           icon: "fal fa-car-building",
           title: "Commerical Clients",
-          content: "1000+"
+          content: "900+"
         },
         {
           icon: "fal fa-smile-wink",
           title: "Happy Clients",
-          content: "1100+"
+          content: "2000+"
         }
       ]
     };

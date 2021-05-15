@@ -47,9 +47,11 @@
                             class="mr-2"
                             v-for="(social, i) in info.content"
                             :key="i"
+                            :href="social.link"
                             icon
                             outlined
                             large
+                            target="_blank"
                           >
                             <v-icon small>
                               {{ social.icon }}
@@ -59,7 +61,7 @@
                       </div>
                     </v-col>
                   </v-row>
-                  <ContactContactform />
+                  <!-- <ContactContactform /> -->
                 </v-col>
               </v-row>
             </v-container>
@@ -94,12 +96,12 @@ export default {
               title: "Facebook",
               link: "https://www.facebook.com/apitechnepal",
               icon: "fab fa-facebook"
-            },
-            {
-              title: "Twitter",
-              link: "https://www.facebook.com/apitechnepal",
-              icon: "fab fa-twitter"
             }
+            // {
+            //   title: "Twitter",
+            //   link: "https://www.facebook.com/apitechnepal",
+            //   icon: "fab fa-twitter"
+            // }
           ]
         }
       ]

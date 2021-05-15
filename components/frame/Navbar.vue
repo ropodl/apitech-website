@@ -90,16 +90,16 @@ export default {
           icon: "info",
           route: "/about"
         },
-        {
-          name: "Our Team",
-          icon: "groups",
-          route: "/team"
-        },
-        {
-          name: "Gallery",
-          icon: "collections",
-          route: "/gallery"
-        },
+        // {
+        //   name: "Our Team",
+        //   icon: "groups",
+        //   route: "/team"
+        // },
+        // {
+        //   name: "Gallery",
+        //   icon: "collections",
+        //   route: "/gallery"
+        // },
         {
           name: "Contact Us",
           icon: "call",

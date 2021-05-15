@@ -3,15 +3,16 @@
     <v-row class="py-10 d-flex">
       <v-col cols="12" md="6">
         <Cattitle class="mb-6" :first="'Solutions'" :second="'we provide'" />
-        <div
-          class="mb-4"
-          style="font-size: 1.25rem !important;font-weight: 300 !important;"
-        >
-          Api Technology was established in 2019 with the aim of providing
-          technical protection services. We offer state-of-the-art technical
-          protection system solutions. Many years of experience and customer
-          satisfaction are proof of our success. We have a MIA license to
-          perform technical protection activities.
+        <div class="mb-4">
+          Api Technology offer you a business to business service in the Web,
+          Android, Networking, ICT and Electronics Hardware platform. We are a
+          dominant technology provider of Internet Of Things, Electronics &
+          Communication, and Security Technologies for critical and
+          high-reliability applications. Markets span government,
+          non-government, medical/industrial and communica-tions/consumer.
+          <br />
+          <br />
+          OUR PHILOSOPHY : Let's Grow With Technology Together
         </div>
         <div class="mb-6 text-h5 font-weight-medium">
           We are engaged in the following activities:
