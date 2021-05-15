@@ -8,7 +8,14 @@
           </li>
         </ul>
         <v-spacer></v-spacer>
-        <v-btn class="mx-auto" icon v-for="(social, i) in socials" :key="i">
+        <v-btn
+          class="mx-auto"
+          icon
+          :href="social.link"
+          target="_blank"
+          v-for="(social, i) in socials"
+          :key="i"
+        >
           <v-icon color="white">{{ social.icon }}</v-icon>
         </v-btn>
         <v-divider vertical></v-divider>

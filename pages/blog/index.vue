@@ -10,10 +10,14 @@
             <v-container>
               <v-row>
                 <v-col cols="12">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Excepturi error neque totam adipisci velit voluptatibus natus
-                  animi quis assumenda voluptatem dolores quae iusto distinctio,
-                  exercitationem doloremque doloribus. Atque, nostrum numquam.
+                  <v-card
+                    link
+                    :to="'/blog/' + re.id"
+                    v-for="(re, i) in res"
+                    :key="i"
+                  >
+                    <v-card-title>{{ re.title }}</v-card-title>
+                  </v-card>
                 </v-col>
               </v-row>
             </v-container>
@@ -25,7 +29,25 @@
 </template>
 
 <script>
-export default {};
+import axios from "axios";
+export default {
+  data() {
+    return {
+      res: ""
+    };
+  },
+  mounted() {
+    this.call();
+  },
+  methods: {
+    call() {
+      axios.get("https://fakestoreapi.com/products").then(res => {
+        this.res = res.data;
+        console.log(res.data);
+      });
+    }
+  }
+};
 </script>
 
 <style></style>
