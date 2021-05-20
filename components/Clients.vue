@@ -49,43 +49,27 @@ export default {
       clients: [
         {
           name: "Nepal Telecom",
-          src:
-            "https://i0.wp.com/apitechnepal.com/wp-content/uploads/2019/10/ntc.jpg"
+          src: "/clients/ntc.webp"
         },
         {
           name: "Nepal Police",
-          src:
-            "https://i0.wp.com/apitechnepal.com/wp-content/uploads/2019/10/nepalpolice.jpg"
+          src: "/clients/nepalpolice.webp"
         },
         {
           name: "Nepal Oil Limited",
-          src:
-            "https://i0.wp.com/apitechnepal.com/wp-content/uploads/2019/10/NEPALOIL.jpg"
+          src: "/clients/NEPALOIL.webp"
         },
         {
           name: "Janaki Tech",
-          src:
-            "https://i0.wp.com/apitechnepal.com/wp-content/uploads/2019/10/janaki.jpg"
+          src: "/clients/janaki.webp"
         },
-        // {
-        //   name: "Mix ERP",
-        //   src:
-        //     "https://i0.wp.com/apitechnepal.com/wp-content/uploads/2019/10/mixerp.jpg"
-        // },
         {
           name: "KIEC",
-          src:
-            "https://i0.wp.com/apitechnepal.com/wp-content/uploads/2019/10/kiec1.jpg"
+          src: "/clients/kiec1.webp"
         },
-        // {
-        //   name: "The Hut",
-        //   src:
-        //     "https://i0.wp.com/apitechnepal.com/wp-content/uploads/2020/09/logo_001.jpg"
-        // },
         {
           name: "Forum for Women",
-          src:
-            "https://i0.wp.com/apitechnepal.com/wp-content/uploads/2020/09/fwld-logo.png"
+          src: "/clients/fwld-logo.webp"
         }
       ],
       windowSize: {
