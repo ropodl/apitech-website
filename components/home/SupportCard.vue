@@ -78,7 +78,7 @@ export default {
           icon: "fas fa-envelope",
           bgicon: "fal fa-envelope",
           title: "Email Address",
-          content: "sarox14@gmail.com"
+          content: "info@apitechnepal.com"
         }
       ]
     };
