@@ -58,7 +58,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  transition: "slide-bottom"
+};
 </script>
 
 <style></style>

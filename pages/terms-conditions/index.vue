@@ -29,6 +29,7 @@
 
 <script>
 export default {
+  transition: "slide-bottom",
   data() {
     return {
       terms: `

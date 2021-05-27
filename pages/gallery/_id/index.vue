@@ -55,11 +55,11 @@ export default {
         {
           title: "img 1",
           url:
-            "https://images.unsplash.com/photo-1614676367446-17828873a71c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=375&q=80"
+            "https://images.unsplash.com/photo-1583418855863-858dc79c2d19?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80"
         },
         {
           url:
-            "https://images.unsplash.com/photo-1545163316-d6dd29834d7a?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=799&q=80"
+            "https://images.unsplash.com/photo-1583418855863-858dc79c2d19?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80"
         }
       ],
       index: null

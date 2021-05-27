@@ -168,10 +168,10 @@ ul.quick-link-list {
       color: white;
       text-decoration: none;
       &:hover {
-        color: var(--v-primary-lighten4);
+        color: var(--v-primary-base);
       }
       &.nuxt-link-exact-active {
-        color: var(--v-primary-lighten2);
+        color: var(--v-primary-base);
       }
     }
   }

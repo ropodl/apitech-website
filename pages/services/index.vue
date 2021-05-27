@@ -24,6 +24,7 @@
 
 <script>
 export default {
+  transition: "slide-bottom",
   data() {
     return {
       msg: "this is a test"

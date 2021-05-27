@@ -13,7 +13,7 @@
         <v-parallax
           height="600"
           class="border"
-          src="https://geniuscript.com/serity/assets/images/resources/img3.jpg"
+          src="images/img3.jpg"
         ></v-parallax>
       </div>
     </v-col>
@@ -21,16 +21,16 @@
       <div class="text-overline mb-2 mt-16" style="font-size:1rem !important;">
         About Us
       </div>
-      <div class="text-h4 font-weight-bold" style="line-height:1.3em;">
+      <div class="text-h4 font-weight-bold mb-3" style="line-height:1.3em;">
         We Provide Service with
         <br class="hidden-sm-and-down" />
         5 Years of Experience
       </div>
-      <div class="mb-10" style="font-size:20px;font-weight:300;">
+      <div class="mb-3" style="font-size:20px;font-weight:300;">
         API Technology offer you a business to business service in the Web,
         Mobile, Networking, ICT and Electronics Hardware platform.
       </div>
-      <div class="mb-4 d-flex">
+      <div class="mb-3 d-flex">
         <span class="text-h5 font-weight-bold" style="line-height:1.2em;">
           For Fast and Reliable Service
           <br />
@@ -38,22 +38,24 @@
         </span>
       </div>
       <div class="mb-10 text-h5 font-weight-bold"></div>
-      <div class="d-flex mb-10">
+      <div class="d-flex flex-wrap">
         <!-- <v-spacer></v-spacer> -->
         <v-btn
           v-if="this.$route.path != '/about'"
           link
+          large
           to="/about"
           color="primary"
-          class="px-10 py-6"
+          class="px-10"
         >
           More about us
         </v-btn>
         <v-btn
           text
           link
-          class="px-10 py-6 ml-md-4"
-          href="https://www.apitechnepal.com/wp-content/uploads/2020/09/brochure.pdf"
+          large
+          class="px-10 ml-md-4"
+          href="documents/brochure.pdf"
           target="_blank"
         >
           View Brochure
