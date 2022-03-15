@@ -10,8 +10,6 @@
           ></v-img>
         </NuxtLink>
         <v-spacer></v-spacer>
-        <!-- color="primary" -->
-        <!-- style="border-radius:50px;" -->
         <v-app-bar-nav-icon
           class="hidden-md-and-up"
           @click="drawer = !drawer"

@@ -13,8 +13,6 @@
     <FrameFooter />
     <v-snackbar v-model="snackbar">
       This website uses cookies. Handle with care.
-      <!-- {{ text }} -->
-
       <template v-slot:action="{ attrs }">
         <v-btn
           text

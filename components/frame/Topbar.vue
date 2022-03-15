@@ -1,5 +1,5 @@
 <template>
-  <v-toolbar max-height="50px" dense elevation="0" color="primary">
+  <v-toolbar max-height="50px" dense elevation="0" color="black">
     <v-container>
       <v-row class="d-flex align-center flex-wrap">
         <ul class="topbar-info-list">
@@ -44,24 +44,24 @@ export default {
       topinfo: [
         {
           icon: "fal fa-envelope",
-          info: "info@apitech.com.np"
+          info: "info@apitech.com.np",
         },
         {
           icon: "fal fa-map-marker-alt",
-          info: "Mid Baneshwor, Kathmandu"
+          info: "Mid Baneshwor, Kathmandu",
         },
         {
           icon: "fal fa-phone-alt",
-          info: "01-4472774"
-        }
+          info: "01-4472774",
+        },
       ],
       socials: [
         {
           id: "1",
           title: "Facebook",
           icon: "fab fa-facebook-square",
-          link: "https://www.facebook.com/apitechnepal"
-        }
+          link: "https://www.facebook.com/apitechnepal",
+        },
         // {
         //   id: "2",
         //   title: "Twitter",
@@ -86,15 +86,15 @@ export default {
         //   icon: "fab fa-youtube",
         //   link: "https://www.youtube.com/apitechnepal"
         // }
-      ]
+      ],
     };
   },
   methods: {
     theme() {
       this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
       localStorage.setItem("dark_theme", this.$vuetify.theme.dark.toString());
-    }
-  }
+    },
+  },
 };
 </script>
 
