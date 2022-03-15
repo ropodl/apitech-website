@@ -4,15 +4,15 @@
       <span class="font-weight-bold mr-1">
         {{ first }}
       </span>
-      <span>
+      <span class="font-weight-light">
         {{ second }}
       </span>
       <!-- <v-divider class="ml-4"></v-divider> -->
       <div class="d-flex my-2">
-        <span class="primary" style="width:60px;height:5px;"></span>
+        <span class="primary" style="width: 60px; height: 5px"></span>
         <span
           :class="$vuetify.theme.dark ? 'white' : 'black'"
-          style="margin-left:5px;width:30px;height:5px;"
+          style="margin-left: 5px; width: 30px; height: 5px"
         ></span>
       </div>
     </h4>
@@ -21,7 +21,7 @@
 
 <script>
 export default {
-  props: ["first", "second"]
+  props: ["first", "second"],
 };
 </script>
 

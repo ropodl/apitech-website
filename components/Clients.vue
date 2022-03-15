@@ -23,12 +23,13 @@
               360: { items: 2 },
               600: { items: 3 },
               900: { items: 4 },
-              1264: { items: 5 }
+              1264: { items: 5 },
             }"
           >
             <!-- {{ windowSize.x }} -->
             <v-card
-              outlined
+              flat
+              color="transparent"
               class="ma-1 d-flex justify-center align-center"
               v-for="(client, i) in clients"
               :key="i"
@@ -49,33 +50,33 @@ export default {
       clients: [
         {
           name: "Nepal Telecom",
-          src: "/clients/ntc.webp"
+          src: "/clients/ntc.webp",
         },
         {
           name: "Nepal Police",
-          src: "/clients/nepalpolice.webp"
+          src: "/clients/nepalpolice.webp",
         },
         {
           name: "Nepal Oil Limited",
-          src: "/clients/NEPALOIL.webp"
+          src: "/clients/NEPALOIL.webp",
         },
         {
           name: "Janaki Tech",
-          src: "/clients/janaki.webp"
+          src: "/clients/janaki.webp",
         },
         {
           name: "KIEC",
-          src: "/clients/kiec1.webp"
+          src: "/clients/kiec1.webp",
         },
         {
           name: "Forum for Women",
-          src: "/clients/fwld-logo.webp"
-        }
+          src: "/clients/fwld-logo.webp",
+        },
       ],
       windowSize: {
         x: 0,
-        y: 0
-      }
+        y: 0,
+      },
     };
   },
   mounted() {
@@ -85,9 +86,9 @@ export default {
     onResize() {
       this.windowSize = {
         x: window.innerWidth,
-        y: window.innerHeight
+        y: window.innerHeight,
       };
-    }
+    },
   },
   // computed: {
   //   x: function() {
@@ -100,7 +101,7 @@ export default {
     // x: function(val) {
     //   val = process.client ? windows.client : "awdawd";
     // }
-  }
+  },
 };
 </script>
 

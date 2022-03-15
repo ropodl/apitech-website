@@ -35,7 +35,7 @@ export default {
   data() {
     return {
       timeout: 0,
-      snackbar: true
+      snackbar: true,
     };
   },
   mounted() {
@@ -55,10 +55,15 @@ export default {
         this.$vuetify.theme.dark = false;
       }
     }
-  }
+  },
 };
 </script>
 <style lang="scss">
+@media (min-width: 1900px) {
+  .container {
+    max-width: 1366px !important;
+  }
+}
 .slide-bottom-enter-active,
 .slide-bottom-leave-active {
   transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
@@ -82,10 +87,5 @@ div.card-bottom-border {
   width: 100px;
   height: 4px;
   background-color: var(--v-primary-base);
-}
-div.v-card {
-  // box-shadow: 0 1px 1px rgba(16, 27, 30, 0.15), 0 2px 2px rgba(16, 27, 30, 0.15),
-  //   0 4px 4px rgba(16, 27, 30, 0.15), 0 8px 8px rgba(16, 27, 30, 0.15),
-  //   0 16px 16px rgba(25, 118, 210, 0.15) !important;
 }
 </style>

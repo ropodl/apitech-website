@@ -1,6 +1,6 @@
 <template>
-  <nav app v-resize="onResize" style="position:sticky;top:0;z-index:9;">
-    <v-app-bar elevate-on-scroll height="70" max-height="70">
+  <nav app v-resize="onResize" style="position: sticky; top: 0; z-index: 9">
+    <v-app-bar elevate-on-scroll height="60" max-height="70">
       <v-container class="d-flex justify-center align-center">
         <NuxtLink link to="/">
           <v-img
@@ -18,7 +18,7 @@
         ></v-app-bar-nav-icon>
         <div>
           <v-tabs
-            height="70"
+            height="60"
             class="hidden-sm-and-down"
             color="primary"
             background-color="transparent"
@@ -72,23 +72,23 @@ export default {
       drawer: false,
       windowSize: {
         x: 0,
-        y: 0
+        y: 0,
       },
       links: [
         {
           name: "Home",
           icon: "home",
-          route: "/"
+          route: "/",
         },
         {
           name: "Services",
           icon: "room_service",
-          route: "/services"
+          route: "/services",
         },
         {
           name: "About Us",
           icon: "info",
-          route: "/about"
+          route: "/about",
         },
         // {
         //   name: "Our Team",
@@ -103,9 +103,9 @@ export default {
         {
           name: "Contact Us",
           icon: "call",
-          route: "/contact"
-        }
-      ]
+          route: "/contact",
+        },
+      ],
     };
   },
   mounted() {
@@ -116,14 +116,14 @@ export default {
       if (process.client) {
         this.windowSize = {
           x: window.innerWidth,
-          y: window.innerHeight
+          y: window.innerHeight,
         };
         if (this.windowSize.x >= 961) {
           this.drawer = false;
         }
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
