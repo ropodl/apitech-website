@@ -14,7 +14,7 @@
     "@nuxtjs/sitemap": "^2.4.0",
     "core-js": "^3.9.1",
     "css-loader": "^5.2.4",
-    "nuxt": "^2.15.2",
+    "nuxt": "^3.0.0",
     "v-owl-carousel": "^1.0.8",
     "vue-light-gallery": "^1.0.1",
     "vue-owl-carousel": "^2.0.3"
