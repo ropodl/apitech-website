@@ -1,25 +1,34 @@
 {
-  "name": "apitech-website",
-  "version": "1.0.0",
+  "name": "api-technology",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.13.1",
-    "@nuxtjs/pwa": "^3.3.5",
-    "@nuxtjs/sitemap": "^2.4.0",
-    "core-js": "^3.9.1",
-    "css-loader": "^5.2.4",
-    "nuxt": "^2.15.2",
-    "v-owl-carousel": "^1.0.8",
-    "vue-light-gallery": "^1.0.1",
-    "vue-owl-carousel": "^2.0.3"
+    "@emailjs/browser": "^3.11.0",
+    "@formkit/auto-animate": "^1.0.0-beta.6",
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-brands-svg-icons": "^6.4.0",
+    "@fortawesome/free-regular-svg-icons": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fortawesome/vue-fontawesome": "^3.0.3",
+    "@mdi/js": "^7.2.96",
+    "@vueuse/core": "^9.13.0",
+    "roboto-fontface": "^0.10.0",
+    "sass": "^1.61.0",
+    "vite-plugin-pwa": "^0.14.7",
+    "vite-plugin-vuetify": "^1.0.2",
+    "vue": "^3.2.47",
+    "vue-router": "^4.1.6",
+    "vuetify": "^3.1.13",
+    "vuew": "^1.0.0-security",
+    "webfontloader": "^1.6.28"
   },
   "devDependencies": {
-    "@nuxtjs/vuetify": "^1.11.3"
+    "@vitejs/plugin-vue": "^4.0.0",
+    "vite": "^4.2.1"
   }
 }
