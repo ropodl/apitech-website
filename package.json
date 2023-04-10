@@ -1,34 +1,29 @@
 {
-  "name": "api-technology",
-  "version": "0.0.0",
+  "name": "nuxt-app",
   "private": true,
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "@emailjs/browser": "^3.11.0",
-    "@formkit/auto-animate": "^1.0.0-beta.6",
-    "@fortawesome/fontawesome-svg-core": "^6.4.0",
-    "@fortawesome/free-brands-svg-icons": "^6.4.0",
-    "@fortawesome/free-regular-svg-icons": "^6.4.0",
-    "@fortawesome/free-solid-svg-icons": "^6.4.0",
-    "@fortawesome/vue-fontawesome": "^3.0.3",
-    "@mdi/js": "^7.2.96",
-    "@vueuse/core": "^9.13.0",
-    "roboto-fontface": "^0.10.0",
-    "sass": "^1.61.0",
-    "vite-plugin-pwa": "^0.14.7",
-    "vite-plugin-vuetify": "^1.0.2",
-    "vue": "^3.2.47",
-    "vue-router": "^4.1.6",
-    "vuetify": "^3.1.13",
-    "vuew": "^1.0.0-security",
-    "webfontloader": "^1.6.28"
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^4.0.0",
-    "vite": "^4.2.1"
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fortawesome/vue-fontawesome": "^3.0.3",
+    "nuxt": "^3.3.3"
+  },
+  "dependencies": {
+    "@fortawesome/free-brands-svg-icons": "^6.4.0",
+    "@mdi/js": "^7.2.96",
+    "@nuxtjs/fontawesome": "^1.1.2",
+    "@nuxtjs/google-fonts": "^3.0.0",
+    "@vite-pwa/nuxt": "^0.0.7",
+    "nuxt-simple-sitemap": "^2.4.8",
+    "nuxt-swiper": "^1.1.0",
+    "sass": "^1.61.0",
+    "vite-plugin-vuetify": "^1.0.2",
+    "vuetify": "^3.1.13"
   }
 }
