@@ -12,7 +12,7 @@ export default defineNuxtConfig({
     /* PWA options */
   },
   sitemap: {
-    siteUrl: "https://www.apitechnology.com.np",
+    siteUrl: "https://apitechnology.com.np",
   },
   swiper:{
     modules:['pagination', 'navigation', 'keyboard', 'autoplay']

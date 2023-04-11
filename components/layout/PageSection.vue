@@ -6,12 +6,7 @@ defineProps({
 </script>
 <template>
   <v-card flat height="400" rounded="0">
-    <v-img
-      eager
-      cover
-      class="rounded-0 h-100 w-100"
-      src="https://kitpro.site/securez/wp-content/uploads/sites/142/2023/01/cctv-security-camera-or-home-surveillance-cameras-2022-11-15-09-07-07-utc.jpg"
-    >
+    <v-img eager cover class="rounded-0 h-100 w-100" src="/images/img3.avif">
       <v-overlay
         :model-value="true"
         contained
@@ -58,7 +53,7 @@ div.page-title-text {
 .divider {
   border-radius: 10px;
   width: 100px;
-  height: 6px;
+  height: 4px;
   background-color: rgb(var(--v-theme-primary));
 }
 </style>

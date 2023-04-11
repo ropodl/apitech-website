@@ -72,7 +72,10 @@ const experience = [
               >
                 <span class="rounded-pill overflow-hidden">
                   <v-img
+                    eager
                     cover
+                    width="350"
+                    height="480"
                     class="h-100 w-100 rounded-pill overflow-hidden"
                     src="/images/img2.avif"
                   >
