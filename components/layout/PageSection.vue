@@ -6,7 +6,7 @@ defineProps({
 });
 </script>
 <template>
-  <v-card flat height="400" rounded="0">
+  <v-card flat height="300" rounded="0">
     <v-img eager cover class="rounded-0 h-100 w-100" :src="image">
       <v-overlay
         :model-value="true"
@@ -15,7 +15,7 @@ defineProps({
         persistent
         scrim="transparent"
         class="overlay-opacity"
-        content-class="d-flex justify-center align-end w-100 h-100 text-center"
+        content-class="d-flex justify-center align-end w-100 h-100 text-center text-primary-darken-3"
       >
         <v-container>
           <v-row justify="center">
@@ -39,13 +39,12 @@ defineProps({
 </template>
 
 <style lang="scss">
-// $overlay-opacity : 0.8;
-div.page-title-text {
-  color: rgb(var(--v-theme-primary));
-  &:nth-child(0) {
-    color: rgb(var(--v-theme-primary-darken1));
-  }
-}
+// div.page-title-text {
+//   color: rgb(var(--v-theme-primary-darken-3));
+//   &:nth-child(1) {
+//     color: rgb(var(--v-theme-primary-darken-1));
+//   }
+// }
 .overlay-opacity {
   div.v-overlay__scrim {
     opacity: 0.9 !important;
@@ -58,13 +57,5 @@ div.page-title-text {
       white 100%
     ) !important;
   }
-}
-</style>
-<style scoped>
-.divider {
-  border-radius: 10px;
-  width: 100px;
-  height: 4px;
-  background-color: rgb(var(--v-theme-primary));
 }
 </style>

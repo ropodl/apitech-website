@@ -29,7 +29,7 @@ const clients = [
 <template>
   <v-container class="py-16">
     <v-row>
-      <v-col cols="12">
+      <v-col cols="12" md="5">
         <div class="text-h5 font-weight-bold mb-3 text-primary-darken-3">
           Our Valued Clients
         </div>

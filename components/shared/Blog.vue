@@ -40,7 +40,12 @@ const blogs = [
     <v-row>
       <v-col cols="12" md="4" v-for="blog in blogs">
         <v-hover v-slot="{ isHovering, props }">
-          <v-card flat variant="text" :to="blog['link']" v-bind="props">
+          <v-card
+            :elevation="isHovering ? '4' : '0'"
+            variant="text"
+            :to="blog['link']"
+            v-bind="props"
+          >
             <v-img
               cover
               height="460"
@@ -49,7 +54,6 @@ const blogs = [
               :src="blog['image']"
             >
               <v-card
-                flat
                 class="mx-3 mb-3"
                 style="
                   background-color: rgba(255, 255, 255, 0.8);

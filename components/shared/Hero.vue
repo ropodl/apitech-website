@@ -107,12 +107,7 @@ const createMail = () => {
   </v-container>
 </template>
 <style lang="scss">
-.divider {
-  border-radius: 10px;
-  width: 100px;
-  height: 6px;
-  background-color: rgb(var(--v-theme-primary));
-}
+
 
 .overlay-opacity {
   div.v-overlay__scrim {

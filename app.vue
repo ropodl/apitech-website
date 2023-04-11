@@ -1,8 +1,18 @@
+<script setup>
+import { useTheme } from "vuetify";
+const theme = useTheme();
+onMounted(() => {
+  let dark = localStorage.getItem("isDarkMode") === "true";
+  theme.global.name.value = dark ? "dark" : "light";
+});
+</script>
 <template>
   <NuxtLoadingIndicator />
   <v-app>
     <NuxtLayout>
-      <NuxtPage />
+      <v-main>
+        <NuxtPage />
+      </v-main>
     </NuxtLayout>
   </v-app>
 </template>
@@ -15,18 +25,24 @@
     max-width: 100%;
   }
 }
+div.divider {
+  border-radius: 10px;
+  width: 100px;
+  height: 6px;
+  background-color: rgb(var(--v-theme-primary-darken-3));
+}
 
 // image zoom effect
 .v-img {
+  transition: all 0.3s;
+  .v-img__img {
     transition: all 0.3s;
+    transform: scale(1);
+  }
+  &.zoom {
     .v-img__img {
-        transition: all 0.3s;
-        transform: scale(1);
+      transform: scale(1.1) translateZ(30deg);
     }
-    &.zoom {
-        .v-img__img {
-            transform: scale(1.1);
-        }
-    }
+  }
 }
 </style>

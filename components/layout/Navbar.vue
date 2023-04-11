@@ -1,4 +1,15 @@
 <script setup>
+import { mdiWhiteBalanceSunny, mdiWeatherNight } from "@mdi/js";
+import { useTheme } from "vuetify";
+const theme = useTheme();
+
+onMounted(() => {
+  isDarkMode.value = localStorage.getItem("isDarkMode") === "true";
+  theme.global.name.value = isDarkMode.value ? "dark" : "light";
+});
+
+let isDarkMode = ref(false);
+
 let drawer = ref(false);
 let windowSize = reactive({
   x: 0,
@@ -48,9 +59,15 @@ const onResize = () => {
       y: window.innerHeight,
     };
     if (windowSize.x >= 961) {
-      drawer = false;
+      drawer.value = false;
     }
   }
+};
+
+const themeCheck = () => {
+  isDarkMode.value = localStorage.getItem("isDarkMode") !== "true";
+  localStorage.setItem("isDarkMode", isDarkMode.value);
+  theme.global.name.value = isDarkMode.value ? "dark" : "light";
 };
 </script>
 <template>
@@ -71,7 +88,6 @@ const onResize = () => {
       <v-img min-width="170" max-width="200" src="/logo.png"></v-img>
     </v-btn>
     <v-spacer></v-spacer>
-    <!-- <div> -->
     <v-tabs height="50" class="rounded-pill hidden-sm-and-down" color="primary">
       <template v-for="(link, i) in links">
         <v-hover v-slot:default="{ isHovering, props }">
@@ -87,30 +103,36 @@ const onResize = () => {
           </v-tab>
         </v-hover>
       </template>
-      <v-tab-slider></v-tab-slider>
     </v-tabs>
-    <!-- </div> -->
     <v-spacer></v-spacer>
-    <v-btn
-      icon
-      class="mr-3"
-      variant="tonal"
-      target="_blank"
-      href="https://www.facebook.com/apitechnepal"
-    >
-      <v-icon>
-        <font-awesome-icon icon="fab fa-facebook" />
-      </v-icon>
-    </v-btn>
-    <v-btn
-      icon class="mr-3"
-      variant="tonal"
-      target="_blank"
-      href="https://www.linkedin.com/company/api-technology-pvt.-ltd./"
-    >
-      <v-icon>
-        <font-awesome-icon icon="fab fa-linkedin"></font-awesome-icon>
-      </v-icon>
+    <client-only>
+      <v-btn
+        icon
+        class="mr-3"
+        variant="tonal"
+        target="_blank"
+        href="https://www.facebook.com/apitechnepal"
+      >
+        <v-icon>
+          <font-awesome-icon :icon="['fab', 'fa-facebook']" />
+        </v-icon>
+      </v-btn>
+      <v-btn
+        icon
+        class="mr-3"
+        variant="tonal"
+        target="_blank"
+        href="https://www.linkedin.com/company/api-technology-pvt.-ltd./"
+      >
+        <v-icon>
+          <font-awesome-icon :icon="['fab', 'fa-linkedin']"></font-awesome-icon>
+        </v-icon>
+      </v-btn>
+    </client-only>
+    <v-btn icon variant="tonal" @click="themeCheck">
+      <v-icon
+        :icon="isDarkMode ? mdiWeatherNight : mdiWhiteBalanceSunny"
+      ></v-icon>
     </v-btn>
     <!-- <v-spacer></v-spacer> -->
     <v-app-bar-nav-icon

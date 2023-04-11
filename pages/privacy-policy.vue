@@ -3,18 +3,7 @@
   <v-container>
     <v-row>
       <v-col cols="12">
-        <v-card flat class="rounded-0">
-          <div class="card-top-border"></div>
-          <div class="card-bottom-border"></div>
-          <v-container>
-            <v-row>
-              <v-col cols="12">
-                <Cattitle :first="'Privacy'" :second="'Policy'" />
-                <div class="dynamic-content" v-html="policy"></div>
-              </v-col>
-            </v-row>
-          </v-container>
-        </v-card>
+        <div class="dynamic-content" v-html="policy"></div>
       </v-col>
     </v-row>
   </v-container>
@@ -26,7 +15,6 @@ export default {
   data() {
     return {
       policy: `
-      <!--<h1>Privacy Policy for Api Technology</h1>-->
 <p>At apitechnepal, accessible from apitechnepal.com, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by apitechnepal and how we use it.</p>
 <p>If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us.</p>
 <p>This Privacy Policy applies only to our online activities and is valid for visitors to our website with regards to the information that they shared and/or collect in apitechnepal. This policy is not applicable to any information collected offline or via channels other than this website. Our Privacy Policy was created with the help of the <a href="https://www.privacypolicyonline.com/privacy-policy-generator/">Free Privacy Policy Generator</a>.</p>
