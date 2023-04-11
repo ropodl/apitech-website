@@ -74,20 +74,17 @@ const onResize = () => {
     </v-btn>
     <v-spacer></v-spacer>
     <div>
-      <v-tabs
-        hide-slider
-        height="40"
-        class="hidden-sm-and-down"
-        color="primary"
-      >
+      <v-tabs height="40" class="hidden-sm-and-down" color="primary">
         <template v-for="(link, i) in links">
           <v-hover v-slot:default="{ isHovering, props }">
             <v-tab
-              class="text-capitalize"
+              :ripple="false"
+              v-bind="props"
+              class="text-capitalize px-2"
               :class="isHovering ? 'text-primary' : ''"
               :to="link['route']"
-              v-bind="props"
-              style="transition: all 1s linear !important"
+              color="white"
+              selected-class="bg-primary text-white"
             >
               {{ link["name"] }}
             </v-tab>
@@ -95,16 +92,29 @@ const onResize = () => {
         </template>
       </v-tabs>
     </div>
-    <!-- <v-spacer></v-spacer>
+    <v-spacer></v-spacer>
     <v-btn
       icon
+      class="mr-3"
       variant="tonal"
       target="_blank"
       href="https://www.facebook.com/apitechnepal"
     >
-      FB
+      <v-icon>
+        <font-awesome-icon icon="fab fa-facebook" />
+      </v-icon>
     </v-btn>
-    <v-app-bar-nav-icon
+    <v-btn
+      icon
+      variant="tonal"
+      target="_blank"
+      href="https://www.linkedin.com/company/api-technology-pvt.-ltd./"
+    >
+      <v-icon>
+        <font-awesome-icon icon="fab fa-linkedin"></font-awesome-icon>
+      </v-icon>
+    </v-btn>
+    <!-- <v-app-bar-nav-icon
       class="hidden-md-and-up"
       @click="drawer = !drawer"
     ></v-app-bar-nav-icon> -->
