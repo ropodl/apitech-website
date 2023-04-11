@@ -1,5 +1,11 @@
 <script setup>
 import { mdiAt } from "@mdi/js";
+import { useTheme } from "vuetify";
+const theme = useTheme();
+
+const isDark = computed(() =>
+  theme.global.name.value == "dark" ? true : false
+);
 
 const experience = [
   {
@@ -31,7 +37,7 @@ const createMail = () => {
         contained
         persistent
         no-click-animation
-        scrim="white"
+        :scrim="isDark ? 'black' : 'white'"
         class="overlay-opacity"
         content-class="pt-16"
       >
@@ -74,7 +80,9 @@ const createMail = () => {
             <v-col cols="12" md="6" class="hidden-sm-and-down">
               <div class="d-flex align-center justify-center">
                 <v-card
-                  class="rounded-pill overflow-visible"
+                  flat
+                  color="transparent"
+                  class="overflow-visible"
                   width="350"
                   height="480"
                 >
@@ -107,8 +115,6 @@ const createMail = () => {
   </v-container>
 </template>
 <style lang="scss">
-
-
 .overlay-opacity {
   div.v-overlay__scrim {
     opacity: 0.8 !important;

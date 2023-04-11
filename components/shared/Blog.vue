@@ -1,4 +1,11 @@
 <script setup>
+import { useTheme } from "vuetify";
+const theme = useTheme();
+
+const isDark = computed(() =>
+  theme.global.name.value == "dark" ? true : false
+);
+
 const blogs = [
   {
     image: "/blogs/blog-1.avif",
@@ -27,9 +34,9 @@ const blogs = [
   <v-container class="py-10">
     <v-row justify="center">
       <v-col cols="4" class="text-center pb-0">
-        <v-card-title class="text-h3 font-weight-bold text-primary-darken-3"
-          >Blog & Article</v-card-title
-        >
+        <v-card-title class="text-h3 font-weight-bold text-primary-darken-3">
+          Blog & Article
+        </v-card-title>
         <div class="mx-auto divider"></div>
         <v-card-text>
           We learnt so many things around our clients. Here are some articles
@@ -55,10 +62,12 @@ const blogs = [
             >
               <v-card
                 class="mx-3 mb-3"
-                style="
-                  background-color: rgba(255, 255, 255, 0.8);
-                  backdrop-filter: blur(10px);
-                "
+                :style="{
+                  backgroundColor: isDark
+                    ? 'rgba(21, 21, 21, 0.8)'
+                    : 'rgba(255, 255, 255, 0.8)',
+                  backdropFilter: 'blur(10px)',
+                }"
               >
                 <v-list density="compact" lines="two" bg-color="transparent">
                   <v-list-item>

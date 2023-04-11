@@ -8,6 +8,10 @@ onMounted(() => {
   theme.global.name.value = isDarkMode.value ? "dark" : "light";
 });
 
+const isDark = computed(() =>
+  theme.global.name.value == "dark" ? true : false
+);
+
 let isDarkMode = ref(false);
 
 let drawer = ref(false);
@@ -31,16 +35,6 @@ const links = [
     icon: "info",
     route: "/about",
   },
-  // {
-  //   name: "Our Team",
-  //   icon: "groups",
-  //   route: "/team"
-  // },
-  // {
-  //   name: "Gallery",
-  //   icon: "collections",
-  //   route: "/gallery"
-  // },
   {
     name: "Contact Us",
     icon: "call",
@@ -75,14 +69,9 @@ const themeCheck = () => {
     height="70"
     max-width="1170"
     v-resize="onResize"
-    class="d-flex align-center px-3 position-fixed rounded-pill mx-auto px-3"
-    style="
-      width: 100%;
-      inset: 10px 0 0 0;
-      z-index: 9;
-      background-color: rgba(255, 255, 255, 0.7);
-      backdrop-filter: blur(10px);
-    "
+    class="d-flex align-center px-3 position-fixed rounded-pill mx-auto w-100"
+    :color="isDark ? 'rgba(21,21,21, 0.7)' : 'rgba(255, 255, 255, 0.7)'"
+    style="inset: 10px 0 0 0; z-index: 9; backdrop-filter: blur(10px)"
   >
     <v-btn variant="text" color="transparent" height="70" link to="/">
       <v-img min-width="170" max-width="200" src="/logo.png"></v-img>

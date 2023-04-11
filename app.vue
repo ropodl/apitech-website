@@ -41,7 +41,7 @@ div.divider {
   }
   &.zoom {
     .v-img__img {
-      transform: scale(1.1) translateZ(30deg);
+      transform: scale(1.1);
     }
   }
 }
