@@ -29,7 +29,7 @@ const clients = [
 <template>
   <v-container class="py-16">
     <v-row>
-      <v-col cols="12" md="4">
+      <v-col cols="12">
         <div class="text-h5 font-weight-bold mb-3 text-primary-darken-3">
           Our Valued Clients
         </div>
@@ -40,7 +40,7 @@ const clients = [
         </div>
       </v-col>
       <v-row>
-        <v-col cols="12" md="2" v-for="(item, i) in clients">
+        <v-col cols="6" sm="3" md="2" v-for="(item, i) in clients">
           <v-img height="100" :src="item['image']"></v-img>
         </v-col>
       </v-row>

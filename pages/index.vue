@@ -33,38 +33,10 @@ const bar = [
     description: "Lorem ipsum dolar sit amet consectetur",
   },
 ];
-
-const experience = [
-  {
-    icon: "fal fa-house",
-    title: "Residental Clients",
-    content: "600+",
-  },
-  {
-    icon: "fal fa-car-building",
-    title: "Commerical Clients",
-    content: "900+",
-  },
-  {
-    icon: "fal fa-smile-wink",
-    title: "Happy Clients",
-    content: "2000+",
-  },
-];
 </script>
 <template>
   <LazySharedHero />
   <LazySharedOurClients />
-
-  <v-container>
-    <v-row>
-      <v-col cols="12">
-        <v-card border elevation="0">
-          <AboutBanner />
-        </v-card>
-      </v-col>
-    </v-row>
-  </v-container>
   <LazySharedBlog />
 
   <v-container class="py-10">

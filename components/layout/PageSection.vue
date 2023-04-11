@@ -1,12 +1,13 @@
 <script setup>
 defineProps({
+  image: { type: String, default: "/images/img3.avif" },
   title: String,
   desc: String,
 });
 </script>
 <template>
   <v-card flat height="400" rounded="0">
-    <v-img eager cover class="rounded-0 h-100 w-100" src="/images/img3.avif">
+    <v-img eager cover class="rounded-0 h-100 w-100" :src="image">
       <v-overlay
         :model-value="true"
         contained
@@ -51,7 +52,9 @@ div.page-title-text {
     background-image: linear-gradient(
       180deg,
       transparent 0%,
-      white 50%,
+      rgba(255, 255, 255, 0.8) 50%,
+      white 80%,
+      white 90%,
       white 100%
     ) !important;
   }

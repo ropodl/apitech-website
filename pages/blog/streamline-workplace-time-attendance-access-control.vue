@@ -1,6 +1,7 @@
 <template>
   <LazyLayoutPageSection
     title="Streamlining Your Workplace with Time Attendance and Access Control Solutions"
+    image="/blogs/blog-3.avif"
   />
   <v-container>
     <v-row justify="center">

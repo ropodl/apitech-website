@@ -1,21 +1,21 @@
 <script setup>
 const blogs = [
   {
-    image: "/blogs/blog-1.jpg",
+    image: "/blogs/blog-1.avif",
     title:
       "Protecting Your Property: The Importance of CCTV and Security Systems",
     desc: "Something to remember me by",
     link: "/blog/protecting-property-importance-cctv-security-systems",
   },
   {
-    image: "/blogs/blog-2.jpg",
+    image: "/blogs/blog-2.avif",
     title:
       "The Importance of Fire Extinguishers in Protecting Your Home or Business",
     desc: "Something to remember me by",
     link: "/blog/fire-extinguishers-protect-home-business",
   },
   {
-    image: "/blogs/blog-3.jpg",
+    image: "/blogs/blog-3.avif",
     title:
       "Streamlining Your Workplace with Time Attendance and Access Control Solutions",
     desc: "Something to remember me by",
@@ -39,32 +39,36 @@ const blogs = [
     </v-row>
     <v-row>
       <v-col cols="12" md="4" v-for="blog in blogs">
-        <v-card flat variant="text" :to="blog['link']">
-          <v-img cover height="470" class="align-end" :src="blog['image']">
-            <v-card
-              flat
-              class="mx-3 mb-3"
-              style="
-                background-color: rgba(255, 255, 255, 0.8);
-                backdrop-filter: blur(10px);
-              "
+        <v-hover v-slot="{ isHovering, props }">
+          <v-card flat variant="text" :to="blog['link']" v-bind="props">
+            <v-img
+              cover
+              height="460"
+              class="align-end"
+              :class="isHovering ? 'zoom' : ''"
+              :src="blog['image']"
             >
-              <v-list class="py-0" lines="two" bg-color="transparent">
-                <v-list-item>
-                  <v-list-item-subtitle
-                    class="text-subtitle-1 font-weight-medium"
-                    v-text="blog['title']"
-                    style="line-height: 1.6rem; opacity: 1"
-                  ></v-list-item-subtitle>
-                </v-list-item>
-              </v-list>
-              <!-- <v-card-text
-                class="text-h6 font-weight-bold text-primary-darken-3"
-                v-text="blog['title']"
-              ></v-card-text> -->
-            </v-card>
-          </v-img>
-        </v-card>
+              <v-card
+                flat
+                class="mx-3 mb-3"
+                style="
+                  background-color: rgba(255, 255, 255, 0.8);
+                  backdrop-filter: blur(10px);
+                "
+              >
+                <v-list density="compact" lines="two" bg-color="transparent">
+                  <v-list-item>
+                    <v-list-item-subtitle
+                      class="text-subtitle-1 font-weight-medium"
+                      v-text="blog['title']"
+                      style="line-height: 1.6rem; opacity: 1"
+                    ></v-list-item-subtitle>
+                  </v-list-item>
+                </v-list>
+              </v-card>
+            </v-img>
+          </v-card>
+        </v-hover>
       </v-col>
     </v-row>
   </v-container>

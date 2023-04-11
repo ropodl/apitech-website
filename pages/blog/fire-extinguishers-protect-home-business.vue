@@ -1,6 +1,7 @@
 <template>
   <LazyLayoutPageSection
     title="The Importance of Fire Extinguishers in Protecting Your Home or Business"
+    image="/blogs/blog-2.avif"
   />
   <v-container>
     <v-row justify="center">
