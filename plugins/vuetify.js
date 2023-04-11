@@ -2,7 +2,6 @@ import { createVuetify } from "vuetify";
 import { md3 } from "vuetify/blueprints";
 import colors from "vuetify/lib/util/colors";
 // Icons
-import { fa } from "vuetify/iconsets/fa";
 import { aliases, mdi } from "vuetify/iconsets/mdi-svg";
 
 export default defineNuxtPlugin((nuxtApp) => {
@@ -13,7 +12,6 @@ export default defineNuxtPlugin((nuxtApp) => {
       defaultSet: "mdi",
       aliases,
       sets: {
-        fa,
         mdi,
       },
     },

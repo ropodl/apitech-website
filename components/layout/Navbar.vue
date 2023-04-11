@@ -74,16 +74,15 @@ const onResize = () => {
     </v-btn>
     <v-spacer></v-spacer>
     <div>
-      <v-tabs height="40" class="hidden-sm-and-down" color="primary">
+      <v-tabs height="50" class="hidden-sm-and-down" color="primary">
         <template v-for="(link, i) in links">
           <v-hover v-slot:default="{ isHovering, props }">
-            <v-tab
+            <v-tab exact
               :ripple="false"
               v-bind="props"
               class="text-capitalize px-2"
               :class="isHovering ? 'text-primary' : ''"
               :to="link['route']"
-              color="white"
               selected-class="bg-primary text-white"
             >
               {{ link["name"] }}

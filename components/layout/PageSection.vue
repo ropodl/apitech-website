@@ -16,14 +16,22 @@ defineProps({
         class="overlay-opacity"
         content-class="d-flex justify-center align-end w-100 h-100 text-center"
       >
-        <div class="py-16">
-          <div
-            class="text-h2 font-weight-bold text-capitalize page-title-text mb-3"
-            v-html="title"
-          ></div>
-          <div class="mx-auto divider"></div>
-          <v-card-text style="width: 500px" v-text="desc"></v-card-text>
-        </div>
+        <v-container>
+          <v-row justify="center">
+            <v-col cols="12">
+              <div
+                class="text-h2 font-weight-bold text-capitalize page-title-text mb-3"
+                v-html="title"
+              ></div>
+              <div class="mx-auto divider"></div>
+              <v-card-text
+                v-if="desc"
+                style="width: 500px"
+                v-text="desc"
+              ></v-card-text>
+            </v-col>
+          </v-row>
+        </v-container>
       </v-overlay>
     </v-img>
   </v-card>

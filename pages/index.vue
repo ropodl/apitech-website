@@ -65,6 +65,7 @@ const experience = [
       </v-col>
     </v-row>
   </v-container>
+  <LazySharedBlog />
 
   <v-container class="py-10">
     <v-row align="center" no-gutters>
