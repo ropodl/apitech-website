@@ -20,11 +20,7 @@ const experience = [
 ];
 </script>
 <template>
-  <v-img
-    cover
-    height="650"
-    src="https://kitpro.site/securez/wp-content/uploads/sites/142/2023/01/cctv-cameras-on-the-wall-record-video-all-day-to-p-2022-10-11-17-18-57-utc.jpg"
-  >
+  <v-img cover height="650" src="/images/img1.avif">
     <v-overlay
       :model-value="true"
       contained
@@ -78,7 +74,7 @@ const experience = [
                   <v-img
                     cover
                     class="h-100 w-100 rounded-pill overflow-hidden"
-                    src="https://kitpro.site/securez/wp-content/uploads/sites/142/2023/01/image-1-721x1024.jpg"
+                    src="/images/img2.avif"
                   >
                   </v-img>
                 </span>
