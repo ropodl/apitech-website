@@ -1,4 +1,6 @@
 import { createVuetify } from "vuetify";
+import "vuetify/styles";
+
 import { md3 } from "vuetify/blueprints";
 import colors from "vuetify/lib/util/colors";
 // Icons

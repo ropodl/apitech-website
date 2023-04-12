@@ -1,6 +1,6 @@
 import vuetify from "vite-plugin-vuetify";
 export default defineNuxtConfig({
-  css: ["vuetify/lib/styles/main.sass",
+  css: [
   '@fortawesome/fontawesome-svg-core/styles.css'
   ],
   devtools: false,
@@ -50,7 +50,9 @@ export default defineNuxtConfig({
     /* Treeshaking: https://next.vuetifyjs.com/en/features/treeshaking/ */
     async (options, nuxt) => {
       nuxt.hooks.hook("vite:extendConfig", (config) => {
-        config?.plugins?.push(vuetify());
+        config?.plugins?.push(vuetify({
+          autoImport: true,
+        }));
       });
     },
   ],
