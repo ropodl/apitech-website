@@ -80,7 +80,6 @@ const rules = {
   message: [
     (value) => {
       if (value?.length > 3) return true;
-
       return "Message must be at least 3 characters.";
     },
   ],
