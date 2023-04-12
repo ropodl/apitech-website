@@ -130,20 +130,15 @@ const themeCheck = () => {
       ></v-icon>
     </v-btn>
     <!-- <v-spacer></v-spacer> -->
-    <v-app-bar-nav-icon variant="tonal"
+    <v-app-bar-nav-icon
+      variant="tonal"
       class="hidden-md-and-up ml-3"
       @click="drawer = !drawer"
     ></v-app-bar-nav-icon>
   </v-card>
 
   <v-card tile v-if="drawer">
-    <v-navigation-drawer
-      location="bottom"
-      height="auto"
-      temporary
-      app
-      v-model="drawer"
-    >
+    <v-navigation-drawer location="bottom" height="auto" temporary>
       <v-list dense>
         <v-list-item v-for="link in links" :to="link.route" color="primary">
           <template #prepend>

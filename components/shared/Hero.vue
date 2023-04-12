@@ -44,7 +44,7 @@ const createMail = () => {
         <v-container class="h-100 w-100">
           <v-row justify="center" align="center" class="h-100">
             <v-col cols="12" md="6">
-              <div class="text-md-h2 text-sm-h1 text-h3 font-weight-black">
+              <div class="text-md-h2 text-sm-h2 text-h3 font-weight-black">
                 Professional <br class="hidden-sm-and-down" /><span
                   class="text-primary"
                   >Security Services</span

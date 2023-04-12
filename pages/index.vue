@@ -36,6 +36,7 @@ const bar = [
 </script>
 <template>
   <LazySharedHero />
+  <LazySharedWorkingProcess />
   <LazySharedOurClients />
   <LazySharedBlog />
 
@@ -57,7 +58,7 @@ const bar = [
           ]"
         >
           <v-card-subtitle class="text-center mb-3">
-            <v-avatar>
+            <v-avatar rounded="0">
               <v-icon
                 size="60"
                 color="white"

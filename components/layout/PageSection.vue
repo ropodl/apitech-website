@@ -29,12 +29,12 @@ defineProps({
             <v-col cols="12">
               <div
                 class="text-h2 font-weight-bold text-capitalize page-title-text mb-3"
-                :class="isDark ? 'text-white' : 'text-primary'"
+                :class="isDark ? 'text-grey-lighten-3' : 'text-primary'"
                 v-html="title"
               ></div>
               <div
                 class="mx-auto divider"
-                :class="isDark ? 'bg-white' : 'bg-primary'"
+                :class="isDark ? 'bg-grey-lighten-3' : 'bg-primary'"
               ></div>
             </v-col>
           </v-row>

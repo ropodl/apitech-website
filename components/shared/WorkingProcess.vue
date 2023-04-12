@@ -1,0 +1,69 @@
+<script setup>
+import {
+  mdiCogClockwise,
+  mdiForum,
+  mdiAccountHardHatOutline,
+  mdiArrowTopRight,
+  mdiArrowRight,
+mdiArrowRightThin,
+} from "@mdi/js";
+import { useTheme } from "vuetify";
+const theme = useTheme();
+
+const isDark = computed(() =>
+  theme.global.name.value == "dark" ? true : false
+);
+
+const processes = [
+  {
+    icon: mdiForum,
+    title: "Discussion",
+    desc: "Consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+  },
+  {
+    icon: mdiCogClockwise,
+    title: "Installation",
+    desc: "Consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+  },
+  {
+    icon: mdiAccountHardHatOutline,
+    title: "Maintenance",
+    desc: "Consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+  },
+];
+</script>
+<template>
+  <v-container class="py-10">
+    <v-row justify="center">
+      <v-col cols="6" class="text-center pb-0">
+        <v-card-title class="text-h3 font-weight-bold text-primary-darken-3">
+          Our Working Process
+        </v-card-title>
+        <div class="mx-auto divider"></div>
+        <v-card-text>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+          tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+        </v-card-text>
+      </v-col>
+    </v-row>
+    <v-row justify="space-between">
+      <v-col cols="12" md="4" v-for="(process, i) in processes">
+        <v-card-text class="text-center mb-n16">
+          <v-avatar class="bg-primary" size="100" style="z-index: 1">
+            <v-icon size="70" :icon="process['icon']"></v-icon>
+          </v-avatar>
+        </v-card-text>
+        <v-card class="pt-16 pb-10 px-10">
+          <v-card-title
+            class="text-wrap text-center"
+            v-text="process['title']"
+          ></v-card-title>
+          <v-card-text
+            class="text-center"
+            v-text="process['desc']"
+          ></v-card-text>
+        </v-card>
+      </v-col>
+    </v-row>
+  </v-container>
+</template>
