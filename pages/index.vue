@@ -7,8 +7,14 @@ import {
 } from "@mdi/js";
 
 useHead({
-  title: "API Technology",
-  meta: [{ name: "description", content: "My amazing site." }],
+  title: "API Technology - B2B Service in Web, Mobile & More",
+  meta: [
+    {
+      name: "description",
+      content:
+        "API Technology provides business to business services in Web, Mobile, Networking, ICT and Electronics Hardware areas.",
+    },
+  ],
 });
 
 const bar = [
@@ -36,8 +42,8 @@ const bar = [
 </script>
 <template>
   <LazySharedHero />
-  <LazySharedWorkingProcess />
   <LazySharedOurClients />
+  <LazySharedWorkingProcess />
   <LazySharedBlog />
 
   <v-container class="py-10">

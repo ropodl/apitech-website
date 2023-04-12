@@ -1,3 +1,15 @@
+<script setup>
+useHead({
+  title: "Learn More About API Technology",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Discover how API Technology can help your business with our B2B services in Web, Mobile, Networking, ICT and Electronics Hardware.",
+    },
+  ],
+});
+</script>
 <template>
   <LazyLayoutPageSection title="About Us" />
   <v-container>

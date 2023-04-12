@@ -1,3 +1,16 @@
+<script setup>
+useHead({
+  title:
+    "API Technology - The Importance of Fire Extinguishers in Protecting Your Home or Business",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Fire safety is crucial for home and business owners. Learn how having a reliable fire extinguisher can help save lives, minimize damage, and comply with regulations. Find out about the different types of fire extinguishers and how to properly maintain them to keep your property safe and secure.",
+    },
+  ],
+});
+</script>
 <template>
   <LazyLayoutPageSection
     title="The Importance of Fire Extinguishers in Protecting Your Home or Business"

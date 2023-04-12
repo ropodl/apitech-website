@@ -7,7 +7,7 @@ onMounted(() => {
 });
 </script>
 <template>
-  <NuxtLoadingIndicator />
+  <NuxtLoadingIndicator color="primary" />
   <v-app>
     <NuxtLayout>
       <v-main>

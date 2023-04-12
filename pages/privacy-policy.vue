@@ -1,3 +1,15 @@
+<script setup>
+useHead({
+  title: "API Technology - B2B Service Privacy Policy",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Learn how API Technology protects your privacy when you use our business to business services in Web, Mobile, Networking, ICT and Electronics Hardware.",
+    },
+  ],
+});
+</script>
 <template>
   <LazyLayoutPageSection title="Privacy Policy" />
   <v-container>

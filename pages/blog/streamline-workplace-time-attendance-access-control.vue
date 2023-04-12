@@ -1,3 +1,17 @@
+<script setup>
+useHead({
+  title:
+    "API Technology - Streamline Workplace Processes with Time Attendance and Access Control Solutions",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Discover how time attendance and access control solutions can automate key processes, save time and resources, and improve productivity. Learn about different types of systems available, benefits of implementation, and factors to consider when choosing the right system for your business.",
+    },
+  ],
+});
+</script>
+
 <template>
   <LazyLayoutPageSection
     title="Streamlining Your Workplace with Time Attendance and Access Control Solutions"

@@ -1,6 +1,19 @@
+<script setup>
+useHead({
+  title:
+    "API Technology - The Benefits of Installing a CCTV and Security System for Your Property",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Protecting your property is essential for any property owner, and installing a CCTV and security system can be an effective way to achieve this. Discover the benefits of CCTV systems, including deterrence, evidence, and monitoring, as well as other security measures you can take to protect your property. Learn more about choosing the right security system for your needs and ensuring it is installed correctly to have peace of mind that your property is safe and secure.",
+    },
+  ],
+});
+</script>
 <template>
   <LazyLayoutPageSection
-    title="Streamlining Your Workplace with Time Attendance and Access Control Solutions"
+    title="Protecting Your Property: The Importance of CCTV and Security Systems"
     image="/blogs/blog-1.avif"
   />
   <v-container>

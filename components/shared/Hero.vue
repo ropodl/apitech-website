@@ -37,6 +37,7 @@ const createMail = () => {
         contained
         persistent
         no-click-animation
+        scroll-strategy="block"
         :scrim="isDark ? 'black' : 'white'"
         class="overlay-opacity"
         content-class="pt-16"
@@ -51,13 +52,16 @@ const createMail = () => {
                 ><br class="hidden-sm-and-down" />
                 You Can Trust
               </div>
-              <div class="divider my-6" :class="isDark?'bg-primary':''"></div>
+              <div
+                class="divider my-6"
+                :class="isDark ? 'bg-primary' : ''"
+              ></div>
               <div class="mb-6">
                 We, at Api Technology, offer B2B services in Web, Android,
                 Networking, ICT, and Electronics Hardware. We excel in providing
-                IoT, Electronics & Communication, and Security
-                Technologies for critical applications across various markets,
-                including government, medical/industrial, and consumer.
+                IoT, Electronics & Communication, and Security Technologies for
+                critical applications across various markets, including
+                government, medical/industrial, and consumer.
               </div>
               <v-row no-gutters class="hidden-md-and-down">
                 <v-col cols="12" sm="6" md="4" v-for="(exp, i) in experience">

@@ -1,3 +1,15 @@
+<script setup>
+useHead({
+  title: "API Technology - B2B Service Terms and Conditions",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Find out our terms and conditions for API Technology's business to business services in Web, Mobile, Networking, ICT and Electronics Hardware.",
+    },
+  ],
+});
+</script>
 <template>
   <LazyLayoutPageSection title="Terms and Conditions" />
   <v-container>

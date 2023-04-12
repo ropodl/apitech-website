@@ -37,8 +37,8 @@ const contactList = [
 ];
 </script>
 <template>
-  <v-footer theme="dark">
-    <v-spacer></v-spacer>
+  <v-card theme="dark">
+    <!-- <v-spacer></v-spacer> -->
     <v-container class="mt-10 mb-5">
       <v-row>
         <v-col cols="12" xs="12" sm="12" md="4">
@@ -93,7 +93,7 @@ const contactList = [
       </v-row>
     </v-container>
     <v-spacer></v-spacer>
-  </v-footer>
+  </v-card>
   <!-- <v-divider></v-divider> -->
   <v-footer theme="dark">
     <v-container>
