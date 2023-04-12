@@ -1,23 +1,24 @@
 <script setup>
 import { useTheme } from "vuetify";
 const theme = useTheme();
+
 onMounted(() => {
   let dark = localStorage.getItem("isDarkMode") === "true";
   theme.global.name.value = dark ? "dark" : "light";
 });
 </script>
+
 <template>
   <NuxtLoadingIndicator color="primary" />
   <v-app>
     <NuxtLayout>
-      <v-main>
-        <NuxtPage />
-      </v-main>
+      <NuxtPage />
     </NuxtLayout>
   </v-app>
 </template>
+
 <style lang="scss">
-::selection{
+::selection {
   color: white;
   background-color: rgb(var(--v-theme-primary-darken-3));
 }

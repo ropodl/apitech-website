@@ -1,4 +1,6 @@
 <script setup>
+import { mdiClockOutline, mdiEmail, mdiMapMarker, mdiPhone } from "@mdi/js";
+
 const quickLinks = [
   {
     title: "Term & Conditions",
@@ -23,22 +25,22 @@ const footerSocial = [
 ];
 const contactList = [
   {
+    icon: mdiMapMarker,
     title: "Mid Baneshwor, Kathmandu",
-    icon: "fal fa-map-marker-alt",
   },
   {
+    icon: mdiPhone,
     title: "01-4472774",
-    icon: "fal fa-phone-alt",
   },
   {
+    icon: mdiEmail,
     title: "info@apitech.com.np",
-    icon: "fal fa-envelope",
   },
 ];
 </script>
 <template>
-  <v-card rounded="0" theme="dark">
-    <v-container class="mt-10 mb-5">
+  <v-footer>
+    <v-container>
       <v-row>
         <v-col cols="12" xs="12" sm="12" md="4">
           <v-img
@@ -62,8 +64,9 @@ const contactList = [
             </li>
           </ul>
         </v-col>
-        <v-col cols="12" xs="12" sm="6" md="3">
-          <!-- <Cattitle :first="'Quick'" :second="'Links'" /> -->
+        <v-col cols="12" xs="12" sm="6" md="2">
+          <div class="text-h6 font-weight-bold">Quick Links</div>
+          <v-divider class="my-3"></v-divider>
           <ul class="quick-link-list">
             <li v-for="(quick, i) in quickLinks" :key="i">
               <router-link :to="quick.link">{{ quick.title }}</router-link>
@@ -71,7 +74,8 @@ const contactList = [
           </ul>
         </v-col>
         <v-col cols="12" xs="12" sm="6" md="3">
-          <!-- <Cattitle :first="'Contact'" :second="'Us'" /> -->
+          <div class="text-h6 font-weight-bold">Quick Info</div>
+          <v-divider class="my-3"></v-divider>
           <ul class="contact-us-list">
             <li
               v-for="(contact, i) in contactList"
@@ -85,15 +89,17 @@ const contactList = [
             </li>
           </ul>
         </v-col>
-        <v-col cols="12" xs="12" sm="12" md="2">
-          <!-- <Cattitle :first="'Special'" :second="'Partner'" /> -->
-          <!-- <v-img width="250" src="/certified-partner-logo.avif"></v-img> -->
+        <v-col cols="12" xs="12" sm="12" md="3">
+          <div class="text-h6 font-weight-bold">Work Hours</div>
+          <v-divider class="my-3"></v-divider>
+          <div class="mb-3">
+            <v-icon :icon="mdiClockOutline"></v-icon>
+            10 AM - 5 PM, Sunday - Friday
+          </div>
+          <div class="mb-3">Please feel free to visit us at given time.</div>
         </v-col>
       </v-row>
-    </v-container>
-  </v-card>
-  <v-card rounded="0" theme="dark">
-    <v-container>
+      <v-divider></v-divider>
       <v-row>
         <v-col
           class="d-flex justify-center text--center text-overline"
@@ -105,7 +111,7 @@ const contactList = [
         </v-col>
       </v-row>
     </v-container>
-  </v-card>
+  </v-footer>
 </template>
 
 <style lang="scss">

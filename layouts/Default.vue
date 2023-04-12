@@ -1,12 +1,8 @@
 <template>
-  <v-app>
-    <v-layout>
-      <LazyLayoutNavbar />
-      <v-main>
-        <slot />
-      </v-main>
-    </v-layout>
+  <LazyLayoutNavbar />
+  <LazyLayoutGotop />
+  <v-main>
+    <slot />
     <LazyLayoutFooter />
-    <LazyLayoutGotop />
-  </v-app>
+  </v-main>
 </template>
