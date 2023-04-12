@@ -7,5 +7,6 @@
       </v-main>
     </v-layout>
     <LazyLayoutFooter />
+    <LazyLayoutGotop />
   </v-app>
 </template>
