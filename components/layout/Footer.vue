@@ -39,7 +39,7 @@ const contactList = [
 ];
 </script>
 <template>
-  <v-footer>
+  <v-footer theme="dark">
     <v-container>
       <v-row class="mb-3">
         <v-col cols="12" xs="12" sm="12" md="4">

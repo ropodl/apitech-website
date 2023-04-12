@@ -80,11 +80,11 @@ const themeCheck = () => {
           height="70"
           v-resize="onResize"
           class="d-flex align-center px-3 rounded-pill mx-auto"
-          :color="isDark ? 'rgba(21,21,21, 0.7)' : 'rgba(255, 255, 255, 0.7)'"
+          color="rgba(var(--v-theme-surface), 0.7)"
           style="backdrop-filter: blur(10px)"
         >
-          <v-btn variant="text" color="transparent" height="70" link to="/">
-            <v-img min-width="170" max-width="200" src="/logo.png"></v-img>
+          <v-btn variant="text" color="transparent" height="70" to="/">
+            <LayoutLogo width="200" height="70" />
           </v-btn>
           <v-spacer></v-spacer>
           <v-tabs
@@ -142,7 +142,6 @@ const themeCheck = () => {
               :icon="isDarkMode ? mdiWeatherNight : mdiWhiteBalanceSunny"
             ></v-icon>
           </v-btn>
-
           <v-app-bar-nav-icon
             variant="tonal"
             :color="isDark ? 'white' : 'primary'"
