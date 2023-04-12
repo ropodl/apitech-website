@@ -159,7 +159,6 @@ const themeCheck = () => {
         <template #prepend>
           <v-icon :icon="link['icon']"></v-icon>
         </template>
-
         <v-list-item-title>{{ link["name"] }}</v-list-item-title>
       </v-list-item>
     </v-list>
