@@ -11,34 +11,14 @@ const quickLinks = [
 ];
 const footerSocial = [
   {
-    id: "1",
     title: "Facebook",
     icon: "fab fa-facebook",
     link: "https://www.facebook.com/apitechnepal",
   },
   {
-    id: "2",
-    title: "Twitter",
-    icon: "fab fa-twitter",
-    link: "https://www.twitter.com/apitechnepal",
-  },
-  {
-    id: "3",
-    title: "Instagram",
-    icon: "fab fa-instagram",
-    link: "https://www.instagram.com/apitechnepal",
-  },
-  {
-    id: "4",
     title: "LinkedIn",
     icon: "fab fa-linkedin",
     link: "https://www.linkedin.com/apitechnepal",
-  },
-  {
-    id: "5",
-    title: "Youtube",
-    icon: "fab fa-youtube",
-    link: "https://www.youtube.com/apitechnepal",
   },
 ];
 const contactList = [

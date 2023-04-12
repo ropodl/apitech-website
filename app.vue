@@ -17,6 +17,10 @@ onMounted(() => {
   </v-app>
 </template>
 <style lang="scss">
+::selection{
+  color: white;
+  background-color: rgb(var(--v-theme-primary-darken-3));
+}
 @media (min-width: 1280px) and (min-width: 1920px) {
   .v-container {
     max-width: 1366px !important;

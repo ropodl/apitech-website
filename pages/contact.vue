@@ -35,14 +35,30 @@ const infoList = [
   <LazyLayoutPageSection title="Contact Us" />
   <v-container>
     <v-row>
-      <v-col cols="12" md="6">
-
+      <v-col cols="12" md="4">
+        <v-card>
+          <v-card-text class="pb-0">
+            <v-text-field placeholder="Full Name"></v-text-field>
+            <v-text-field placeholder="Phone Number"></v-text-field>
+            <v-text-field placeholder="Email Address"></v-text-field>
+            <v-textarea placeholder="Message"></v-textarea>
+          </v-card-text>
+          <v-card-text class="pt-0">
+            <v-btn
+              size="large"
+              rounded="sm"
+              variant="flat"
+              class="text-capitalize px-16"
+              >Submit</v-btn
+            >
+          </v-card-text>
+        </v-card>
+      </v-col>
+      <v-col cols="12" md="8">
         <div class="text-h2 font-weight-black mb-6">
           Excited about the project? <br />
           Please <span class="primary--text">get in touch.</span>
         </div>
-      </v-col>
-      <v-col cols="12" md="6" class="py-10">
         <v-row>
           <v-col
             class=""
@@ -87,7 +103,7 @@ const infoList = [
             :style="{
               border: 0,
               minHeight: '400px',
-              filter: isDark?'grayscale(1) invert(1)':'',
+              filter: isDark ? 'grayscale(1) invert(1)' : '',
             }"
             aria-hidden="false"
             tabindex="0"
@@ -98,8 +114,3 @@ const infoList = [
     </v-row>
   </v-container>
 </template>
-<style scoped>
-div.dark {
-  filter: grayscale(1) !important;
-}
-</style>
