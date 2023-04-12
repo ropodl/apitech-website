@@ -51,11 +51,11 @@ const createMail = () => {
                 ><br class="hidden-sm-and-down" />
                 You Can Trust
               </div>
-              <div class="divider my-6"></div>
+              <div class="divider my-6" :class="isDark?'bg-primary':''"></div>
               <div class="mb-6">
                 We, at Api Technology, offer B2B services in Web, Android,
                 Networking, ICT, and Electronics Hardware. We excel in providing
-                Internet of Things, Electronics & Communication, and Security
+                IoT, Electronics & Communication, and Security
                 Technologies for critical applications across various markets,
                 including government, medical/industrial, and consumer.
               </div>
@@ -63,10 +63,7 @@ const createMail = () => {
                 <v-col cols="12" sm="6" md="4" v-for="(exp, i) in experience">
                   <v-card flat color="transparent">
                     <v-card-title
-                      class="text-center text-h3 mb-3 font-weight-black text-wrap"
-                      :class="[
-                        'text-primary-darken-' + (experience.length - i),
-                      ]"
+                      class="text-center text-h4 mb-3 font-weight-black text-wrap text-primary"
                       v-text="exp['number']"
                     ></v-card-title>
                     <v-card-text

@@ -84,9 +84,8 @@ const themeCheck = () => {
             :ripple="false"
             v-bind="props"
             class="text-capitalize rounded-pill"
-            :class="isHovering ? 'text-primary' : ''"
             :to="link['route']"
-            selected-class="bg-primary text-white"
+            selected-class="text-white"
           >
             {{ link["name"] }}
           </v-tab>
@@ -99,6 +98,7 @@ const themeCheck = () => {
         icon
         class="mr-3"
         variant="tonal"
+        :color="isDark ? 'white' : 'primary'"
         target="_blank"
         href="https://www.facebook.com/apitechnepal"
       >
@@ -110,6 +110,7 @@ const themeCheck = () => {
         icon
         class="mr-3"
         variant="tonal"
+        :color="isDark ? 'white' : 'primary'"
         target="_blank"
         href="https://www.linkedin.com/company/api-technology-pvt.-ltd./"
       >
@@ -118,29 +119,46 @@ const themeCheck = () => {
         </v-icon>
       </v-btn>
     </client-only>
-    <v-btn icon variant="tonal" @click="themeCheck">
+    <v-btn
+      icon
+      variant="tonal"
+      :color="isDark ? 'white' : 'primary'"
+      @click="themeCheck"
+    >
       <v-icon
         :icon="isDarkMode ? mdiWeatherNight : mdiWhiteBalanceSunny"
       ></v-icon>
     </v-btn>
     <!-- <v-spacer></v-spacer> -->
-    <v-app-bar-nav-icon
-      class="hidden-md-and-up"
+    <v-app-bar-nav-icon variant="tonal"
+      class="hidden-md-and-up ml-3"
       @click="drawer = !drawer"
     ></v-app-bar-nav-icon>
   </v-card>
 
   <v-card tile v-if="drawer">
-    <v-navigation-drawer bottom height="auto" temporary app v-model="drawer">
+    <v-navigation-drawer
+      location="bottom"
+      height="auto"
+      temporary
+      app
+      v-model="drawer"
+    >
       <v-list dense>
         <v-list-item v-for="link in links" :to="link.route" color="primary">
           <template #prepend>
             <v-icon>{{ link.icon }}</v-icon>
           </template>
 
-          <v-list-item-title>{{ link.name }}</v-list-item-title>
+          <v-list-item-title>{{ link["name"] }}</v-list-item-title>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
   </v-card>
 </template>
+<style>
+.v-slide-group-item--active {
+  color: white;
+  background-color: rgba(var(--v-theme-primary-darken-3), 0.8);
+}
+</style>

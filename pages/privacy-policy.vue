@@ -1,8 +1,8 @@
 <template>
   <LazyLayoutPageSection title="Privacy Policy" />
   <v-container>
-    <v-row>
-      <v-col cols="12">
+    <v-row justify="center">
+      <v-col cols="12" md="8">
         <div class="dynamic-content" v-html="policy"></div>
       </v-col>
     </v-row>

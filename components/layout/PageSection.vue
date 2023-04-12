@@ -36,11 +36,6 @@ defineProps({
                 class="mx-auto divider"
                 :class="isDark ? 'bg-white' : 'bg-primary'"
               ></div>
-              <!-- <v-card-text
-                v-if="desc"
-                style="width: 500px"
-                v-text="desc"
-              ></v-card-text> -->
             </v-col>
           </v-row>
         </v-container>
