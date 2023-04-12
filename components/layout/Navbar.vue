@@ -146,7 +146,7 @@ const themeCheck = () => {
           <v-app-bar-nav-icon
             variant="tonal"
             :color="isDark ? 'white' : 'primary'"
-            class="ml-3"
+            class="ml-3 hidden-md-and-up"
             @click="drawer = !drawer"
           ></v-app-bar-nav-icon>
         </v-card>
@@ -154,11 +154,11 @@ const themeCheck = () => {
     </v-row>
   </v-container>
 
-  <v-navigation-drawer v-model="drawer" location="bottom">
+  <v-navigation-drawer v-model="drawer" location="bottom" temporary>
     <v-list dense>
       <v-list-item v-for="link in links" :to="link['link']" color="primary">
         <template #prepend>
-          <v-icon>{{ link.icon }}</v-icon>
+          <v-icon :icon="link['icon']"></v-icon>
         </template>
 
         <v-list-item-title>{{ link["name"] }}</v-list-item-title>

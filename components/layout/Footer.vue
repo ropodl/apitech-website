@@ -14,12 +14,12 @@ const quickLinks = [
 const footerSocial = [
   {
     title: "Facebook",
-    icon: "fab fa-facebook",
+    icon: "['fab', 'fa-facebook']",
     link: "https://www.facebook.com/apitechnepal",
   },
   {
     title: "LinkedIn",
-    icon: "fab fa-linkedin",
+    icon: "['fab', 'fa-linkedin']",
     link: "https://www.linkedin.com/apitechnepal",
   },
 ];
@@ -41,28 +41,48 @@ const contactList = [
 <template>
   <v-footer>
     <v-container>
-      <v-row>
+      <v-row class="mb-3">
         <v-col cols="12" xs="12" sm="12" md="4">
           <v-img
-            class="mb-4"
+            class="mb-3"
             height="100"
             width="350"
             src="/logo.png"
             alt="Api Technology Logo"
           ></v-img>
-          <div class="mb-4">
+          <div class="mb-3">
             API Technology offer you a business to business service in the Web,
             Mobile, Networking, ICT and Electronics Hardware platform.
           </div>
-          <ul class="footer-social">
-            <li v-for="(social, i) in footerSocial" :key="i">
-              <a :href="social.link" target="_blank" rel="noopener noreferrer">
-                <v-icon>
-                  {{ social.icon }}
-                </v-icon>
-              </a>
-            </li>
-          </ul>
+          <client-only>
+            <v-btn
+              icon
+              class="mr-3"
+              variant="tonal"
+              color="white"
+              target="_blank"
+              href="https://www.facebook.com/apitechnepal"
+            >
+              <v-icon size="x-large">
+                <font-awesome-icon :icon="['fab', 'fa-facebook']" />
+              </v-icon>
+            </v-btn>
+            <v-btn
+              icon
+              rounded="circle"
+              class="mr-3"
+              variant="tonal"
+              color="white"
+              target="_blank"
+              href="https://www.linkedin.com/company/api-technology-pvt.-ltd./"
+            >
+              <v-icon>
+                <font-awesome-icon
+                  :icon="['fab', 'fa-linkedin']"
+                ></font-awesome-icon>
+              </v-icon>
+            </v-btn>
+          </client-only>
         </v-col>
         <v-col cols="12" xs="12" sm="6" md="2">
           <div class="text-h6 font-weight-bold">Quick Links</div>
@@ -74,7 +94,7 @@ const contactList = [
           </ul>
         </v-col>
         <v-col cols="12" xs="12" sm="6" md="3">
-          <div class="text-h6 font-weight-bold">Quick Info</div>
+          <div class="text-h6 font-weight-bold">General Info</div>
           <v-divider class="my-3"></v-divider>
           <ul class="contact-us-list">
             <li
@@ -99,15 +119,15 @@ const contactList = [
           <div class="mb-3">Please feel free to visit us at given time.</div>
         </v-col>
       </v-row>
-      <v-divider></v-divider>
       <v-row>
-        <v-col
-          class="d-flex justify-center text--center text-overline"
-          cols="12"
-          md="12"
-        >
-          Copyright © {{ new Date().getFullYear() }}, API Technology. All Right
-          Reserved
+        <v-divider></v-divider>
+      </v-row>
+      <v-row>
+        <v-col cols="12" class="pt-6">
+          <div class="text-center text-overline">
+            Copyright © {{ new Date().getFullYear() }}, API Technology. All
+            Right Reserved
+          </div>
         </v-col>
       </v-row>
     </v-container>
