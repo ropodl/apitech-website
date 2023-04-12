@@ -11,11 +11,12 @@ const onScroll = (e) => {
 <template>
   <v-btn
     aria-label="Go to top"
-    icon size="x-large"
+    icon
+    size="x-large"
     color="primary"
     class="rounded-circle"
     v-scroll="onScroll"
-    style="position: fixed; bottom: 20px; right: 20px"
+    style="position: fixed; bottom: 20px; right: 20px; z-index: 999"
     @click="scrollTo('__nuxt')"
   >
     <v-icon :icon="mdiArrowUp"></v-icon>

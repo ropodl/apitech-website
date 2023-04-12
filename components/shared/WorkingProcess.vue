@@ -1,12 +1,5 @@
 <script setup>
-import {
-  mdiCogClockwise,
-  mdiForum,
-  mdiAccountHardHatOutline,
-  mdiArrowTopRight,
-  mdiArrowRight,
-mdiArrowRightThin,
-} from "@mdi/js";
+import { mdiCogClockwise, mdiForum, mdiAccountHardHatOutline } from "@mdi/js";
 import { useTheme } from "vuetify";
 const theme = useTheme();
 
@@ -35,8 +28,10 @@ const processes = [
 <template>
   <v-container class="py-10">
     <v-row justify="center">
-      <v-col cols="6" class="text-center pb-0">
-        <v-card-title class="text-h3 font-weight-bold text-primary-darken-3">
+      <v-col cols="12" sm="8" md="8" lg="6" class="text-center pb-0">
+        <v-card-title
+          class="text-h3 font-weight-bold text-primary-darken-3 text-wrap"
+        >
           Our Working Process
         </v-card-title>
         <div class="mx-auto divider"></div>
@@ -47,7 +42,7 @@ const processes = [
       </v-col>
     </v-row>
     <v-row justify="space-between">
-      <v-col cols="12" md="4" v-for="(process, i) in processes">
+      <v-col cols="12" sm="6" md="6" lg="4" v-for="(process, i) in processes">
         <v-card-text class="text-center mb-n16">
           <v-avatar class="bg-primary" size="100" style="z-index: 1">
             <v-icon size="70" :icon="process['icon']"></v-icon>

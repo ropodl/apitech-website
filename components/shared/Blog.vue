@@ -33,7 +33,7 @@ const blogs = [
 <template>
   <v-container class="py-10">
     <v-row justify="center">
-      <v-col cols="4" class="text-center pb-0">
+      <v-col cols="12" sm="8" md="5" class="text-center pb-0">
         <v-card-title class="text-h3 font-weight-bold text-primary-darken-3">
           Blog & Article
         </v-card-title>
@@ -45,7 +45,7 @@ const blogs = [
       </v-col>
     </v-row>
     <v-row>
-      <v-col cols="12" md="4" v-for="blog in blogs">
+      <v-col cols="12" sm="6" md="4" v-for="blog in blogs">
         <v-hover v-slot="{ isHovering, props }">
           <v-card
             :elevation="isHovering ? '4' : '0'"

@@ -4,6 +4,7 @@ import { useTheme } from "vuetify";
 const theme = useTheme();
 
 onMounted(() => {
+  // onResize();
   isDarkMode.value = localStorage.getItem("isDarkMode") === "true";
   theme.global.name.value = isDarkMode.value ? "dark" : "light";
 });
@@ -23,28 +24,24 @@ const links = [
   {
     name: "Home",
     icon: "home",
-    route: "/",
+    link: "/",
   },
   {
     name: "Services",
     icon: "room_service",
-    route: "/services",
+    link: "/services",
   },
   {
     name: "About Us",
     icon: "info",
-    route: "/about",
+    link: "/about",
   },
   {
     name: "Contact Us",
     icon: "call",
-    route: "/contact",
+    link: "/contact",
   },
 ];
-
-onMounted(() => {
-  onResize();
-});
 
 const onResize = () => {
   if (process.client) {
@@ -79,17 +76,14 @@ const themeCheck = () => {
     <v-spacer></v-spacer>
     <v-tabs height="50" class="rounded-pill hidden-sm-and-down" color="primary">
       <template v-for="(link, i) in links">
-        <v-hover v-slot:default="{ isHovering, props }">
-          <v-tab
-            :ripple="false"
-            v-bind="props"
-            class="text-capitalize rounded-pill"
-            :to="link['route']"
-            selected-class="text-white"
-          >
-            {{ link["name"] }}
-          </v-tab>
-        </v-hover>
+        <v-tab
+          :ripple="false"
+          class="text-capitalize rounded-pill"
+          :to="link['link']"
+          selected-class="text-white"
+        >
+          {{ link["name"] }}
+        </v-tab>
       </template>
     </v-tabs>
     <v-spacer></v-spacer>
@@ -129,7 +123,7 @@ const themeCheck = () => {
         :icon="isDarkMode ? mdiWeatherNight : mdiWhiteBalanceSunny"
       ></v-icon>
     </v-btn>
-    <!-- <v-spacer></v-spacer> -->
+
     <v-app-bar-nav-icon
       variant="tonal"
       class="hidden-md-and-up ml-3"
@@ -137,19 +131,17 @@ const themeCheck = () => {
     ></v-app-bar-nav-icon>
   </v-card>
 
-  <v-card tile v-if="drawer">
-    <v-navigation-drawer location="bottom" height="auto" temporary>
-      <v-list dense>
-        <v-list-item v-for="link in links" :to="link.route" color="primary">
-          <template #prepend>
-            <v-icon>{{ link.icon }}</v-icon>
-          </template>
+  <v-navigation-drawer :model-value="true" location="bottom" permanent>
+    <v-list dense>
+      <v-list-item v-for="link in links" :to="link['link']" color="primary">
+        <!-- <template #prepend>
+          <v-icon>{{ link.icon }}</v-icon>
+        </template> -->
 
-          <v-list-item-title>{{ link["name"] }}</v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-  </v-card>
+        <v-list-item-title>{{ link["name"] }}</v-list-item-title>
+      </v-list-item>
+    </v-list>
+  </v-navigation-drawer>
 </template>
 <style>
 .v-slide-group-item--active {
