@@ -11,17 +11,17 @@ const processes = [
   {
     icon: mdiForum,
     title: "Discussion",
-    desc: "Consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+    desc: "Consult with clients, suggest best fit security solutions.",
   },
   {
     icon: mdiCogClockwise,
     title: "Installation",
-    desc: "Consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+    desc: "Install CCTV, alarms, and access control systems.",
   },
   {
     icon: mdiAccountHardHatOutline,
     title: "Maintenance",
-    desc: "Consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+    desc: "Regular check-ups, troubleshoot issues, repair damages.",
   },
 ];
 </script>
@@ -36,8 +36,7 @@ const processes = [
         </v-card-title>
         <div class="mx-auto divider"></div>
         <v-card-text>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-          tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+          Learn about how we execute and finish a project.
         </v-card-text>
       </v-col>
     </v-row>
