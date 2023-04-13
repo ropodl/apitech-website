@@ -11,7 +11,7 @@ onMounted(() => {
   <NuxtLoadingIndicator />
   <v-app>
     <NuxtLayout>
-      <NuxtPage />
+      <NuxtPage keepalive />
     </NuxtLayout>
   </v-app>
 </template>
