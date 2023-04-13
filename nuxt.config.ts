@@ -1,8 +1,6 @@
 import vuetify from "vite-plugin-vuetify";
 export default defineNuxtConfig({
-  css: [
-
-  ],
+  css: [],
   devtools: false,
   googleFonts: {
     families: {
@@ -20,8 +18,10 @@ export default defineNuxtConfig({
       manifest: {
         name: "API Technology",
         short_name: "API Tech",
-        description: "Official Website of API Technology",
+        start_url: "/",
+        display: "standalone",
         theme_color: "#ff7800",
+        description: "Official Website of API Technology",
         // icons: [
         //   {
         //     src: "favicon-192.png",

@@ -1,6 +1,7 @@
 <script setup>
 import { useTheme } from "vuetify";
 const theme = useTheme();
+
 onMounted(() => {
   let dark = localStorage.getItem("isDarkMode") === "true";
   theme.global.name.value = dark ? "dark" : "light";
@@ -35,6 +36,7 @@ div.divider {
   height: 6px;
   background-color: rgb(var(--v-theme-primary-darken-3));
 }
+
 // image zoom effect
 .v-img {
   transition: all 0.3s;
