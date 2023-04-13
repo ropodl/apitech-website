@@ -39,9 +39,6 @@ export default defineNuxtConfig({
   sitemap: {
     siteUrl: "https://apitechnology.com.np",
   },
-  swiper:{
-    modules:['pagination', 'navigation', 'keyboard', 'autoplay']
-  },
   modules: [
     "@vite-pwa/nuxt",
     "nuxt-simple-sitemap",
