@@ -34,13 +34,13 @@ const blogs = [
   <v-container class="py-10">
     <v-row justify="center">
       <v-col cols="12" sm="8" md="5" class="text-center pb-0">
-        <v-card-title class="text-h3 font-weight-bold text-primary-darken-3">
+        <v-card-title class="text-h3 font-weight-bold">
           Blog & Article
         </v-card-title>
-        <div class="mx-auto divider"></div>
+        <!-- <div class="mx-auto divider"></div> -->
         <v-card-text>
-          We learnt so many things around our clients. Here are some articles
-          to.
+          Explore our insightful blog for valuable industry tips and client
+          success stories. Stay updated with API Technology.
         </v-card-text>
       </v-col>
     </v-row>

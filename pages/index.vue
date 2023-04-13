@@ -7,7 +7,7 @@ import {
 } from "@mdi/js";
 
 useHead({
-  title: "API Technology - B2B Service in Web, Mobile & More",
+  title: "API Technology - B2B Service in networking, ICT & More",
   meta: [
     {
       name: "description",

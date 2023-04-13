@@ -4,6 +4,17 @@ import { mdiEmail, mdiMapMarker, mdiPhone } from "@mdi/js";
 import { useTheme } from "vuetify";
 const theme = useTheme();
 
+useHead({
+  title: "API Technology - Contact Us for Services in Web, Mobile & More",
+  meta: [
+    {
+      name: "description",
+      content:
+        "API Technology provides business to business services in Web, Mobile, Networking, ICT and Electronics Hardware areas.",
+    },
+  ],
+});
+
 const isDark = computed(() =>
   theme.global.name.value == "dark" ? true : false
 );
@@ -118,9 +129,10 @@ const infoList = [
   <LazyLayoutPageSection title="Contact Us" />
   <v-container>
     <v-row>
-      <v-col cols="12" md="4">
-        <v-card>
-          <v-form ref="contactForm" @submit.prevent="submitForm">
+      <v-col cols="12" md="4" class="mt-lg-n16">
+        <v-form ref="contactForm" @submit.prevent="submitForm">
+          <v-card class="px-2 pt-4">
+            <v-card-title class="mb-3">Send a message</v-card-title>
             <v-card-text class="pb-0">
               <v-text-field
                 v-model="templateParams['from_name']"
@@ -155,12 +167,12 @@ const infoList = [
                 size="large"
                 rounded="sm"
                 variant="flat"
-                class="text-capitalize px-16"
+                class="text-capitalize"
                 >Submit</v-btn
               >
             </v-card-text>
-          </v-form>
-        </v-card>
+          </v-card>
+        </v-form>
       </v-col>
       <v-col cols="12" md="8">
         <div class="text-h2 font-weight-black mb-6">
@@ -178,7 +190,7 @@ const infoList = [
             <v-list rounded="xl" class="elevation-1">
               <v-list-item>
                 <template #prepend>
-                  <v-avatar size="80" rounded="0">
+                  <v-avatar size="60" rounded="0">
                     <v-icon size="40" :icon="info['icon']"></v-icon>
                   </v-avatar>
                 </template>

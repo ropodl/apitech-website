@@ -32,4 +32,5 @@ useHead({
       </v-col>
     </v-row>
   </v-container>
+  <SharedWorkingProcess />
 </template>
