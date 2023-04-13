@@ -24,7 +24,6 @@
     "@nuxtjs/google-fonts": "^3.0.0",
     "@vite-pwa/nuxt": "^0.0.7",
     "nuxt-simple-sitemap": "^2.4.8",
-    "nuxt-swiper": "^1.1.0",
     "sass": "^1.61.0",
     "vite-plugin-vuetify": "^1.0.2",
     "vuetify": "^3.1.13"

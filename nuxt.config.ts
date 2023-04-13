@@ -44,7 +44,6 @@ export default defineNuxtConfig({
   },
   modules: [
     "@vite-pwa/nuxt",
-    "nuxt-swiper",
     "nuxt-simple-sitemap",
     "@nuxtjs/google-fonts",
     async (options, nuxt) => {
