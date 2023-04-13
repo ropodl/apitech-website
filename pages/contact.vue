@@ -1,5 +1,6 @@
 <script setup>
 import emailjs from "@emailjs/browser";
+import { mdiEmail, mdiMapMarker, mdiPhone } from "@mdi/js";
 import { useTheme } from "vuetify";
 const theme = useTheme();
 
@@ -87,14 +88,17 @@ const rules = {
 
 const infoList = [
   {
+    icon: mdiMapMarker,
     title: "Contact Address",
     content: "Mid Baneshwor",
   },
   {
+    icon: mdiEmail,
     title: "General Inquiry",
     content: "info@apitechnepal.com",
   },
   {
+    icon: mdiPhone,
     title: "Phone Number",
     content: "01-4472774 ",
   },
@@ -161,17 +165,30 @@ const infoList = [
       <v-col cols="12" md="8">
         <div class="text-h2 font-weight-black mb-6">
           Excited about the project? <br />
-          Please <span class="primary--text">get in touch.</span>
+          Please<span class="primary--text"> get in touch.</span>
         </div>
-        <v-row>
+        <v-row class="mb-3">
           <v-col
-            class=""
             v-for="(info, i) in infoList"
             :key="i"
             cols="12"
-            md="6"
+            md="12"
+            lg="6"
           >
-            <div class="text-overline">{{ info.title }}</div>
+            <v-list rounded="xl">
+              <v-list-item>
+                <template #prepend>
+                  <v-avatar size="80" rounded="0">
+                    <v-icon size="40" :icon="info['icon']"></v-icon>
+                  </v-avatar>
+                </template>
+                <v-list-item-title v-text="info['title']"></v-list-item-title>
+                <v-list-item-subtitle
+                  v-text="info['content']"
+                ></v-list-item-subtitle>
+              </v-list-item>
+            </v-list>
+            <!-- <div class="text-overline">{{ info.title }}</div>
             <div class="text-subtitle-1">
               <span v-if="i != 3">
                 {{ info.content }}
@@ -192,7 +209,7 @@ const infoList = [
                   </v-icon>
                 </v-btn>
               </span>
-            </div>
+            </div> -->
           </v-col>
         </v-row>
         <v-card>

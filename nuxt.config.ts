@@ -47,7 +47,6 @@ export default defineNuxtConfig({
     "nuxt-swiper",
     "nuxt-simple-sitemap",
     "@nuxtjs/google-fonts",
-    /* Treeshaking: https://next.vuetifyjs.com/en/features/treeshaking/ */
     async (options, nuxt) => {
       nuxt.hooks.hook("vite:extendConfig", (config) => {
         config?.plugins?.push(vuetify({
