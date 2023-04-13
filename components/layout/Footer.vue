@@ -63,7 +63,7 @@ const contactList = [
               target="_blank"
               href="https://www.facebook.com/apitechnepal"
             >
-              <v-icon size="x-large">
+              <v-icon>
                 <font-awesome-icon :icon="['fab', 'fa-facebook']" />
               </v-icon>
             </v-btn>
