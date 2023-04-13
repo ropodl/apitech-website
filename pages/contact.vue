@@ -175,7 +175,7 @@ const infoList = [
             md="12"
             lg="6"
           >
-            <v-list rounded="xl">
+            <v-list rounded="xl" class="elevation-1">
               <v-list-item>
                 <template #prepend>
                   <v-avatar size="80" rounded="0">
