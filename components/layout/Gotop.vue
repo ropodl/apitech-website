@@ -2,10 +2,12 @@
 import { mdiArrowUp } from "@mdi/js";
 
 let fab = ref(false);
+
 const onScroll = (e) => {
   if (typeof window === "undefined") return;
-  const top = window.pageYOffset || e.target.scrollTop || 0;
-  fab = top > 300;
+  const top = window.scrollY || 0;
+  // || window.pageYOffset || e.target.scrollTop
+  fab.value = top > 500 ? true : false;
 };
 </script>
 <template>
@@ -14,19 +16,20 @@ const onScroll = (e) => {
     icon
     size="x-large"
     color="primary"
-    class="rounded-circle"
+    class="rounded-circle position-fixed"
     v-scroll="onScroll"
-    style="position: fixed; bottom: 20px; right: 20px; z-index: 999"
+    :style="{
+      bottom: fab ? '20px' : '-100px',
+      right: '40px',
+      zIndex: '999',
+      transition: 'all 250ms linear',
+    }"
     @click="scrollTo('__nuxt')"
   >
     <v-icon :icon="mdiArrowUp"></v-icon>
   </v-btn>
 </template>
 <style>
-button.v-btn {
-  z-index: 2;
-}
-
 .slide-fade-enter-active {
   transition: all 0.3s ease;
 }
