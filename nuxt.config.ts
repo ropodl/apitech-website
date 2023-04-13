@@ -1,7 +1,7 @@
 import vuetify from "vite-plugin-vuetify";
 export default defineNuxtConfig({
   css: [
-  '@fortawesome/fontawesome-svg-core/styles.css'
+
   ],
   devtools: false,
   googleFonts: {
