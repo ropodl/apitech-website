@@ -22,18 +22,18 @@ export default defineNuxtConfig({
         display: "standalone",
         theme_color: "#ff7800",
         description: "Official Website of API Technology",
-        // icons: [
-        //   {
-        //     src: "favicon-192.png",
-        //     sizes: "192x192",
-        //     type: "image/png",
-        //   },
-        //   {
-        //     src: "favicon-512.png",
-        //     sizes: "512x512",
-        //     type: "image/png",
-        //   },
-        // ],
+        icons: [
+          {
+            src: "icon.png",
+            sizes: "192x192",
+            type: "image/png",
+          },
+          {
+            src: "icon.png",
+            sizes: "512x512",
+            type: "image/png",
+          },
+        ],
       },
   },
   sitemap: {
