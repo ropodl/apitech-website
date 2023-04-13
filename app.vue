@@ -9,7 +9,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <NuxtLoadingIndicator color="primary" />
+  <NuxtLoadingIndicator />
   <v-app>
     <NuxtLayout>
       <NuxtPage />
@@ -36,7 +36,6 @@ div.divider {
   height: 6px;
   background-color: rgb(var(--v-theme-primary-darken-3));
 }
-
 // image zoom effect
 .v-img {
   transition: all 0.3s;
