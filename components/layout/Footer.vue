@@ -122,6 +122,8 @@ const contactList = [
           <div class="text-h6 font-weight-bold">Special Partner</div>
           <v-divider class="my-3"></v-divider>
           <v-img
+            width="200"
+            height="60"
             src="/certified-partner-logo.avif"
             alt="certified partner logo"
           ></v-img>

@@ -16,7 +16,7 @@ const why = [
   {
     icon: mdiThumbUp,
     title: "7+ years of service",
-    desc: "Api Technologies has been providing technical protection solutions for over 7 years, gaining extensive experience and knowledge in the industry.",
+    desc: "Api Technologies is a company that has been operating in the technical protection solutions industry for over 7 years. During this time, we have acquired extensive experience and knowledge in the field, enabling it to provide high-quality solutions to our clients.",
   },
   {
     icon: mdiStar,
