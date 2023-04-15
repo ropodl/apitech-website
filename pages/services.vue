@@ -91,7 +91,7 @@ const services = [
       </v-col>
     </v-row>
     <v-row justify="center" class="pb-16">
-      <v-col cols="12" md="4" v-for="(service, i) in services">
+      <v-col cols="12" sm="6" md="4" v-for="(service, i) in services">
         <v-card border flat rounded="xl" class="py-10 h-100">
           <v-card-text class="text-center">
             <v-avatar rounded="0" size="70">
