@@ -41,7 +41,7 @@ const clients = [
       </v-col>
       <v-row>
         <v-col cols="6" sm="3" md="2" v-for="(item, i) in clients">
-          <v-img height="100" :src="item['image']" :alt="item['title']"></v-img>
+          <v-img height="100" :src="item['image']" :alt="item['name']"></v-img>
         </v-col>
       </v-row>
     </v-row>
