@@ -112,6 +112,7 @@ const themeCheck = () => {
               :color="isDark ? 'white' : 'primary'"
               target="_blank"
               href="https://www.facebook.com/apitechnepal"
+              aria-label="Facebook Icon"
             >
               <v-icon>
                 <font-awesome-icon :icon="['fab', 'fa-facebook']" />
@@ -124,6 +125,7 @@ const themeCheck = () => {
               :color="isDark ? 'white' : 'primary'"
               target="_blank"
               href="https://www.linkedin.com/company/api-technology-pvt.-ltd./"
+              aria-label="LinkedIn Icon"
             >
               <v-icon>
                 <font-awesome-icon
@@ -137,6 +139,7 @@ const themeCheck = () => {
             variant="tonal"
             :color="isDark ? 'white' : 'primary'"
             @click="themeCheck"
+            :aria-label="'Switch to' + isDark ? ' Light ' : ' Dark ' + 'Mode'"
           >
             <v-icon
               :icon="isDarkMode ? mdiWeatherNight : mdiWhiteBalanceSunny"

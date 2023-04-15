@@ -33,7 +33,7 @@ const createMail = () => {
 </script>
 <template>
   <v-container fluid class="pa-0">
-    <v-img cover height="650" src="/images/img1.avif">
+    <v-img cover height="650" src="/images/img1.avif" alt="background image">
       <v-overlay
         :model-value="true"
         contained
@@ -98,6 +98,7 @@ const createMail = () => {
                       height="480"
                       class="h-100 w-100 rounded-pill overflow-hidden"
                       src="/images/img2.avif"
+                      alt="CCTV Image"
                     >
                     </v-img>
                   </span>
@@ -107,46 +108,10 @@ const createMail = () => {
                     size="70"
                     style="position: absolute; bottom: 0; left: 50px"
                     @click="createMail"
+                    aria-label="Send us an Email Button"
                   >
                     <v-icon size="40" :icon="mdiAt"></v-icon>
                   </v-btn>
-                  <!-- <v-dialog
-                    absolute
-                    v-model="videoDialog"
-                    class="align-center justify-center"
-                    width="800"
-                    scrim="black"
-                  >
-                    <template v-slot:activator="{ props }">
-                      <v-btn
-                        icon
-                        color="primary"
-                        class="rounded-circle pulse-button"
-                        size="70"
-                        style="position: absolute; top: 0; right: 50px"
-                        v-bind="props"
-                      >
-                        <v-icon size="40" :icon="mdiPlay"></v-icon>
-                      </v-btn>
-                    </template>
-
-                    <v-card flat>
-                      <v-card-text class="d-flex pa-0">
-                        <v-spacer></v-spacer>
-                        <v-btn icon @click="videoDialog = false">
-                          <v-icon :icon="mdiClose"></v-icon>
-                        </v-btn>
-                      </v-card-text>
-                    <iframe
-                      src="https://www.youtube.com/embed/WK5NODlRfMA"
-                      title="YouTube video player"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowfullscreen
-                      autoplay
-                    ></iframe>
-                    </v-card>
-                  </v-dialog> -->
                 </v-card>
               </div>
             </v-col>

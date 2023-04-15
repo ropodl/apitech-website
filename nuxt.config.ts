@@ -1,5 +1,13 @@
 import vuetify from "vite-plugin-vuetify";
 export default defineNuxtConfig({
+  app: {
+    head: {
+        htmlAttrs: {
+            lang: 'en',
+        },
+        charset: 'utf-8'
+    }
+},
   css: [],
   devtools: false,
   googleFonts: {

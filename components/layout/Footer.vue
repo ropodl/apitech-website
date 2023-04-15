@@ -62,6 +62,7 @@ const contactList = [
               color="white"
               target="_blank"
               href="https://www.facebook.com/apitechnepal"
+              aria-label="Facebook Link button"
             >
               <v-icon>
                 <font-awesome-icon :icon="['fab', 'fa-facebook']" />
@@ -75,6 +76,7 @@ const contactList = [
               color="white"
               target="_blank"
               href="https://www.linkedin.com/company/api-technology-pvt.-ltd./"
+              aria-label="LikedIn Link button"
             >
               <v-icon>
                 <font-awesome-icon
@@ -117,6 +119,12 @@ const contactList = [
             10 AM - 5 PM, Sunday - Friday
           </div>
           <div class="mb-3">Please feel free to visit us at given time.</div>
+          <div class="text-h6 font-weight-bold">Work Hours</div>
+          <v-divider class="my-3"></v-divider>
+          <v-img
+            src="/certified-partner-logo.avif"
+            alt="certified partner logo"
+          ></v-img>
         </v-col>
       </v-row>
       <v-row>
