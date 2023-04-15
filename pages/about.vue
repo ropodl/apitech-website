@@ -85,7 +85,7 @@ const why = [
             professionalism, and customer satisfaction. Protect your assets with
             API Technologies and enjoy peace of mind.
           </v-card-text>
-          <v-list density="compact" lines="three" v-for="(item, i) in why">
+          <v-list density="compact" v-for="(item, i) in why">
             <v-list-item>
               <template #prepend>
                 <v-avatar size="60" color="primary-darken-3" rounded="lg">
@@ -98,6 +98,7 @@ const why = [
               >
               </v-list-item-title>
               <v-list-item-subtitle
+                class="text-wrap"
                 v-text="item['desc']"
                 style="line-height: 1.6rem"
               ></v-list-item-subtitle>

@@ -119,7 +119,7 @@ const contactList = [
             10 AM - 5 PM, Sunday - Friday
           </div>
           <div class="mb-3">Please feel free to visit us at given time.</div>
-          <div class="text-h6 font-weight-bold">Work Hours</div>
+          <div class="text-h6 font-weight-bold">Special Partner</div>
           <v-divider class="my-3"></v-divider>
           <v-img
             src="/certified-partner-logo.avif"
