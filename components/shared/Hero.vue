@@ -1,7 +1,9 @@
 <script setup>
-import { mdiAt } from "@mdi/js";
+import { mdiAt, mdiClose, mdiPlay } from "@mdi/js";
 import { useTheme } from "vuetify";
 const theme = useTheme();
+
+let videoDialog = ref(false);
 
 const isDark = computed(() =>
   theme.global.name.value == "dark" ? true : false
@@ -47,7 +49,9 @@ const createMail = () => {
             <v-col cols="12" md="6">
               <div class="text-md-h2 text-sm-h2 text-h3 font-weight-black">
                 Professional <br class="hidden-sm-and-down" /><span
-                  class="text-primary"
+                  :class="
+                    isDark ? 'text-primary-lighten-1' : 'text-primary-darken-3'
+                  "
                   >Security Services</span
                 ><br class="hidden-sm-and-down" />
                 You Can Trust
@@ -106,6 +110,43 @@ const createMail = () => {
                   >
                     <v-icon size="40" :icon="mdiAt"></v-icon>
                   </v-btn>
+                  <!-- <v-dialog
+                    absolute
+                    v-model="videoDialog"
+                    class="align-center justify-center"
+                    width="800"
+                    scrim="black"
+                  >
+                    <template v-slot:activator="{ props }">
+                      <v-btn
+                        icon
+                        color="primary"
+                        class="rounded-circle pulse-button"
+                        size="70"
+                        style="position: absolute; top: 0; right: 50px"
+                        v-bind="props"
+                      >
+                        <v-icon size="40" :icon="mdiPlay"></v-icon>
+                      </v-btn>
+                    </template>
+
+                    <v-card flat>
+                      <v-card-text class="d-flex pa-0">
+                        <v-spacer></v-spacer>
+                        <v-btn icon @click="videoDialog = false">
+                          <v-icon :icon="mdiClose"></v-icon>
+                        </v-btn>
+                      </v-card-text>
+                    <iframe
+                      src="https://www.youtube.com/embed/WK5NODlRfMA"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen
+                      autoplay
+                    ></iframe>
+                    </v-card>
+                  </v-dialog> -->
                 </v-card>
               </div>
             </v-col>

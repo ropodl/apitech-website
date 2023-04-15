@@ -12,6 +12,7 @@ useHead({
 </script>
 <template>
   <LazyLayoutPageSection title="About Us" />
+  <HomeAboutPara />
   <v-container>
     <v-row>
       <v-col cols="12" md="6">
