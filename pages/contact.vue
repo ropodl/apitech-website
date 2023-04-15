@@ -112,17 +112,7 @@ const infoList = [
     icon: mdiPhone,
     title: "Phone Number",
     content: "01-4472774 ",
-  },
-  // {
-  //   title: "Social Media",
-  //   content: [
-  //     {
-  //       title: "Facebook",
-  //       link: "https://www.facebook.com/apitechnepal",
-  //       icon: "['fab', 'fa-facebook']",
-  //     },
-  //   ],
-  // },
+  }
 ];
 </script>
 <template>
@@ -131,7 +121,7 @@ const infoList = [
     <v-row>
       <v-col cols="12" md="4" class="mt-lg-n16">
         <v-form ref="contactForm" @submit.prevent="submitForm">
-          <v-card class="px-2 pt-4">
+          <v-card class="px-3 pt-4">
             <v-card-title class="mb-3">Send a message</v-card-title>
             <v-card-text class="pb-0">
               <v-text-field
