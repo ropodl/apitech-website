@@ -107,7 +107,7 @@ const themeCheck = () => {
           <client-only>
             <v-btn
               icon
-              class="mr-3"
+              class="mr-3 hidden-xs"
               variant="tonal"
               :color="isDark ? 'white' : 'primary'"
               target="_blank"
@@ -120,7 +120,7 @@ const themeCheck = () => {
             </v-btn>
             <v-btn
               icon
-              class="mr-3"
+              class="mr-3 hidden-xs"
               variant="tonal"
               :color="isDark ? 'white' : 'primary'"
               target="_blank"
@@ -157,6 +157,40 @@ const themeCheck = () => {
   </v-container>
 
   <v-navigation-drawer v-model="drawer" location="bottom" temporary>
+    <v-card flat>
+      <v-card-text class="d-flex justify-center">
+        <client-only>
+          <v-btn height="50"
+            class="mr-3 px-10 text-capitalize"
+            variant="tonal"
+            :color="isDark ? 'white' : 'primary'"
+            target="_blank"
+            href="https://www.facebook.com/apitechnepal"
+            aria-label="Facebook Icon"
+          >
+            <v-icon start>
+              <font-awesome-icon :icon="['fab', 'fa-facebook']" />
+            </v-icon>
+            Facebook
+          </v-btn>
+          <v-btn height="50"
+            class="mr-3 px-10 text-capitalize"
+            variant="tonal"
+            :color="isDark ? 'white' : 'primary'"
+            target="_blank"
+            href="https://www.linkedin.com/company/api-technology-pvt.-ltd./"
+            aria-label="LinkedIn Icon"
+          >
+            <v-icon start>
+              <font-awesome-icon
+                :icon="['fab', 'fa-linkedin']"
+              ></font-awesome-icon>
+            </v-icon>
+            LinkedIn
+          </v-btn>
+        </client-only>
+      </v-card-text>
+    </v-card>
     <v-list dense>
       <v-list-item v-for="link in links" :to="link['link']" color="primary">
         <template #prepend>
