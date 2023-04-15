@@ -1,5 +1,5 @@
 <script setup>
-import { mdiThumbUp } from "@mdi/js";
+import { mdiStar, mdiThumbUp, mdiCertificate } from "@mdi/js";
 
 useHead({
   title: "Learn More About API Technology",
@@ -19,12 +19,12 @@ const why = [
     desc: "Api Technologies has been providing technical protection solutions for over 7 years, gaining extensive experience and knowledge in the industry.",
   },
   {
-    icon: mdiThumbUp,
+    icon: mdiStar,
     title: "Best in Industry Support",
     desc: "Api Technologies prides itself on providing exceptional customer support, always striving to exceed client expectations. Our team of professional engineers and technicians are highly skilled and experienced, offering the best support in the industry.",
   },
   {
-    icon: mdiThumbUp,
+    icon: mdiCertificate,
     title: "Industry Certified",
     desc: "Api Technologies is industry certified, having obtained all necessary certifications required to operate in the technical protection solutions industry. Our certifications serve as a testament to our commitment to professionalism and quality.",
   },
@@ -100,33 +100,15 @@ const why = [
               <v-list-item-subtitle
                 class="text-wrap"
                 v-text="item['desc']"
-                style="line-height: 1.6rem"
+                style="line-height: 1.6rem; -webkit-line-clamp: 4 !important"
               ></v-list-item-subtitle>
             </v-list-item>
           </v-list>
-          <!-- <v-card-text> this is a test and this is also a test </v-card-text> -->
         </v-card>
       </v-col>
     </v-row>
   </v-container>
   <LazySharedOurClients />
-  <!-- <HomeAboutPara /> -->
-  <!-- <v-container>
-    <v-row>
-      <v-col cols="12" md="6">
-        Api Technology offer you a business to business service in the Web,
-        Android, Networking, ICT and Electronics Hardware platform. We are a
-        dominant technology provider of Internet Of Things, Electronics &
-        Communication, and Security Technologies for critical and
-        high-reliability applications. Markets span government, non-government,
-        medical/industrial and communica-tions/consumer.
-      </v-col>
-      <v-col cols="12" md="6">
-        <div class="text-h2 font-weight-black text-right text-uppercase">
-        </div>
-      </v-col>
-    </v-row>
-  </v-container> -->
   <v-card rounded="0" color="primary">
     <v-container class="my-10">
       <v-row justify="center">
