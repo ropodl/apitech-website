@@ -8,6 +8,7 @@ import {
   mdiHomeAutomation,
   mdiPhoneClassic,
   mdiSquareRoundedBadge,
+  mdiCrosshairsGps,
 } from "@mdi/js";
 
 useHead({
@@ -39,7 +40,7 @@ const services = [
     title: "Optical Fiber/Wired/Wireless Networking",
   },
   {
-    icon: mdiFireAlert,
+    icon: mdiCrosshairsGps,
     title: "GPS Tracking",
   },
   {
