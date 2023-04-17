@@ -1,6 +1,6 @@
 <script setup>
 useHead({
-  title: "API Technology - B2B Service in networking, ICT & More",
+  title: "API Technology - B2B Service in networking, ICT and More",
   meta: [
     {
       name: "description",
