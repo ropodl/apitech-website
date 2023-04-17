@@ -28,10 +28,11 @@ export default defineNuxtConfig({
         {
           name: "twitter:image",
           content: seoImage,
-        },{
+        },
+        {
           name: "twitter:card",
           content: "summary_large_image",
-        }
+        },
       ],
     },
   },
@@ -43,21 +44,15 @@ export default defineNuxtConfig({
     },
   },
   pwa: {
-    scope: '/',
-  srcDir: './service-worker.js',
-  filename: 'sw.js',
-  strategies: 'injectManifest',
-  injectRegister: false,
-  includeManifestIcons: false,
-    // includeAssets: ["favicon.ico", "apple-touch-icon.png", "masked-icon.svg"],
+    registerType: 'autoUpdate',
     workbox: {
       cleanupOutdatedCaches: true,
+      navigateFallback: '/',
       globPatterns: ["**/*.{js,css,html,ico,png,svg}"],
     },
     manifest: {
       name: "API Technology",
       short_name: "API Tech",
-      display: "standalone",
       theme_color: "#ff7800",
       description: "Official Website of API Technology",
       icons: [
@@ -72,6 +67,16 @@ export default defineNuxtConfig({
           type: "image/png",
         },
       ],
+    },
+    client: {
+      installPrompt: true,
+      // you don't need to include this: only for testing purposes
+      // if enabling periodic sync for update use 1 hour or so (periodicSyncForUpdates: 3600)
+      periodicSyncForUpdates: 3600,
+    },
+    devOptions: {
+      enabled: false,
+      type: 'module',
     },
   },
   sitemap: {
