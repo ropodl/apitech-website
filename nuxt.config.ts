@@ -53,7 +53,7 @@ export default defineNuxtConfig({
     manifest: {
       name: "API Technology",
       short_name: "API Tech",
-      theme_color: "#ff7800",
+      theme_color: "#1976d2",
       description: "Official Website of API Technology",
       icons: [
         {
