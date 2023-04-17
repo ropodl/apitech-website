@@ -4,6 +4,7 @@ const seoImage = "https://apitechnology.com.np/images/apitech.webp";
 
 export default defineNuxtConfig({
   app: {
+    keepalive: true,
     head: {
       htmlAttrs: {
         lang: "en",
@@ -42,9 +43,12 @@ export default defineNuxtConfig({
     },
   },
   pwa: {
-    registerWebManifestInRouteRules:true,
-    registerType: "autoUpdate",
-    injectRegister: "auto",
+    scope: '/',
+  srcDir: './service-worker.js',
+  filename: 'sw.js',
+  strategies: 'injectManifest',
+  injectRegister: false,
+  includeManifestIcons: false,
     // includeAssets: ["favicon.ico", "apple-touch-icon.png", "masked-icon.svg"],
     workbox: {
       cleanupOutdatedCaches: true,
