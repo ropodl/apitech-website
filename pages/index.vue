@@ -1,13 +1,14 @@
 <script setup>
-useHead({
-  title: "API Technology - B2B Service in networking, ICT and More",
-  meta: [
-    {
-      name: "description",
-      content:
-        "API Technology provides business to business services in Web, Mobile, Networking, ICT and Electronics Hardware areas.",
-    },
-  ],
+const title = "API Technology - B2B Service in networking, ICT and More";
+const desc =
+  "API Technology provides business to business services in Web, Mobile, Networking, ICT and Electronics Hardware areas.";
+useServerSeoMeta({
+  title: title,
+  ogTitle: title,
+  description: desc,
+  ogDescription: desc,
+  twitterCard: "summary_large_image",
+  twitterDescription: desc,
 });
 </script>
 <template>
