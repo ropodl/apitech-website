@@ -9,12 +9,15 @@ onMounted(() => {
 </script>
 
 <template>
-  <NuxtLoadingIndicator />
-  <v-app>
-    <NuxtLayout>
-      <NuxtPage keepalive />
-    </NuxtLayout>
-  </v-app>
+  <div>
+    <VitePwaManifest />
+    <NuxtLoadingIndicator />
+    <v-app>
+      <NuxtLayout>
+        <NuxtPage keepalive />
+      </NuxtLayout>
+    </v-app>
+  </div>
 </template>
 
 <style lang="scss">
