@@ -85,25 +85,25 @@ const why = [
             professionalism, and customer satisfaction. Protect your assets with
             API Technologies and enjoy peace of mind.
           </v-card-text>
-          <v-list density="compact" v-for="(item, i) in why">
-            <v-list-item>
-              <template #prepend>
-                <v-avatar size="60" color="primary-darken-3" rounded="lg">
-                  <v-icon size="30" :icon="item['icon']"></v-icon>
-                </v-avatar>
-              </template>
-              <v-list-item-title
-                class="text-h5 font-weight-bold text-wrap mb-3"
-                v-text="item['title']"
-              >
-              </v-list-item-title>
-              <v-list-item-subtitle
-                class="text-wrap"
-                v-text="item['desc']"
-                style="line-height: 1.6rem; -webkit-line-clamp: 4 !important"
-              ></v-list-item-subtitle>
-            </v-list-item>
-          </v-list>
+          <!-- <v-list density="compact" > -->
+          <v-list-item class="mb-6" v-for="(item, i) in why">
+            <template #prepend>
+              <v-avatar size="60" color="primary-darken-3" rounded="lg">
+                <v-icon size="30" :icon="item['icon']"></v-icon>
+              </v-avatar>
+            </template>
+            <v-list-item-title
+              class="text-h5 font-weight-bold text-wrap mb-3"
+              v-text="item['title']"
+            >
+            </v-list-item-title>
+            <v-list-item-subtitle
+              class="text-wrap"
+              v-text="item['desc']"
+              style="line-height: 1.4rem"
+            ></v-list-item-subtitle>
+          </v-list-item>
+          <!-- </v-list> -->
         </v-card>
       </v-col>
     </v-row>
