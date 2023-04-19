@@ -33,13 +33,9 @@ const why = [
 <template>
   <LazyLayoutPageSection title="About Us" />
   <v-container>
-    <v-row no-gutters>
+    <v-row no-gutters align="center">
       <v-col cols="12" md="4">
-        <v-card
-          color="primary-darken-3"
-          class="py-10 px-3 mt-lg-n16"
-          rounded="xl"
-        >
+        <v-card color="primary-darken-3" class="py-10 px-3" rounded="xl">
           <v-card-title class="text-h3 font-weight-bold">
             Our Vision
           </v-card-title>
