@@ -1,5 +1,5 @@
 <script setup>
-import { mdiAt, mdiClose, mdiPlay } from "@mdi/js";
+import { mdiArrowRight, mdiAt } from "@mdi/js";
 import { useTheme } from "vuetify";
 const theme = useTheme();
 
@@ -67,18 +67,20 @@ const createMail = () => {
                 critical applications across various markets, including
                 government, medical/industrial, and consumer.
               </div>
-              <v-row no-gutters class="hidden-md-and-down">
-                <v-col cols="12" sm="6" md="4" v-for="(exp, i) in experience">
-                  <v-card flat color="transparent">
-                    <v-card-title
-                      class="text-center text-h4 mb-3 font-weight-black text-wrap text-primary"
-                      v-text="exp['number']"
-                    ></v-card-title>
-                    <v-card-text
-                      class="text-center text-body-1"
-                      v-text="exp['title']"
-                    ></v-card-text>
-                  </v-card>
+              <v-row>
+                <v-col cols="12" md="6">
+                  <v-btn
+                    block
+                    flat
+                    rounded="pill"
+                    color="primary"
+                    height="60"
+                    class="text-capitalize"
+                    to="/services"
+                  >
+                    Explore Our Services
+                    <v-icon end :icon="mdiArrowRight"></v-icon>
+                  </v-btn>
                 </v-col>
               </v-row>
             </v-col>

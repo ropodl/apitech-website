@@ -37,7 +37,8 @@ useHead({
           cover
           height="400"
           class="my-6"
-          src="https://pixabay.com/get/g52431130171e6470c6fd501a40312766bdd2d6584c9d51296b76a7d0843d1677d23024835759afd0c0c47cf899646f199a00e92b51238dce91b055342dc31a9201ac01022977f45d1e40cd37f036556d_640.jpg"
+          alt="office time"
+          src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80"
           aspect-ratio="16/9"
         ></v-img>
         <p>
@@ -70,7 +71,7 @@ useHead({
           cover
           height="400"
           class="my-6"
-          src="https://pixabay.com/get/g91035ff3a2cbd0fc6a44e375b1c46b248c5f81a209708ad0ccb970dbbeb69f4b7c90abd414164c691c632d05507f86b18d385f4bad5810da791e3d7bd5fb8b9aa71f6b295cac5d62552c9215ca437bc8_640.jpg"
+          src="https://images.unsplash.com/19/clock.JPG?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1465&q=80"
           aspect-ratio="16/9"
         ></v-img>
         <p>
