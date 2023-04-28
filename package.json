@@ -23,6 +23,6 @@
     "nuxt-simple-sitemap": "^2.4.11",
     "sass": "^1.61.0",
     "vite-plugin-vuetify": "^1.0.2",
-    "vuetify": "^3.1.14"
+    "vuetify": "^3.2.1"
   }
 }
