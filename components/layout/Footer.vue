@@ -34,7 +34,7 @@ const contactList = [
   },
   {
     icon: mdiEmail,
-    title: "info@apitech.com.np",
+    title: "info.apitech@gmail.com",
   },
 ];
 </script>
