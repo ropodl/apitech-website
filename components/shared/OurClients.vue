@@ -24,6 +24,46 @@ const clients = [
     name: "Forum for Women",
     image: "/clients/fwld-logo.avif",
   },
+  {
+    name: "Aarma",
+    image: "/clients/Aarma.avif",
+  },
+  {
+    name: "Annapurna",
+    image: "/clients/Annapurna.avif",
+  },
+  {
+    name: "Gajuri",
+    image: "/clients/gajuri.avif",
+  },
+  {
+    name: "Hard Rock",
+    image: "/clients/HardRock.avif",
+  },
+  {
+    name: "IIDS",
+    image: "/clients/IIDS.avif",
+  },
+  {
+    name: "JAF",
+    image: "/clients/jaf.avif",
+  },
+  {
+    name: "Mandala",
+    image: "/clients/mandala.avif",
+  },
+  {
+    name: "Ministry of Finance",
+    image: "/clients/Ministry_of_finance.avif",
+  },
+  {
+    name: "Muktishree",
+    image: "/clients/Muktishree.avif",
+  },
+  {
+    name: "Trissa",
+    image: "/clients/Trissa.avif",
+  },
 ];
 </script>
 <template>
