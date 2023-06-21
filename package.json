@@ -13,7 +13,7 @@
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
     "@fortawesome/free-brands-svg-icons": "^6.4.0",
     "@fortawesome/vue-fontawesome": "^3.0.3",
-    "nuxt": "^3.4.0"
+    "nuxt": "^3.4.3"
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
