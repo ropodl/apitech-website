@@ -3,8 +3,6 @@ import { mdiArrowRight, mdiAt } from "@mdi/js";
 import { useTheme } from "vuetify";
 const theme = useTheme();
 
-let videoDialog = ref(false);
-
 const isDark = computed(() =>
   theme.global.name.value == "dark" ? true : false
 );
@@ -47,15 +45,14 @@ const createMail = () => {
               <div class="text-md-h2 text-sm-h2 text-h3 font-weight-black">
                 Professional <br class="hidden-sm-and-down" /><span
                   :class="
-                    isDark ? 'text-primary-lighten-1' : 'text-primary-darken-3'
+                    isDark ? 'text-primary-lighten-4' : 'text-primary'
                   "
                   >Security Services</span
                 ><br class="hidden-sm-and-down" />
                 You Can Trust
               </div>
               <div
-                class="divider my-6"
-                :class="isDark ? 'bg-primary' : ''"
+                class="divider my-6 bg-primary"
               ></div>
               <div class="mb-6">
                 We, at Api Technology, offer B2B services in Web, Android,

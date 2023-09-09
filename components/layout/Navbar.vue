@@ -1,11 +1,11 @@
 <script setup>
 import {
-  mdiWhiteBalanceSunny,
-  mdiWeatherNight,
-  mdiHome,
   mdiHandshake,
+  mdiHome,
   mdiInformationOutline,
   mdiPhoneIncomingOutgoing,
+  mdiWeatherNight,
+  mdiWhiteBalanceSunny,
 } from "@mdi/js";
 import { useTheme } from "vuetify";
 const theme = useTheme();
@@ -87,17 +87,14 @@ const themeCheck = () => {
             <LayoutLogo width="200" height="70" />
           </v-btn>
           <v-spacer></v-spacer>
-          <v-tabs
-            height="50"
-            class="rounded-pill hidden-sm-and-down"
-            color="primary"
-          >
+          <v-tabs height="50" class="hidden-sm-and-down">
             <template v-for="(link, i) in links">
               <v-tab
                 :ripple="false"
-                class="text-capitalize rounded-pill"
+                class="text-capitalize rounded"
+                :class="isDark ? 'text-white' : 'text-black'"
                 :to="link['link']"
-                selected-class="text-white"
+                selected-class="text-white bg-primary"
               >
                 {{ link["name"] }}
               </v-tab>
@@ -160,7 +157,8 @@ const themeCheck = () => {
     <v-card flat>
       <v-card-text class="d-flex justify-center">
         <client-only>
-          <v-btn height="50"
+          <v-btn
+            height="50"
             class="mr-3 px-10 text-capitalize"
             variant="tonal"
             :color="isDark ? 'white' : 'primary'"
@@ -173,7 +171,8 @@ const themeCheck = () => {
             </v-icon>
             Facebook
           </v-btn>
-          <v-btn height="50"
+          <v-btn
+            height="50"
             class="mr-3 px-10 text-capitalize"
             variant="tonal"
             :color="isDark ? 'white' : 'primary'"

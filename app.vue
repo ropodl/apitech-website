@@ -11,7 +11,7 @@ onMounted(() => {
 <template>
   <div>
     <VitePwaManifest />
-    <NuxtLoadingIndicator />
+    <NuxtLoadingIndicator color="rgb(var(--v-theme-primary))" />
     <v-app>
       <NuxtLayout>
         <NuxtPage keepalive />

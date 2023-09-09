@@ -1,5 +1,5 @@
 <script setup>
-import { mdiStar, mdiThumbUp, mdiCertificate } from "@mdi/js";
+import { mdiCertificate, mdiStar, mdiThumbUp } from "@mdi/js";
 
 useHead({
   title: "Learn More About API Technology",
@@ -35,7 +35,7 @@ const why = [
   <v-container>
     <v-row no-gutters align="center">
       <v-col cols="12" md="4">
-        <v-card color="primary-darken-3" class="py-10 px-3" rounded="xl">
+        <v-card color="primary" class="py-10 px-3" rounded="xl">
           <v-card-title class="text-h3 font-weight-bold">
             Our Vision
           </v-card-title>
@@ -81,10 +81,9 @@ const why = [
             professionalism, and customer satisfaction. Protect your assets with
             API Technologies and enjoy peace of mind.
           </v-card-text>
-          <!-- <v-list density="compact" > -->
           <v-list-item class="mb-6" v-for="(item, i) in why">
             <template #prepend>
-              <v-avatar size="60" color="primary-darken-3" rounded="lg">
+              <v-avatar size="60" color="primary" rounded="lg">
                 <v-icon size="30" :icon="item['icon']"></v-icon>
               </v-avatar>
             </template>
@@ -99,7 +98,6 @@ const why = [
               style="line-height: 1.4rem"
             ></v-list-item-subtitle>
           </v-list-item>
-          <!-- </v-list> -->
         </v-card>
       </v-col>
     </v-row>
@@ -119,5 +117,5 @@ const why = [
       </v-row>
     </v-container>
   </v-card>
-  <SharedWorkingProcess />
+  <LazySharedWorkingProcess />
 </template>

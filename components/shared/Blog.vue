@@ -34,7 +34,7 @@ const blogs = [
   <v-container class="py-10">
     <v-row justify="center">
       <v-col cols="12" sm="8" md="5" class="text-center pb-0">
-        <v-card-title class="text-h3 font-weight-bold">
+        <v-card-title class="text-h3 font-weight-bold text-primary">
           Blog & Article
         </v-card-title>
         <!-- <div class="mx-auto divider"></div> -->
@@ -52,6 +52,7 @@ const blogs = [
             variant="text"
             :to="blog['link']"
             v-bind="props"
+            v-tilt="{ gyroscope: false, speed: 500, perspective: 1200 }"
           >
             <v-img
               cover

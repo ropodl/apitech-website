@@ -43,13 +43,7 @@ const contactList = [
     <v-container>
       <v-row class="mb-3">
         <v-col cols="12" xs="12" sm="12" md="4">
-          <v-img
-            class="mb-3"
-            height="100"
-            width="350"
-            src="/logo.png"
-            alt="Api Technology Logo"
-          ></v-img>
+          <LayoutLogo width="250" height="70" />
           <div class="mb-3">
             API Technology offer you a business to business service in the Web,
             Mobile, Networking, ICT and Electronics Hardware platform.
@@ -76,7 +70,7 @@ const contactList = [
               color="white"
               target="_blank"
               href="https://www.linkedin.com/company/api-technology-pvt.-ltd./"
-              aria-label="LikedIn Link button"
+              aria-label="LinkedIn Link button"
             >
               <v-icon>
                 <font-awesome-icon

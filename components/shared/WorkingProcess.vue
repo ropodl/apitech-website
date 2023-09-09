@@ -29,7 +29,7 @@ const processes = [
   <v-container class="py-10">
     <v-row justify="center">
       <v-col cols="12" sm="8" md="8" lg="6" class="text-center pb-0">
-        <v-card-title class="text-h3 font-weight-bold text-wrap">
+        <v-card-title class="text-h3 font-weight-bold text-wrap text-primary">
           Our Working Process
         </v-card-title>
         <!-- <div class="mx-auto divider"></div> -->

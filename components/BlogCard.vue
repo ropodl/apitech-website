@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col cols="12">
-      <Cattitle :first="'Blog'" />
+      <LazyCattitle :first="'Blog'" />
     </v-col>
     <v-col v-for="i in 3" :key="i" cols="12" md="4">
       <v-hover v-slot="{ hover }">

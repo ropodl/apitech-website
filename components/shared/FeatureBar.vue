@@ -1,9 +1,9 @@
 <script setup>
 import {
+  mdiAccountWrenchOutline,
+  mdiCheckDecagramOutline,
   mdiLightbulbOnOutline,
   mdiThumbUp,
-  mdiCheckDecagramOutline,
-  mdiAccountWrenchOutline,
 } from "@mdi/js";
 
 const bar = [
@@ -40,18 +40,10 @@ const bar = [
             rounded="0"
             class="py-8 px-10 rounded-0"
           >
-            <!-- :class="[
-              i == 0
-                ? 'rounded-e-0 rounded-s-xl'
-                : i == bar.length - 1
-                ? 'rounded-e-xl'
-                : '',
-              i == 2 ? 'py-16 rounded-xl elevation-12' : '',
-            ]" -->
             <v-card-subtitle class="text-center mb-3">
-              <v-avatar rounded="0">
+              <v-avatar size="50" rounded="0">
                 <v-icon
-                  size="60"
+                  size="50"
                   color="white"
                   style="opacity: 1 !important"
                   :icon="item['icon']"
