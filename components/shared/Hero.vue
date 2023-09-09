@@ -34,15 +34,12 @@ const createMail = () => {
 <template>
   <v-container fluid class="pa-0">
     <v-img cover height="650" src="/images/img1.avif" alt="background image">
-      <v-overlay
-        :model-value="true"
-        contained
-        persistent
-        no-click-animation
-        scroll-strategy="block"
-        :scrim="isDark ? 'black' : 'white'"
-        class="overlay-opacity"
-        content-class="pt-16"
+      <div
+        class="h-100 w-100 pt-16"
+        :style="{
+          backgroundColor: isDark ? `rgba(0,0,0,0.5)` : `rgba(255,255,255,0.5)`,
+          backdropFilter: `blur(4px)`,
+        }"
       >
         <v-container class="h-100 w-100">
           <v-row justify="center" align="center" class="h-100">
@@ -119,17 +116,11 @@ const createMail = () => {
             </v-col>
           </v-row>
         </v-container>
-      </v-overlay>
+      </div>
     </v-img>
   </v-container>
 </template>
 <style lang="scss">
-.overlay-opacity {
-  div.v-overlay__scrim {
-    opacity: 0.8 !important;
-  }
-}
-
 .pulse-button {
   position: relative;
   display: block;

@@ -5,8 +5,6 @@ const theme = useTheme();
 onMounted(() => {
   let dark = localStorage.getItem("isDarkMode") === "true";
   theme.global.name.value = dark ? "dark" : "light";
-  if (process.server) console.log("true");
-  else console.log("false");
 });
 </script>
 
