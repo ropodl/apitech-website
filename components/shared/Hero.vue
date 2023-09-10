@@ -35,8 +35,8 @@ const createMail = () => {
       <div
         class="h-100 w-100 pt-16"
         :style="{
-          backgroundColor: isDark ? `rgba(0,0,0,0.5)` : `rgba(255,255,255,0.5)`,
-          backdropFilter: `blur(4px)`,
+          backgroundColor: isDark ? 'rgba(0,0,0,0.8)' : 'rgba(255,255,255,0.8)',
+          backdropFilter: 'blur(4px)',
         }"
       >
         <v-container class="h-100 w-100">
@@ -44,16 +44,12 @@ const createMail = () => {
             <v-col cols="12" md="6">
               <div class="text-md-h2 text-sm-h2 text-h3 font-weight-black">
                 Professional <br class="hidden-sm-and-down" /><span
-                  :class="
-                    isDark ? 'text-primary-lighten-4' : 'text-primary'
-                  "
+                  :class="isDark ? 'text-primary' : 'text-primary'"
                   >Security Services</span
                 ><br class="hidden-sm-and-down" />
                 You Can Trust
               </div>
-              <div
-                class="divider my-6 bg-primary"
-              ></div>
+              <div class="divider my-6 bg-primary"></div>
               <div class="mb-6">
                 We, at Api Technology, offer B2B services in Web, Android,
                 Networking, ICT, and Electronics Hardware. We excel in providing

@@ -109,19 +109,17 @@
   <v-container>
     <v-row>
       <v-col cols="12" md="4" class="mt-lg-n16">
-        <v-form ref="contactForm" @submit.prevent="submitForm">
-          <v-card class="px-3 pt-4">
+        <v-form fast-fail ref="contactForm" @submit.prevent="submitForm">
+          <v-card class="pt-4">
             <v-card-title class="mb-3">Send a message</v-card-title>
             <v-card-text class="pb-0">
-              <v-text-field v-model="templateParams['from_name']" :rules="rules['fullName']" placeholder="Full Name"></v-text-field>
-              <v-text-field v-model="templateParams['from_mobile_number']" :rules="rules['phoneNumber']" placeholder="Phone Number"></v-text-field>
-              <v-text-field v-model="templateParams['from_email']" :rules="rules['emailAddress']" placeholder="Email Address"></v-text-field>
-              <v-text-field v-model="templateParams['from_subject']" :rules="rules['subject']" placeholder="Subject"></v-text-field>
-              <v-textarea v-model="templateParams['message']" :rules="rules['message']" placeholder="Message"></v-textarea>
+              <v-text-field v-model="templateParams['from_name']" :rules="rules['fullName']" variant="solo-filled" placeholder="Full Name"></v-text-field>
+              <v-text-field v-model="templateParams['from_mobile_number']" :rules="rules['phoneNumber']" variant="solo-filled" placeholder="Phone Number"></v-text-field>
+              <v-text-field v-model="templateParams['from_email']" :rules="rules['emailAddress']" variant="solo-filled" placeholder="Email Address"></v-text-field>
+              <v-text-field v-model="templateParams['from_subject']" :rules="rules['subject']" variant="solo-filled" placeholder="Subject"></v-text-field>
+              <v-textarea v-model="templateParams['message']" :rules="rules['message']" variant="solo-filled" placeholder="Message"></v-textarea>
             </v-card-text>
-            <v-card-text class="pt-0">
-              <v-btn block type="submit" size="large" rounded="sm" variant="flat" class="text-capitalize">Submit</v-btn>
-            </v-card-text>
+            <v-btn block type="submit" size="large" rounded="sm" variant="flat" class="text-capitalize">Submit</v-btn>
           </v-card>
         </v-form>
       </v-col>

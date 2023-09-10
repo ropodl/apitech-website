@@ -8,6 +8,7 @@ import {
   mdiWhiteBalanceSunny,
 } from "@mdi/js";
 import { useTheme } from "vuetify";
+
 const theme = useTheme();
 
 onMounted(() => {
@@ -71,9 +72,9 @@ const themeCheck = () => {
 </script>
 <template>
   <v-container
-    class="position-fixed mx-auto"
+    class="mx-auto position-fixed"
     style="height: 70px; top: 10px; left: 0; right: 0; z-index: 999"
-  >
+    >
     <v-row>
       <v-col cols="12" class="py-0">
         <v-card
@@ -201,6 +202,13 @@ const themeCheck = () => {
   </v-navigation-drawer>
 </template>
 <style>
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
 .v-slide-group-item--active {
   color: white;
   background-color: rgba(var(--v-theme-primary-darken-3), 0.8);

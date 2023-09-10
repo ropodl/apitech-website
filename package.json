@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-app",
+  "name": "api-technology",
   "private": true,
   "scripts": {
     "build": "NITRO_PRESET=vercel-edge nuxt build",
