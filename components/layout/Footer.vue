@@ -1,4 +1,5 @@
 <script setup>
+import { Icon } from "@iconify/vue";
 import { mdiClockOutline, mdiEmail, mdiMapMarker, mdiPhone } from "@mdi/js";
 
 const quickLinks = [
@@ -59,7 +60,8 @@ const contactList = [
               aria-label="Facebook Link button"
             >
               <v-icon>
-                <font-awesome-icon :icon="['fab', 'fa-facebook']" />
+                <Icon icon="fa6-brands:facebook" />
+                <!-- <font-awesome-icon :icon="['fab', 'fa-facebook']" /> -->
               </v-icon>
             </v-btn>
             <v-btn
@@ -73,9 +75,7 @@ const contactList = [
               aria-label="LinkedIn Link button"
             >
               <v-icon>
-                <font-awesome-icon
-                  :icon="['fab', 'fa-linkedin']"
-                ></font-awesome-icon>
+                <Icon icon="fa6-brands:linkedin" />
               </v-icon>
             </v-btn>
           </client-only>
@@ -99,7 +99,7 @@ const contactList = [
               class="d-flex align-center"
             >
               <span>
-                <v-icon small>{{ contact.icon }}</v-icon>
+                <v-icon small color="primary">{{ contact.icon }}</v-icon>
               </span>
               {{ contact.title }}
             </li>

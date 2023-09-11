@@ -1,4 +1,5 @@
 <script setup>
+import { Icon } from "@iconify/vue";
 import {
   mdiHandshake,
   mdiHome,
@@ -74,7 +75,7 @@ const themeCheck = () => {
   <v-container
     class="mx-auto position-fixed"
     style="height: 70px; top: 10px; left: 0; right: 0; z-index: 999"
-    >
+  >
     <v-row>
       <v-col cols="12" class="py-0">
         <v-card
@@ -113,7 +114,7 @@ const themeCheck = () => {
               aria-label="Facebook Icon"
             >
               <v-icon>
-                <font-awesome-icon :icon="['fab', 'fa-facebook']" />
+                <Icon icon="fa6-brands:facebook" />
               </v-icon>
             </v-btn>
             <v-btn
@@ -126,9 +127,7 @@ const themeCheck = () => {
               aria-label="LinkedIn Icon"
             >
               <v-icon>
-                <font-awesome-icon
-                  :icon="['fab', 'fa-linkedin']"
-                ></font-awesome-icon>
+                <Icon icon="fa6-brands:linkedin" />
               </v-icon>
             </v-btn>
           </client-only>
