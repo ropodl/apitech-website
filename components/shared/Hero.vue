@@ -127,6 +127,8 @@ const slides = [
         </v-row>
       </v-container>
       <button
+        role="button"
+        aria-label="scroll down"
         class="scroller hidden-sm-and-down"
         @click="scrollTo('explore', 0)"
       ></button>
