@@ -70,7 +70,12 @@ const blogs = [
                   backdropFilter: 'blur(10px)',
                 }"
               >
-                <v-list density="compact" lines="two" bg-color="transparent">
+                <v-list
+                  density="compact"
+                  lines="two"
+                  bg-color="transparent"
+                  :aria-label="blog['title']"
+                >
                   <v-list-item>
                     <v-list-item-subtitle
                       class="text-subtitle-1 font-weight-medium"

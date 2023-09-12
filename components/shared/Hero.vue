@@ -90,16 +90,15 @@ const slides = [
                 width="350"
                 height="350"
               >
-                <!-- <span class="rounded-circle overflow-hidden"> -->
                 <client-only>
                   <carousel
                     :items-to-show="1"
-                    autoplay="4000"
+                    :autoplay="4000"
                     wrap-around
-                    transition="0"
+                    :transition="0"
                     pauseAutoplayOnHover
-                    mouseDrag="false"
-                    touchDrag="false"
+                    :mouseDrag="false"
+                    :touchDrag="false"
                   >
                     <slide v-for="slide in slides" :key="slide">
                       <v-img
@@ -110,13 +109,8 @@ const slides = [
                         :src="slide"
                       ></v-img>
                     </slide>
-                    <!-- <template #addons>
-                        <navigation />
-                        <pagination />
-                      </template> -->
                   </carousel>
                 </client-only>
-                <!-- </span> -->
                 <v-btn
                   icon
                   class="rounded-circle pulse-button text-decoration-none"

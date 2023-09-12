@@ -31,11 +31,11 @@ const why = [
 ];
 </script>
 <template>
-  <LazyLayoutPageSection title="About Us" />
+  <LazyLayoutPageSection class="mb-10" title="About Us" />
   <v-container>
-    <v-row no-gutters align="center">
-      <v-col cols="12" md="4">
-        <v-card color="primary" class="py-10 px-3" rounded="xl">
+    <v-row>
+      <v-col cols="12" md="6">
+        <v-card flat color="transparent" class="py-10 px-3" rounded="xl">
           <v-card-title class="text-h3 font-weight-bold">
             Our Vision
           </v-card-title>
@@ -71,8 +71,8 @@ const why = [
           </v-card-text>
         </v-card>
       </v-col>
-      <v-col cols="12" md="8">
-        <v-card class="rounded-xl rounded-s-0 py-10">
+      <v-col cols="12" md="6">
+        <v-card color="primary" class="py-10 px-3" rounded="xl">
           <v-card-title class="text-h4">Why API Technology</v-card-title>
           <v-divider class="border-0"></v-divider>
           <v-card-text>

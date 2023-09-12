@@ -38,7 +38,7 @@ const bar = [
         <v-col cols="12" sm="6" md="3" v-for="(item, i) in bar">
           <v-card
             flat
-            :color="i == 2 ? 'primary-darken-1' : 'primary-darken-3'"
+            :color="i % 2 ? 'primary-darken-1' : 'primary-darken-3'"
             rounded="0"
             class="py-8 px-10 rounded-0"
           >
