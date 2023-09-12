@@ -35,7 +35,7 @@ const bar = [
   <v-container class="py-0" style="margin-top: -100px">
     <v-card color="primary-darken-3 rounded-pill">
       <v-row align="center" no-gutters>
-        <v-col cols="12" md="3" v-for="(item, i) in bar">
+        <v-col cols="12" sm="6" md="3" v-for="(item, i) in bar">
           <v-card
             flat
             :color="i == 2 ? 'primary-darken-1' : 'primary-darken-3'"
@@ -52,7 +52,7 @@ const bar = [
                 ></v-icon>
               </v-avatar>
             </v-card-subtitle>
-            <v-card-title class="text-h5 text-center">{{
+            <v-card-title class="text-h5 text-center text-wrap">{{
               item["title"]
             }}</v-card-title>
           </v-card>
@@ -63,10 +63,8 @@ const bar = [
 </template>
 <style lang="scss" scoped>
 .rounded-pill{
-  @media (max-width:400px) {
+  @media (max-width:960px) {
     border-radius: 30px !important;
   }
 }
-
-  
 </style>
