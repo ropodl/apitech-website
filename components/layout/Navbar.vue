@@ -89,7 +89,7 @@ const themeCheck = () => {
             <LayoutLogo width="200" height="70" />
           </v-btn>
           <v-spacer></v-spacer>
-          <v-tabs height="50" class="hidden-sm-and-down">
+          <v-tabs exact height="50" class="hidden-sm-and-down">
             <template v-for="(link, i) in links">
               <v-tab
                 :ripple="false"
@@ -167,7 +167,7 @@ const themeCheck = () => {
             aria-label="Facebook Icon"
           >
             <v-icon start>
-              <font-awesome-icon :icon="['fab', 'fa-facebook']" />
+              <Icon icon="fa6-brands:facebook" />
             </v-icon>
             Facebook
           </v-btn>
@@ -181,9 +181,7 @@ const themeCheck = () => {
             aria-label="LinkedIn Icon"
           >
             <v-icon start>
-              <font-awesome-icon
-                :icon="['fab', 'fa-linkedin']"
-              ></font-awesome-icon>
+              <Icon icon="fa6-brands:linkedin" />
             </v-icon>
             LinkedIn
           </v-btn>

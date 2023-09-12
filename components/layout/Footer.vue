@@ -61,7 +61,6 @@ const contactList = [
             >
               <v-icon>
                 <Icon icon="fa6-brands:facebook" />
-                <!-- <font-awesome-icon :icon="['fab', 'fa-facebook']" /> -->
               </v-icon>
             </v-btn>
             <v-btn

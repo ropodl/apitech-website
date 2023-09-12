@@ -204,28 +204,6 @@ const infoList = [
                 ></v-list-item-subtitle>
               </v-list-item>
             </v-list>
-            <!-- <div class="text-overline">{{ info.title }}</div>
-            <div class="text-subtitle-1">
-              <span v-if="i != 3">
-                {{ info.content }}
-              </span>
-              <span v-else>
-                <v-btn
-                  class="mr-2"
-                  v-for="(social, i) in info.content"
-                  :key="i"
-                  :href="social.link"
-                  icon
-                  outlined
-                  large
-                  target="_blank"
-                >
-                  <v-icon>
-                    <font-awesome-icon :icon="social.icon"></font-awesome-icon>
-                  </v-icon>
-                </v-btn>
-              </span>
-            </div> -->
           </v-col>
         </v-row>
         <v-card>
