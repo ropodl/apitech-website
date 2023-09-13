@@ -68,17 +68,20 @@ const contactList = [
           </client-only>
         </v-col>
         <v-col cols="12" xs="12" sm="6" md="2">
-          <div class="text-h6 font-weight-bold">Quick Links</div>
-          <v-divider class="my-3"></v-divider>
+          <div class="text-h6 font-weight-bold mb-3">Quick Links</div>
           <ul class="quick-link-list">
-            <li v-for="(quick, i) in quickLinks" :key="i">
-              <router-link :to="quick.link">{{ quick.title }}</router-link>
+            <li>
+              <router-link to="/terms-conditions">
+                Terms & Conditions
+              </router-link>
+            </li>
+            <li>
+              <router-link to="/privacy-policy">Privacy Policy</router-link>
             </li>
           </ul>
         </v-col>
         <v-col cols="12" xs="12" sm="6" md="3">
-          <div class="text-h6 font-weight-bold">General Info</div>
-          <v-divider class="my-3"></v-divider>
+          <div class="text-h6 font-weight-bold mb-3">General Info</div>
           <ul class="contact-us-list">
             <li
               v-for="(contact, i) in contactList"
@@ -95,8 +98,7 @@ const contactList = [
           </ul>
         </v-col>
         <v-col cols="12" xs="12" sm="12" md="3">
-          <div class="text-h6 font-weight-bold">Work Hours</div>
-          <v-divider class="my-3"></v-divider>
+          <div class="text-h6 font-weight-bold mb-3">Work Hours</div>
           <div class="mb-3">
             <v-icon>
               <Icon icon="mdi:clock-outline" />
@@ -104,8 +106,7 @@ const contactList = [
             10 AM - 6 PM, Sunday - Friday
           </div>
           <div class="mb-3">Please feel free to visit us at given time.</div>
-          <div class="text-h6 font-weight-bold">Special Partner</div>
-          <v-divider class="my-3"></v-divider>
+          <div class="text-h6 font-weight-bold mb-3">Special Partner</div>
           <v-img
             width="200"
             height="60"
@@ -113,9 +114,6 @@ const contactList = [
             alt="certified partner logo"
           ></v-img>
         </v-col>
-      </v-row>
-      <v-row>
-        <v-divider></v-divider>
       </v-row>
       <v-row>
         <v-col cols="12" class="pt-6">

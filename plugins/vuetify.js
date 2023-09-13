@@ -4,7 +4,7 @@ import "vuetify/styles";
 import { md3 } from "vuetify/blueprints";
 import colors from "vuetify/lib/util/colors";
 // Icons
-import { aliases, mdi } from "vuetify/iconsets/mdi-svg";
+// import { aliases, mdi } from "vuetify/iconsets/mdi-svg";
 
 export default defineNuxtPlugin((nuxtApp) => {
   const vuetify = createVuetify({
@@ -12,10 +12,10 @@ export default defineNuxtPlugin((nuxtApp) => {
     blueprint: md3,
     icons: {
       defaultSet: "mdi",
-      aliases,
-      sets: {
-        mdi,
-      },
+      // aliases,
+      // sets: {
+      //   mdi,
+      // },
     },
     theme: {
       defaultTheme: "light",
