@@ -1,13 +1,5 @@
 <script setup>
 import { Icon } from "@iconify/vue";
-import {
-  mdiHandshake,
-  mdiHome,
-  mdiInformationOutline,
-  mdiPhoneIncomingOutgoing,
-  mdiWeatherNight,
-  mdiWhiteBalanceSunny,
-} from "@mdi/js";
 import { useTheme } from "vuetify";
 
 const theme = useTheme();
@@ -32,22 +24,22 @@ let windowSize = reactive({
 
 const links = [
   {
-    icon: mdiHome,
+    icon: "mdi:home",
     name: "Home",
     link: "/",
   },
   {
-    icon: mdiHandshake,
+    icon: "mdi:handshake",
     name: "Services",
     link: "/services",
   },
   {
-    icon: mdiInformationOutline,
+    icon: "mdi:information-outline",
     name: "About Us",
     link: "/about",
   },
   {
-    icon: mdiPhoneIncomingOutgoing,
+    icon: "mdi:phone-incoming-outgoing",
     name: "Contact Us",
     link: "/contact",
   },
@@ -138,9 +130,13 @@ const themeCheck = () => {
             @click="themeCheck"
             :aria-label="'Switch to' + isDark ? ' Light ' : ' Dark ' + 'Mode'"
           >
-            <v-icon
-              :icon="isDarkMode ? mdiWeatherNight : mdiWhiteBalanceSunny"
-            ></v-icon>
+            <v-icon>
+              <Icon
+                :icon="
+                  isDarkMode ? 'mdi:weather-night' : 'mdi:white-balance-sunny'
+                "
+              />
+            </v-icon>
           </v-btn>
           <v-app-bar-nav-icon
             variant="tonal"
@@ -191,7 +187,9 @@ const themeCheck = () => {
     <v-list dense>
       <v-list-item v-for="link in links" :to="link['link']" color="primary">
         <template #prepend>
-          <v-icon :icon="link['icon']"></v-icon>
+          <v-icon>
+            <Icon :icon="link['icon']" />
+          </v-icon>
         </template>
         <v-list-item-title>{{ link["name"] }}</v-list-item-title>
       </v-list-item>

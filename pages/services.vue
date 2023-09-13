@@ -1,15 +1,5 @@
 <script setup>
-import {
-  mdiArrowRight,
-  mdiCctv,
-  mdiRadioHandheld,
-  mdiFireAlert,
-  mdiAccessPointNetwork,
-  mdiHomeAutomation,
-  mdiPhoneClassic,
-  mdiSquareRoundedBadge,
-  mdiCrosshairsGps,
-} from "@mdi/js";
+import { Icon } from "@iconify/vue";
 
 useHead({
   title: "Our B2B Services in Web, Mobile, Networking & Hardware",
@@ -24,39 +14,39 @@ useHead({
 
 const services = [
   {
-    icon: mdiCctv,
+    icon: "mdi:cctv",
     title: "IP/HD/Analog/Wireless CCTV",
   },
   {
-    icon: mdiFireAlert,
+    icon: "mdi:fire-alert",
     title: "Fire Resistance System",
   },
   {
-    icon: mdiRadioHandheld,
+    icon: "mdi:radio-handheld",
     title: "Intercom/Radio Systems",
   },
   {
-    icon: mdiAccessPointNetwork,
+    icon: "mdi:access-point-network",
     title: "Optical Fiber/Wired/Wireless Networking",
   },
   {
-    icon: mdiCrosshairsGps,
+    icon: "mdi:crosshairs-gps",
     title: "GPS Tracking",
   },
   {
-    icon: mdiRadioHandheld,
+    icon: "mdi:radio-handheld",
     title: "Time Attendance, Access Control",
   },
   {
-    icon: mdiHomeAutomation,
+    icon: "mdi:home-automation",
     title: "Internet of Things(IOT) & Automation",
   },
   {
-    icon: mdiPhoneClassic,
+    icon: "mdi:phone-classic",
     title: "EPABX/KTS & Phones",
   },
   {
-    icon: mdiSquareRoundedBadge,
+    icon: "mdi:square-rounded-badge",
     title: "Web and Android Apps Design",
   },
 ];
@@ -87,7 +77,9 @@ const services = [
           to="/about"
         >
           Learn More about out vision
-          <v-icon end :icon="mdiArrowRight"></v-icon>
+          <v-icon end>
+            <Icon icon="mdi:arrow-right" />
+          </v-icon>
         </v-btn>
       </v-col>
     </v-row>
@@ -95,12 +87,10 @@ const services = [
       <v-col cols="12" sm="6" md="4" v-for="(service, i) in services">
         <v-card border flat rounded="xl" class="py-10 h-100">
           <v-card-text class="text-center">
-            <v-avatar rounded="0" size="70">
-              <v-icon
-                color="primary"
-                size="90"
-                :icon="service['icon']"
-              ></v-icon>
+            <v-avatar rounded="0" size="90">
+              <v-icon color="primary" size="90">
+                <Icon :icon="service['icon']" />
+              </v-icon>
             </v-avatar>
           </v-card-text>
           <v-card-text
@@ -109,9 +99,6 @@ const services = [
           ></v-card-text>
         </v-card>
       </v-col>
-      <!-- <v-col cols="12">
-        <HomeAboutPara />
-      </v-col> -->
     </v-row>
   </v-container>
 </template>

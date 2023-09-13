@@ -1,31 +1,24 @@
 <script setup>
-import {
-  mdiAccountWrenchOutline,
-  mdiCheckDecagramOutline,
-  mdiLightbulbOnOutline,
-  mdiThumbUp,
-} from "@mdi/js";
-
-
+import { Icon } from "@iconify/vue";
 
 const bar = [
   {
-    icon: mdiLightbulbOnOutline,
+    icon: "mdi:lightbulb-on-outline",
     title: "Innovation",
     description: "Lorem ipsum dolar sit amet consectetur",
   },
   {
-    icon: mdiThumbUp,
+    icon: "mdi:thumb-up",
     title: "High Quality",
     description: "Lorem ipsum dolar sit amet consectetur",
   },
   {
-    icon: mdiCheckDecagramOutline,
+    icon: "mdi:check-decagram-outline",
     title: "Top Services",
     description: "Lorem ipsum dolar sit amet consectetur",
   },
   {
-    icon: mdiAccountWrenchOutline,
+    icon: "mdi:account-wrench-outline",
     title: "Best Product",
     description: "Lorem ipsum dolar sit amet consectetur",
   },
@@ -44,12 +37,9 @@ const bar = [
           >
             <v-card-subtitle class="text-center mb-3">
               <v-avatar size="50" rounded="0">
-                <v-icon
-                  size="50"
-                  color="white"
-                  style="opacity: 1 !important"
-                  :icon="item['icon']"
-                ></v-icon>
+                <v-icon size="50" color="white" style="opacity: 1 !important">
+                  <Icon :icon="item['icon']" />
+                </v-icon>
               </v-avatar>
             </v-card-subtitle>
             <v-card-title class="text-h5 text-center text-wrap">{{
@@ -62,8 +52,8 @@ const bar = [
   </v-container>
 </template>
 <style lang="scss" scoped>
-.rounded-pill{
-  @media (max-width:960px) {
+.rounded-pill {
+  @media (max-width: 960px) {
     border-radius: 30px !important;
   }
 }

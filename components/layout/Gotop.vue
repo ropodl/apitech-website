@@ -1,5 +1,5 @@
 <script setup>
-import { mdiArrowUp } from "@mdi/js";
+import { Icon } from "@iconify/vue";
 
 let fab = ref(false);
 
@@ -27,6 +27,8 @@ const onScroll = (e) => {
     }"
     @click="scrollTo('__nuxt')"
   >
-    <v-icon :icon="mdiArrowUp"></v-icon>
+    <v-icon>
+      <Icon icon="mdi:arrow-up" />
+    </v-icon>
   </v-btn>
 </template>

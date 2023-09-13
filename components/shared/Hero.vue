@@ -1,5 +1,5 @@
 <script setup>
-import { mdiArrowRight, mdiAt } from "@mdi/js";
+import { Icon } from "@iconify/vue";
 import Typed from "typed.js";
 import { Carousel, Slide } from "vue3-carousel";
 import "vue3-carousel/dist/carousel.css";
@@ -34,7 +34,6 @@ const slides = [
   "/images/img1.avif",
   "/images/finger.avif",
   "/images/fingerprint.avif",
-  // "/images/nest.jpg",
 ];
 </script>
 <template>
@@ -76,7 +75,9 @@ const slides = [
                   to="/services"
                 >
                   Explore Our Services
-                  <v-icon end :icon="mdiArrowRight"></v-icon>
+                  <v-icon end>
+                    <Icon icon="mdi:arrow-right" />
+                  </v-icon>
                 </v-btn>
               </v-col>
             </v-row>
@@ -102,8 +103,8 @@ const slides = [
                   >
                     <slide v-for="slide in slides" :key="slide">
                       <v-img
-                        class="rounded-circle"
                         cover
+                        class="rounded-circle"
                         height="350"
                         width="350"
                         :src="slide"
@@ -119,7 +120,9 @@ const slides = [
                   @click="createMail"
                   aria-label="Send us an Email Button"
                 >
-                  <v-icon size="40" :icon="mdiAt"></v-icon>
+                  <v-icon size="40">
+                    <Icon icon="mdi:at" />
+                  </v-icon>
                 </v-btn>
               </v-card>
             </div>

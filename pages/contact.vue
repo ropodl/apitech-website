@@ -1,6 +1,6 @@
 <script setup>
 import emailjs from "@emailjs/browser";
-import { mdiEmail, mdiMapMarker, mdiPhone } from "@mdi/js";
+import { Icon } from "@iconify/vue";
 import { useTheme } from "vuetify";
 const theme = useTheme();
 
@@ -99,17 +99,17 @@ const rules = {
 
 const infoList = [
   {
-    icon: mdiMapMarker,
+    icon: "mdi:map-marker",
     title: "Contact Address",
     content: "Mid Baneshwor",
   },
   {
-    icon: mdiEmail,
+    icon: "mdi:email",
     title: "General Inquiry",
     content: "info.apitech@gmail.com",
   },
   {
-    icon: mdiPhone,
+    icon: "mdi:phone",
     title: "Phone Number",
     content: "01-4472774 ",
   },
@@ -164,13 +164,15 @@ const infoList = [
             </v-card-text>
             <v-btn
               block
+              height="50"
               type="submit"
               size="large"
               rounded="sm"
               variant="flat"
               class="text-capitalize"
-              >Submit</v-btn
             >
+              Submit
+            </v-btn>
           </v-card>
         </v-form>
       </v-col>
@@ -191,11 +193,9 @@ const infoList = [
               <v-list-item>
                 <template #prepend>
                   <v-avatar size="60" rounded="0">
-                    <v-icon
-                      color="primary"
-                      size="40"
-                      :icon="info['icon']"
-                    ></v-icon>
+                    <v-icon color="primary" size="40">
+                      <Icon :icon="info['icon']" />
+                    </v-icon>
                   </v-avatar>
                 </template>
                 <v-list-item-title v-text="info['title']"></v-list-item-title>

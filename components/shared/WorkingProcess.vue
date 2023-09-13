@@ -1,5 +1,5 @@
 <script setup>
-import { mdiCogClockwise, mdiForum, mdiAccountHardHatOutline } from "@mdi/js";
+import { Icon } from "@iconify/vue";
 import { useTheme } from "vuetify";
 const theme = useTheme();
 
@@ -9,17 +9,17 @@ const isDark = computed(() =>
 
 const processes = [
   {
-    icon: mdiForum,
+    icon: "mdi:forum",
     title: "Discussion",
     desc: "Consult with clients, suggest best fit security solutions.",
   },
   {
-    icon: mdiCogClockwise,
+    icon: "mdi:cog-clockwise",
     title: "Installation",
     desc: "Install CCTV, alarms, and access control systems.",
   },
   {
-    icon: mdiAccountHardHatOutline,
+    icon: "mdi:account-hard-hat-outline",
     title: "Maintenance",
     desc: "Regular check-ups, troubleshoot issues, repair damages.",
   },
@@ -41,11 +41,13 @@ const processes = [
     <v-row justify="space-between">
       <v-col cols="12" sm="6" md="6" lg="4" v-for="(process, i) in processes">
         <v-card-text class="text-center mb-n16">
-          <v-avatar class="bg-primary" size="100" style="z-index: 1">
-            <v-icon size="70" :icon="process['icon']"></v-icon>
+          <v-avatar class="bg-surface border" size="100" style="z-index: 1">
+            <v-icon size="70" color="primary">
+              <Icon :icon="process['icon']" />
+            </v-icon>
           </v-avatar>
         </v-card-text>
-        <v-card class="pt-16 pb-10 px-10">
+        <v-card border flat class="pt-16 pb-10 px-10">
           <v-card-title
             class="text-wrap text-center"
             v-text="process['title']"

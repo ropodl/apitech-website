@@ -1,6 +1,5 @@
 <script setup>
 import { Icon } from "@iconify/vue";
-import { mdiClockOutline, mdiEmail, mdiMapMarker, mdiPhone } from "@mdi/js";
 
 const quickLinks = [
   {
@@ -12,29 +11,18 @@ const quickLinks = [
     link: "/privacy-policy",
   },
 ];
-const footerSocial = [
-  {
-    title: "Facebook",
-    icon: "['fab', 'fa-facebook']",
-    link: "https://www.facebook.com/apitechnepal",
-  },
-  {
-    title: "LinkedIn",
-    icon: "['fab', 'fa-linkedin']",
-    link: "https://www.linkedin.com/apitechnepal",
-  },
-];
+
 const contactList = [
   {
-    icon: mdiMapMarker,
+    icon: "mdi:map-marker",
     title: "Mid Baneshwor, Kathmandu",
   },
   {
-    icon: mdiPhone,
+    icon: "mdi:phone",
     title: "01-4472774",
   },
   {
-    icon: mdiEmail,
+    icon: "mdi:email",
     title: "info.apitech@gmail.com",
   },
 ];
@@ -98,7 +86,9 @@ const contactList = [
               class="d-flex align-center"
             >
               <span>
-                <v-icon small color="primary">{{ contact.icon }}</v-icon>
+                <v-icon small color="primary">
+                  <Icon :icon="contact['icon']" />
+                </v-icon>
               </span>
               {{ contact.title }}
             </li>
@@ -108,7 +98,9 @@ const contactList = [
           <div class="text-h6 font-weight-bold">Work Hours</div>
           <v-divider class="my-3"></v-divider>
           <div class="mb-3">
-            <v-icon :icon="mdiClockOutline"></v-icon>
+            <v-icon>
+              <Icon icon="mdi:clock-outline" />
+            </v-icon>
             10 AM - 6 PM, Sunday - Friday
           </div>
           <div class="mb-3">Please feel free to visit us at given time.</div>

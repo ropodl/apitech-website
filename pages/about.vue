@@ -1,5 +1,5 @@
 <script setup>
-import { mdiCertificate, mdiStar, mdiThumbUp } from "@mdi/js";
+import { Icon } from "@iconify/vue";
 
 useHead({
   title: "Learn More About API Technology",
@@ -14,17 +14,17 @@ useHead({
 
 const why = [
   {
-    icon: mdiThumbUp,
+    icon: "mdi:thumb-up",
     title: "7+ years of service",
     desc: "Api Technologies is a company that has been operating in the technical protection solutions industry for over 7 years. During this time, we have acquired extensive experience and knowledge in the field, enabling it to provide high-quality solutions to our clients.",
   },
   {
-    icon: mdiStar,
+    icon: "mdi:star",
     title: "Best in Industry Support",
     desc: "Api Technologies prides itself on providing exceptional customer support, always striving to exceed client expectations. Our team of professional engineers and technicians are highly skilled and experienced, offering the best support in the industry.",
   },
   {
-    icon: mdiCertificate,
+    icon: "mdi:certificate",
     title: "Industry Certified",
     desc: "Api Technologies is industry certified, having obtained all necessary certifications required to operate in the technical protection solutions industry. Our certifications serve as a testament to our commitment to professionalism and quality.",
   },
@@ -84,7 +84,9 @@ const why = [
           <v-list-item class="mb-6" v-for="(item, i) in why">
             <template #prepend>
               <v-avatar size="60" color="primary" rounded="lg">
-                <v-icon size="30" :icon="item['icon']"></v-icon>
+                <v-icon size="30">
+                  <Icon :icon="item['icon']" />
+                </v-icon>
               </v-avatar>
             </template>
             <v-list-item-title
