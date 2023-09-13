@@ -52,8 +52,8 @@ const blogs = [
             variant="text"
             :to="blog['link']"
             v-bind="props"
-            v-tilt="{ gyroscope: false, speed: 500, perspective: 1200 }"
-          >
+            >
+            <!-- v-tilt="{ gyroscope: false, speed: 500, perspective: 1200 }" -->
             <v-img
               cover
               height="460"
