@@ -81,7 +81,7 @@ const themeCheck = () => {
             <LayoutLogo width="200" height="70" />
           </v-btn>
           <v-spacer></v-spacer>
-          <v-tabs exact height="50" class="hidden-sm-and-down" v-auto-animate>
+          <v-tabs exact height="50" class="hidden-sm-and-down">
             <template v-for="(link, i) in links">
               <v-tab
                 :ripple="false"
