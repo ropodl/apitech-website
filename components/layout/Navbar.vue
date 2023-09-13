@@ -128,7 +128,7 @@ const themeCheck = () => {
             variant="tonal"
             :color="isDark ? 'white' : 'primary'"
             @click="themeCheck"
-            :aria-label="'Switch to' + isDark ? ' Light ' : ' Dark ' + 'Mode'"
+            :aria-label="isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode'"
           >
             <v-icon>
               <Icon

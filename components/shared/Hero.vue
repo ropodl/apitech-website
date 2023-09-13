@@ -108,6 +108,7 @@ const slides = [
                         height="350"
                         width="350"
                         :src="slide"
+                        :alt="slide"
                       ></v-img>
                     </slide>
                   </carousel>
