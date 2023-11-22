@@ -19,7 +19,7 @@ const contactList = [
   },
   {
     icon: "mdi:phone",
-    title: "01-4472774",
+    title: "01-4572774",
   },
   {
     icon: "mdi:email",
