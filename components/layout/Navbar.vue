@@ -138,7 +138,7 @@ const themeCheck = () => {
               />
             </v-icon>
           </v-btn>
-          <v-btn
+          <v-btn icon
             variant="tonal"
             :color="isDark ? 'white' : 'primary'"
             class="ml-3 hidden-md-and-up"
