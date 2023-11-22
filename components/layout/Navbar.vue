@@ -138,12 +138,12 @@ const themeCheck = () => {
               />
             </v-icon>
           </v-btn>
-          <v-app-bar-nav-icon
+          <v-btn
             variant="tonal"
             :color="isDark ? 'white' : 'primary'"
             class="ml-3 hidden-md-and-up"
             @click="drawer = !drawer"
-          ></v-app-bar-nav-icon>
+          ><v-icon><Icon :icon="drawer?'mdi:close':'mdi:menu'"/></v-icon></v-btn>
         </v-card>
       </v-col>
     </v-row>
