@@ -1,4 +1,7 @@
 <script setup>
+import { Carousel, Navigation, Slide } from "vue3-carousel";
+import "vue3-carousel/dist/carousel.css";
+
 const clients = [
   {
     name: "Nepal Telecom",
@@ -65,6 +68,18 @@ const clients = [
     image: "/clients/Trissa.avif",
   },
 ];
+const breakpoints = {
+  // 700px and up
+  700: {
+    itemsToShow: 3.5,
+    snapAlign: "center",
+  },
+  // 1024 and up
+  1024: {
+    itemsToShow: 5,
+    snapAlign: "start",
+  },
+};
 </script>
 <template>
   <v-container class="py-16">
@@ -79,11 +94,25 @@ const clients = [
           peace of mind.
         </div>
       </v-col>
-      <v-row>
-        <v-col cols="6" sm="3" md="2" v-for="(item, i) in clients">
-          <v-img height="100" :src="item['image']" :alt="item['name']"></v-img>
-        </v-col>
-      </v-row>
+      <v-col cols="12" sm="12" md="7">
+        <client-only>
+          <carousel
+            :autoplay="4000"
+            :items-to-show="5"
+            wrap-around
+            pauseAutoplayOnHover
+            :breakpoints="breakpoints"
+          >
+            <Slide v-for="(item, i) in clients" :key="item">
+              <v-img
+                height="100"
+                class="carousel__item ma-2"
+                :src="item.image"
+              ></v-img>
+            </Slide>
+          </carousel>
+        </client-only>
+      </v-col>
     </v-row>
   </v-container>
 </template>

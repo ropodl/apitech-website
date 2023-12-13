@@ -164,10 +164,10 @@ const infoList = [
             </v-card-text>
             <v-btn
               block
+              color="primary"
               height="50"
               type="submit"
-              size="large"
-              rounded="sm"
+              rounded="0"
               variant="flat"
               class="text-capitalize"
             >
@@ -177,7 +177,7 @@ const infoList = [
         </v-form>
       </v-col>
       <v-col cols="12" md="8">
-        <div class="text-h2 font-weight-black my-16">
+        <div class="text-h2 font-weight-black mb-10">
           Excited about the project? <br />
           Please<span class="primary--text"> get in touch.</span>
         </div>
@@ -189,7 +189,7 @@ const infoList = [
             md="12"
             lg="6"
           >
-            <v-list rounded="xl" class="elevation-1">
+            <v-list flat rounded="lg">
               <v-list-item>
                 <template #prepend>
                   <v-avatar size="60" rounded="0">

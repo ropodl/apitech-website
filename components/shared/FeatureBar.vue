@@ -26,7 +26,7 @@ const bar = [
 </script>
 <template>
   <v-container class="py-0" style="margin-top: -100px">
-    <v-card color="primary-darken-3 rounded-pill">
+    <v-card color="primary-darken-3 rounded-lg">
       <v-row align="center" no-gutters>
         <v-col cols="12" sm="6" md="3" v-for="(item, i) in bar">
           <v-card

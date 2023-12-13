@@ -40,6 +40,7 @@ const contactList = [
           <client-only>
             <v-btn
               icon
+              rounded="lg"
               class="mr-3"
               variant="tonal"
               color="white"
@@ -53,7 +54,7 @@ const contactList = [
             </v-btn>
             <v-btn
               icon
-              rounded="circle"
+              rounded="lg"
               class="mr-3"
               variant="tonal"
               color="white"

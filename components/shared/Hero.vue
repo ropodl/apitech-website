@@ -47,7 +47,7 @@ const slides = [
     >
       <v-container class="h-100 w-100">
         <v-row justify="center" align="center" class="h-100">
-          <v-col cols="12" md="6">
+          <v-col cols="12" md="8" lg="7">
             <div class="text-md-h2 text-sm-h2 text-h3 font-weight-black">
               Professional <br />
               <span id="typed" class="text-primary"> </span>
@@ -62,27 +62,25 @@ const slides = [
               critical applications across various markets, including
               government, medical/industrial, and consumer.
             </div>
+            <v-btn
+              id="explore"
+              flat
+              rounded="lg"
+              color="primary"
+              height="50"
+              class="text-capitalize px-10"
+              to="/services"
+            >
+              Explore Our Services
+              <v-icon end>
+                <Icon icon="mdi:arrow-right" />
+              </v-icon>
+            </v-btn>
             <v-row>
-              <v-col cols="12" md="6">
-                <v-btn
-                  id="explore"
-                  flat
-                  width="300"
-                  rounded="pill"
-                  color="primary"
-                  height="60"
-                  class="text-capitalize"
-                  to="/services"
-                >
-                  Explore Our Services
-                  <v-icon end>
-                    <Icon icon="mdi:arrow-right" />
-                  </v-icon>
-                </v-btn>
-              </v-col>
+              <v-col cols="12" md="6"> </v-col>
             </v-row>
           </v-col>
-          <v-col cols="12" md="6" class="hidden-sm-and-down">
+          <v-col cols="12" md="4" lg="5" class="hidden-sm-and-down">
             <div class="d-flex align-center justify-center">
               <v-card
                 flat
@@ -115,7 +113,9 @@ const slides = [
                 </client-only>
                 <v-btn
                   icon
-                  class="rounded-circle pulse-button text-decoration-none"
+                  rounded="circle"
+                  color="primary"
+                  class="pulse-button text-decoration-none"
                   size="70"
                   style="position: absolute; bottom: 0; left: 50px"
                   @click="createMail"

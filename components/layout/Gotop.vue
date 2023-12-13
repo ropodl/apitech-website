@@ -14,10 +14,11 @@ const onScroll = (e) => {
   <v-btn
     icon
     aria-label="Go to top button"
-    size="x-large"
-    color="primary"
+    height="60"
+    width="60"
     variant="tonal"
-    class="rounded-circle position-fixed"
+    rounded="lg"
+    class="position-fixed"
     v-scroll="onScroll"
     :style="{
       bottom: fab ? '20px' : '-70px',

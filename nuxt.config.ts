@@ -1,4 +1,4 @@
-import vuetify from "vite-plugin-vuetify";
+import colors from "vuetify/lib/util/colors";
 
 const seoImage = "https://apitechnology.com.np/images/apitech.webp";
 
@@ -37,17 +37,29 @@ export default defineNuxtConfig({
     },
   },
   css: [],
-  devtools: false,
+  devtools: { enabled: false },
+  modules: [
+    "@vite-pwa/nuxt",
+    "nuxt-simple-sitemap",
+    "@nuxtjs/google-fonts",
+    "vuetify-nuxt-module",
+    "nuxt-simple-sitemap",
+    "nuxt-delay-hydration",
+  ],
+  build: {
+    transpile: ["vuetify"],
+  },
   googleFonts: {
+    download: true,
     families: {
       Roboto: [100, 300, 400, 500, 700, 900],
     },
   },
   pwa: {
-    registerType: 'autoUpdate',
+    registerType: "autoUpdate",
     workbox: {
       cleanupOutdatedCaches: true,
-      navigateFallback: '/',
+      navigateFallback: "/",
       globPatterns: ["**/*.{js,css,html,ico,png,svg}"],
     },
     manifest: {
@@ -70,26 +82,60 @@ export default defineNuxtConfig({
     },
     client: {
       installPrompt: true,
-    }, 
+    },
   },
   sitemap: {
     siteUrl: "https://apitechnology.com.np",
   },
-  modules: [
-    "@vite-pwa/nuxt",
-    "nuxt-simple-sitemap",
-    "@nuxtjs/google-fonts",
-    async (options, nuxt) => {
-      nuxt.hooks.hook("vite:extendConfig", (config) => {
-        config?.plugins?.push(
-          vuetify({
-            autoImport: true,
-          })
-        );
-      });
+  vuetify: {
+    vuetifyOptions: {
+      // blueprint: md3,
+      icons: {
+        defaultSet: "mdi",
+      },
+      theme: {
+        defaultTheme: "light",
+        variations: {
+          colors: [
+            "primary",
+            "secondary",
+            "error",
+            "info",
+            "success",
+            "warning",
+          ],
+          lighten: 5,
+          darken: 5,
+        },
+        themes: {
+          light: {
+            dark: false,
+            colors: {
+              primary: "#016780",
+              // colors.blue.darken2,
+              accent: colors.grey.darken3,
+              secondary: colors.amber.darken3,
+              info: colors.teal.lighten1,
+              warning: colors.amber.base,
+              error: colors.deepOrange.accent4,
+              success: colors.green.accent3,
+            },
+          },
+          dark: {
+            dark: true,
+            colors: {
+              primary: "#016780",
+              // colors.blue.darken2,
+              accent: colors.grey.darken3,
+              secondary: colors.amber.darken3,
+              info: colors.teal.lighten1,
+              warning: colors.amber.base,
+              error: colors.deepOrange.accent4,
+              success: colors.green.accent3,
+            },
+          },
+        },
+      },
     },
-  ],
-  build: {
-    transpile: ["vuetify"],
   },
 });

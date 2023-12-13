@@ -66,14 +66,16 @@ const themeCheck = () => {
 <template>
   <v-container
     class="mx-auto position-fixed"
-    style="height: 70px; top: 10px; left: 0; right: 0; z-index: 999"
+    style="height: 70px; top: 0; left: 0; right: 0; z-index: 999"
   >
     <v-row>
       <v-col cols="12" class="py-0">
         <v-card
+          border
+          flat
           height="70"
           v-resize="onResize"
-          class="d-flex align-center px-3 rounded-pill mx-auto"
+          class="d-flex align-center px-3 rounded-lg mx-auto"
           color="rgba(var(--v-theme-surface), 0.7)"
           style="backdrop-filter: blur(10px)"
         >
@@ -84,8 +86,9 @@ const themeCheck = () => {
           <v-tabs exact height="50" class="hidden-sm-and-down">
             <template v-for="(link, i) in links">
               <v-tab
+                rounded="lg"
                 :ripple="false"
-                class="text-capitalize rounded"
+                class="text-capitalize"
                 :class="isDark ? 'text-white' : 'text-black'"
                 :to="link['link']"
                 selected-class="text-white bg-primary"
@@ -98,6 +101,7 @@ const themeCheck = () => {
           <client-only>
             <v-btn
               icon
+              rounded="lg"
               class="mr-3 hidden-xs"
               variant="tonal"
               :color="isDark ? 'white' : 'primary'"
@@ -109,8 +113,9 @@ const themeCheck = () => {
                 <Icon icon="fa6-brands:facebook" />
               </v-icon>
             </v-btn>
-            <v-btn
+            <!-- <v-btn
               icon
+              rounded="lg"
               class="mr-3 hidden-xs"
               variant="tonal"
               :color="isDark ? 'white' : 'primary'"
@@ -121,14 +126,17 @@ const themeCheck = () => {
               <v-icon>
                 <Icon icon="fa6-brands:linkedin" />
               </v-icon>
-            </v-btn>
+            </v-btn> -->
           </client-only>
           <v-btn
             icon
+            rounded="lg"
             variant="tonal"
             :color="isDark ? 'white' : 'primary'"
             @click="themeCheck"
-            :aria-label="isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode'"
+            :aria-label="
+              isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode'
+            "
           >
             <v-icon>
               <Icon
@@ -138,12 +146,14 @@ const themeCheck = () => {
               />
             </v-icon>
           </v-btn>
-          <v-btn icon
+          <v-btn
+            icon
             variant="tonal"
             :color="isDark ? 'white' : 'primary'"
             class="ml-3 hidden-md-and-up"
             @click="drawer = !drawer"
-          ><v-icon><Icon :icon="drawer?'mdi:close':'mdi:menu'"/></v-icon></v-btn>
+            ><v-icon><Icon :icon="drawer ? 'mdi:close' : 'mdi:menu'" /></v-icon
+          ></v-btn>
         </v-card>
       </v-col>
     </v-row>
