@@ -43,7 +43,6 @@ export default defineNuxtConfig({
     "@nuxtjs/google-fonts",
     "vuetify-nuxt-module",
     "nuxt-simple-sitemap",
-    "nuxt-delay-hydration",
     "nuxt-gtag",
   ],
   gtag: {
