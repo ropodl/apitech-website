@@ -47,7 +47,7 @@ export default defineNuxtConfig({
     "nuxt-gtag",
   ],
   gtag: {
-    id: "G-EKC1Q8HW13",
+    id: "G-1KNXYTYZ03",
   },
   googleFonts: {
     download: true,
