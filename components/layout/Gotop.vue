@@ -16,8 +16,9 @@ const onScroll = (e) => {
     aria-label="Go to top button"
     height="60"
     width="60"
-    variant="tonal"
     rounded="lg"
+    color="primary"
+    variant="flat"
     class="position-fixed"
     v-scroll="onScroll"
     :style="{

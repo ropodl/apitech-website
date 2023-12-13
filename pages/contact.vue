@@ -181,7 +181,7 @@ const infoList = [
           Excited about the project? <br />
           Please<span class="primary--text"> get in touch.</span>
         </div>
-        <v-row class="mb-3">
+        <v-row dense class="mb-3">
           <v-col
             v-for="(info, i) in infoList"
             :key="i"
@@ -189,7 +189,7 @@ const infoList = [
             md="12"
             lg="6"
           >
-            <v-list flat rounded="lg">
+            <v-list border rounded="lg">
               <v-list-item>
                 <template #prepend>
                   <v-avatar size="60" rounded="0">

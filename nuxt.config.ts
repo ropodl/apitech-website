@@ -36,8 +36,7 @@ export default defineNuxtConfig({
       ],
     },
   },
-  css: [],
-  devtools: { enabled: false },
+  devtools: { enabled: true },
   modules: [
     "@vite-pwa/nuxt",
     "nuxt-simple-sitemap",
@@ -45,9 +44,10 @@ export default defineNuxtConfig({
     "vuetify-nuxt-module",
     "nuxt-simple-sitemap",
     "nuxt-delay-hydration",
+    "nuxt-gtag",
   ],
-  build: {
-    transpile: ["vuetify"],
+  gtag: {
+    id: "G-EKC1Q8HW13",
   },
   googleFonts: {
     download: true,

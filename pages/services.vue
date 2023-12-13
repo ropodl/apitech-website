@@ -71,7 +71,9 @@ const services = [
           non-government, medical/industrial and communications/consumer.
         </div>
         <v-btn
+          rounded="lg"
           variant="tonal"
+          color="primary"
           height="50"
           class="text-capitalize px-10"
           to="/about"
@@ -85,7 +87,7 @@ const services = [
     </v-row>
     <v-row justify="center" class="pb-16">
       <v-col cols="12" sm="6" md="4" v-for="(service, i) in services">
-        <v-card border flat rounded="xl" class="py-10 h-100">
+        <v-card border flat rounded="lg" class="py-10 h-100">
           <v-card-text class="text-center">
             <v-avatar rounded="0" size="90">
               <v-icon color="primary" size="90">
