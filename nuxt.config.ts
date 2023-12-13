@@ -60,7 +60,7 @@ export default defineNuxtConfig({
     workbox: {
       cleanupOutdatedCaches: true,
       navigateFallback: "/",
-      globPatterns: ["**/*.{js,css,html,ico,png,svg}"],
+      globPatterns: ["**/*.{js,css,html}"],
     },
     manifest: {
       name: "API Technology",
@@ -89,7 +89,6 @@ export default defineNuxtConfig({
   },
   vuetify: {
     vuetifyOptions: {
-      // blueprint: md3,
       icons: {
         defaultSet: "mdi",
       },
@@ -112,7 +111,6 @@ export default defineNuxtConfig({
             dark: false,
             colors: {
               primary: "#016780",
-              // colors.blue.darken2,
               accent: colors.grey.darken3,
               secondary: colors.amber.darken3,
               info: colors.teal.lighten1,
@@ -125,7 +123,6 @@ export default defineNuxtConfig({
             dark: true,
             colors: {
               primary: "#016780",
-              // colors.blue.darken2,
               accent: colors.grey.darken3,
               secondary: colors.amber.darken3,
               info: colors.teal.lighten1,

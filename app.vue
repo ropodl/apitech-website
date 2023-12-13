@@ -3,15 +3,17 @@ import { useTheme } from "vuetify";
 const theme = useTheme();
 
 onMounted(() => {
-  let dark = localStorage.getItem("isDarkMode") === "true";
-  theme.global.name.value = dark ? "dark" : "light";
+  nextTick(() => {
+    let dark = localStorage.getItem("isDarkMode") === "true";
+    theme.global.name.value = dark ? "dark" : "light";
+  });
 });
 </script>
 
 <template>
   <div>
     <VitePwaManifest />
-    <NuxtLoadingIndicator color="rgb(var(--v-theme-primary))" />
+    <NuxtLoadingIndicator :height="1" color="rgb(var(--v-theme-primary))" />
     <v-app>
       <NuxtLayout>
         <NuxtPage keepalive />
