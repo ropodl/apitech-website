@@ -44,6 +44,7 @@ export default defineNuxtConfig({
     "vuetify-nuxt-module",
     "nuxt-simple-sitemap",
     "nuxt-gtag",
+    "nuxt-capo",
   ],
   gtag: {
     id: "G-1KNXYTYZ03",

@@ -12,6 +12,7 @@
   "devDependencies": {
     "@nuxt/devtools": "^1.0.6",
     "nuxt": "^3.7.2",
+    "nuxt-capo": "^0.1.0",
     "nuxt-gtag": "latest"
   },
   "dependencies": {
