@@ -48,6 +48,7 @@ export default defineNuxtConfig({
     "@formkit/auto-animate/nuxt",
     "nuxt-delay-hydration",
     "@vueuse/nuxt",
+    "nuxt-vercel-analytics",
   ],
   gtag: {
     id: "G-1KNXYTYZ03",
