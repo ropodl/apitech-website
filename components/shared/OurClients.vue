@@ -108,6 +108,7 @@ const breakpoints = {
                 height="100"
                 class="carousel__item ma-2"
                 :src="item.image"
+                :alt="item.name"
               ></v-img>
             </Slide>
           </carousel>

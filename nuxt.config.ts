@@ -43,8 +43,11 @@ export default defineNuxtConfig({
     "@nuxtjs/google-fonts",
     "vuetify-nuxt-module",
     "nuxt-simple-sitemap",
+    // "nuxt-capo",
     "nuxt-gtag",
-    "nuxt-capo",
+    "@formkit/auto-animate/nuxt",
+    "nuxt-delay-hydration",
+    "@vueuse/nuxt",
   ],
   gtag: {
     id: "G-1KNXYTYZ03",
@@ -84,8 +87,8 @@ export default defineNuxtConfig({
       installPrompt: true,
     },
   },
-  sitemap: {
-    siteUrl: "https://apitechnology.com.np",
+  site: {
+    url: "https://apitechnology.com.np",
   },
   vuetify: {
     vuetifyOptions: {

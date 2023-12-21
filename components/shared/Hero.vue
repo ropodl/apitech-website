@@ -37,7 +37,13 @@ const slides = [
 ];
 </script>
 <template>
-  <v-img cover height="700" src="/images/img1.avif" alt="background image">
+  <v-img
+    cover
+    height="700"
+    class="border"
+    src="/images/img1.avif"
+    alt="background image"
+  >
     <div
       class="h-100 w-100"
       :style="{
@@ -92,7 +98,7 @@ const slides = [
                 <client-only>
                   <carousel
                     :items-to-show="1"
-                    :autoplay="4000"
+                    :autoplay="2000"
                     wrap-around
                     :transition="0"
                     pauseAutoplayOnHover
@@ -102,6 +108,7 @@ const slides = [
                     <slide v-for="slide in slides" :key="slide">
                       <v-img
                         cover
+                        eager
                         class="rounded-circle"
                         height="350"
                         width="350"
@@ -137,7 +144,7 @@ const slides = [
         @click="scrollTo('explore', 0)"
       ></button>
     </div>
-    <svg
+    <!-- <svg
       viewBox="0 0 1440 220"
       style="
         position: absolute;
@@ -154,7 +161,7 @@ const slides = [
         stroke-width="1"
         d="M0,96L120,117.3C240,139,480,181,720,186.7C960,192,1200,160,1320,144L1440,128L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
       ></path>
-    </svg>
+    </svg> -->
   </v-img>
 </template>
 <style lang="scss" scoped>
