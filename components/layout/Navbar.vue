@@ -5,9 +5,11 @@ import { useTheme } from "vuetify";
 const theme = useTheme();
 
 onMounted(() => {
-  onResize();
-  isDarkMode.value = localStorage.getItem("isDarkMode") === "true";
-  theme.global.name.value = isDarkMode.value ? "dark" : "light";
+  nextTick(() => {
+    onResize();
+    isDarkMode.value = localStorage.getItem("isDarkMode") === "true";
+    theme.global.name.value = isDarkMode.value ? "dark" : "light";
+  });
 });
 
 const isDark = computed(() =>
@@ -196,7 +198,12 @@ const themeCheck = () => {
       </v-card-text>
     </v-card>
     <v-list dense>
-      <v-list-item v-for="link in links" :to="link['link']" color="primary">
+      <v-list-item
+        v-for="link in links"
+        :to="link['link']"
+        color="primary"
+        role="button"
+      >
         <template #prepend>
           <v-icon>
             <Icon :icon="link['icon']" />
