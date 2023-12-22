@@ -54,7 +54,6 @@ export default defineNuxtConfig({
     id: "G-1KNXYTYZ03",
   },
   googleFonts: {
-    download: true,
     families: {
       Roboto: [100, 300, 400, 500, 700, 900],
     },

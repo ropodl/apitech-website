@@ -64,21 +64,21 @@ const themeCheck = () => {
 };
 </script>
 <template>
-  <v-container
-    class="mx-auto position-fixed"
-    style="height: 70px; top: 0; left: 0; right: 0; z-index: 999"
-  >
-    <v-row>
-      <v-col cols="12" class="py-0">
-        <v-card
-          border
-          flat
-          height="70"
-          v-resize="onResize"
-          class="d-flex align-center px-3 rounded-lg mx-auto"
-          color="rgba(var(--v-theme-surface), 0.7)"
-          style="backdrop-filter: blur(10px)"
-        >
+  <v-layout class="w-100 position-fixed" style="height: 65px; top: 0">
+    <v-app-bar
+      border
+      elevation="0"
+      rounded="0"
+      style="
+        border-top: 0;
+        border-right: 0;
+        border-left: 0;
+        background-color: rgba(var(--v-theme-surface), 0.8);
+        backdrop-filter: blur(8px);
+      "
+    >
+      <v-container>
+        <v-row align="center">
           <v-btn variant="text" color="transparent" height="70" to="/">
             <LayoutLogo width="200" height="70" />
           </v-btn>
@@ -114,19 +114,19 @@ const themeCheck = () => {
               </v-icon>
             </v-btn>
             <!-- <v-btn
-              icon
-              rounded="lg"
-              class="mr-3 hidden-xs"
-              variant="tonal"
-              :color="isDark ? 'white' : 'primary'"
-              target="_blank"
-              href="https://www.linkedin.com/company/api-technology-pvt.-ltd./"
-              aria-label="LinkedIn Icon"
-            >
-              <v-icon>
-                <Icon icon="fa6-brands:linkedin" />
-              </v-icon>
-            </v-btn> -->
+                icon
+                rounded="lg"
+                class="mr-3 hidden-xs"
+                variant="tonal"
+                :color="isDark ? 'white' : 'primary'"
+                target="_blank"
+                href="https://www.linkedin.com/company/api-technology-pvt.-ltd./"
+                aria-label="LinkedIn Icon"
+              >
+                <v-icon>
+                  <Icon icon="fa6-brands:linkedin" />
+                </v-icon>
+              </v-btn> -->
           </client-only>
           <v-btn
             icon
@@ -149,15 +149,16 @@ const themeCheck = () => {
           <v-btn
             icon
             variant="tonal"
+            rounded="lg"
             :color="isDark ? 'white' : 'primary'"
             class="ml-3 hidden-md-and-up"
             @click="drawer = !drawer"
             ><v-icon><Icon :icon="drawer ? 'mdi:close' : 'mdi:menu'" /></v-icon
           ></v-btn>
-        </v-card>
-      </v-col>
-    </v-row>
-  </v-container>
+        </v-row>
+      </v-container>
+    </v-app-bar>
+  </v-layout>
 
   <v-navigation-drawer v-model="drawer" location="bottom" temporary>
     <v-card flat>

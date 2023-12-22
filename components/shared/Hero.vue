@@ -37,114 +37,116 @@ const slides = [
 ];
 </script>
 <template>
-  <v-img
+  <!-- <v-img
     cover
     height="700"
     class="border"
     src="/images/img1.avif"
     alt="background image"
-  >
-    <div
+  > -->
+  <v-card style="padding-top: 65px">
+    <!-- <div
       class="h-100 w-100"
       :style="{
         backgroundColor: isDark ? 'rgba(0,0,0,0.8)' : 'rgba(255,255,255,0.8)',
         backdropFilter: 'blur(4px)',
       }"
-    >
-      <v-container class="h-100 w-100">
-        <v-row justify="center" align="center" class="h-100">
-          <v-col cols="12" md="8" lg="7">
-            <div class="text-md-h2 text-sm-h2 text-h3 font-weight-black">
-              Professional <br />
-              <span id="typed" class="text-primary"> </span>
-              <br />
-              You Can Trust
-            </div>
-            <div class="divider my-6 bg-primary"></div>
-            <div class="mb-6">
-              We, at Api Technology, offer B2B services in Web, Android,
-              Networking, ICT, and Electronics Hardware. We excel in providing
-              IoT, Electronics & Communication, and Security Technologies for
-              critical applications across various markets, including
-              government, medical/industrial, and consumer.
-            </div>
-            <v-btn
-              id="explore"
+    > -->
+    <v-container class="py-16">
+      <v-row justify="center" align="center" class="h-100 pb-16">
+        <v-col cols="12" md="8" lg="7">
+          <div class="text-md-h2 text-sm-h2 text-h3 font-weight-black">
+            Professional <br />
+            <span id="typed" class="text-primary"> </span>
+            <br />
+            You Can Trust
+          </div>
+          <div class="divider my-6 bg-primary"></div>
+          <div class="mb-6">
+            We, at Api Technology, offer B2B services in Web, Android,
+            Networking, ICT, and Electronics Hardware. We excel in providing
+            IoT, Electronics & Communication, and Security Technologies for
+            critical applications across various markets, including government,
+            medical/industrial, and consumer.
+          </div>
+          <v-btn
+            id="explore"
+            flat
+            rounded="lg"
+            color="primary"
+            height="50"
+            class="text-capitalize px-10"
+            to="/services"
+          >
+            Explore Our Services
+            <v-icon end>
+              <Icon icon="mdi:arrow-right" />
+            </v-icon>
+          </v-btn>
+          <v-row>
+            <v-col cols="12" md="6"> </v-col>
+          </v-row>
+        </v-col>
+        <v-col cols="12" md="4" lg="5" class="hidden-sm-and-down">
+          <div class="d-flex align-center justify-center">
+            <v-card
               flat
-              rounded="lg"
-              color="primary"
-              height="50"
-              class="text-capitalize px-10"
-              to="/services"
+              color="transparent"
+              class="overflow-visible"
+              width="350"
+              height="350"
             >
-              Explore Our Services
-              <v-icon end>
-                <Icon icon="mdi:arrow-right" />
-              </v-icon>
-            </v-btn>
-            <v-row>
-              <v-col cols="12" md="6"> </v-col>
-            </v-row>
-          </v-col>
-          <v-col cols="12" md="4" lg="5" class="hidden-sm-and-down">
-            <div class="d-flex align-center justify-center">
-              <v-card
-                flat
-                color="transparent"
-                class="overflow-visible"
-                width="350"
-                height="350"
-              >
-                <client-only>
-                  <carousel
-                    :items-to-show="1"
-                    :autoplay="2000"
-                    wrap-around
-                    :transition="0"
-                    pauseAutoplayOnHover
-                    :mouseDrag="false"
-                    :touchDrag="false"
-                  >
-                    <slide v-for="slide in slides" :key="slide">
-                      <v-img
-                        cover
-                        eager
-                        class="rounded-circle"
-                        height="350"
-                        width="350"
-                        :src="slide"
-                        :alt="slide"
-                      ></v-img>
-                    </slide>
-                  </carousel>
-                </client-only>
-                <v-btn
-                  icon
-                  rounded="circle"
-                  color="primary"
-                  class="pulse-button text-decoration-none"
-                  size="70"
-                  style="position: absolute; bottom: 0; left: 50px"
-                  @click="createMail"
-                  aria-label="Send us an Email Button"
+              <client-only>
+                <carousel
+                  :items-to-show="1"
+                  :autoplay="2000"
+                  wrap-around
+                  :transition="0"
+                  pauseAutoplayOnHover
+                  :mouseDrag="false"
+                  :touchDrag="false"
                 >
-                  <v-icon size="40">
-                    <Icon icon="mdi:at" />
-                  </v-icon>
-                </v-btn>
-              </v-card>
-            </div>
-          </v-col>
-        </v-row>
-      </v-container>
-      <button
-        role="button"
-        aria-label="scroll down"
-        class="scroller hidden-sm-and-down"
-        @click="scrollTo('explore', 0)"
-      ></button>
-    </div>
-    <!-- <svg
+                  <slide v-for="slide in slides" :key="slide">
+                    <v-img
+                      cover
+                      eager
+                      class="rounded-circle"
+                      height="350"
+                      width="350"
+                      :src="slide"
+                      :alt="slide"
+                    ></v-img>
+                  </slide>
+                </carousel>
+              </client-only>
+              <v-btn
+                icon
+                rounded="circle"
+                color="primary"
+                class="pulse-button text-decoration-none"
+                size="70"
+                style="position: absolute; bottom: 0; left: 50px"
+                @click="createMail"
+                aria-label="Send us an Email Button"
+              >
+                <v-icon size="40">
+                  <Icon icon="mdi:at" />
+                </v-icon>
+              </v-btn>
+            </v-card>
+          </div>
+        </v-col>
+      </v-row>
+    </v-container>
+    <button
+      role="button"
+      aria-label="scroll down"
+      class="scroller hidden-sm-and-down"
+      @click="scrollTo('explore', 0)"
+    ></button>
+    <!-- </div> -->
+  </v-card>
+  <!-- <svg
       viewBox="0 0 1440 220"
       style="
         position: absolute;
@@ -162,7 +164,7 @@ const slides = [
         d="M0,96L120,117.3C240,139,480,181,720,186.7C960,192,1200,160,1320,144L1440,128L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
       ></path>
     </svg> -->
-  </v-img>
+  <!-- </v-img> -->
 </template>
 <style lang="scss" scoped>
 button {
