@@ -2,6 +2,7 @@
 import emailjs from "@emailjs/browser";
 import { Icon } from "@iconify/vue";
 import { useTheme } from "vuetify";
+
 const theme = useTheme();
 
 useHead({
@@ -15,16 +16,17 @@ useHead({
   ],
 });
 
+let snackbar = reactive({
+  show: false,
+  text: "",
+});
+
 const isDark = computed(() =>
   theme.global.name.value == "dark" ? true : false
 );
 
 const contactForm = ref(null);
 let loading = ref(false);
-let snackbar = reactive({
-  show: false,
-  text: "",
-});
 
 const submitForm = async () => {
   loading.value = true;
@@ -227,18 +229,18 @@ const infoList = [
         </v-col>
       </v-row>
     </v-container>
-    <v-snackbar v-model="snackbar['show']" theme="light">
-      {{ snackbar["text"] }}
-      <template v-slot:actions>
-        <v-btn
-          class="text-capitalize px-4"
-          color="primary"
-          variant="tonal"
-          @click="snackbar['show'] = false"
-        >
-          Close
-        </v-btn>
-      </template>
-    </v-snackbar>
   </NuxtLayout>
+  <v-snackbar v-model="snackbar['show']" theme="light">
+    {{ snackbar["text"] }}
+    <template v-slot:actions>
+      <v-btn
+        class="text-capitalize px-4"
+        color="primary"
+        variant="tonal"
+        @click="snackbar['show'] = false"
+      >
+        Close
+      </v-btn>
+    </template>
+  </v-snackbar>
 </template>

@@ -16,6 +16,7 @@ onMounted(() => {
     <v-app>
       <NuxtLayout>
         <NuxtPage keepalive />
+        <LazyLayoutSnackbar />
       </NuxtLayout>
     </v-app>
 </template>

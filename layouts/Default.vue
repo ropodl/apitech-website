@@ -3,6 +3,6 @@
   <LazyLayoutGotop />
   <v-main>
     <slot />
-    <LazyLayoutFooter />
   </v-main>
+  <LazyLayoutFooter />
 </template>
