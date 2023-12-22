@@ -11,14 +11,17 @@ useHead({
 });
 </script>
 <template>
-  <LazyLayoutPageSection title="Privacy Policy" />
-  <v-container>
-    <v-row justify="center">
-      <v-col cols="12" md="8">
-        <div class="dynamic-content" v-html="policy"></div>
-      </v-col>
-    </v-row>
-  </v-container>
+  <!-- <LazyLayoutPageSection title="Privacy Policy" /> -->
+  <NuxtLayout name="page-title">
+    <template #title>Privacy Policy</template>
+    <v-container>
+      <v-row justify="center">
+        <v-col cols="12" md="8">
+          <div class="dynamic-content" v-html="policy"></div>
+        </v-col>
+      </v-row>
+    </v-container>
+  </NuxtLayout>
 </template>
 
 <script>

@@ -44,7 +44,7 @@ const slides = [
     src="/images/img1.avif"
     alt="background image"
   > -->
-  <v-card style="padding-top: 65px">
+  <v-card flat rounded="0" style="padding-top: 65px">
     <!-- <div
       class="h-100 w-100"
       :style="{
@@ -138,14 +138,15 @@ const slides = [
         </v-col>
       </v-row>
     </v-container>
-    <button
+    <!-- <button
       role="button"
       aria-label="scroll down"
       class="scroller hidden-sm-and-down"
       @click="scrollTo('explore', 0)"
-    ></button>
+    ></button> -->
     <!-- </div> -->
   </v-card>
+  <v-divider></v-divider>
   <!-- <svg
       viewBox="0 0 1440 220"
       style="

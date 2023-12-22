@@ -11,7 +11,6 @@ onMounted(() => {
 </script>
 
 <template>
-  <div>
     <VitePwaManifest />
     <NuxtLoadingIndicator :height="1" color="rgb(var(--v-theme-primary))" />
     <v-app>
@@ -19,7 +18,6 @@ onMounted(() => {
         <NuxtPage keepalive />
       </NuxtLayout>
     </v-app>
-  </div>
 </template>
 
 <style lang="scss">
@@ -30,12 +28,6 @@ onMounted(() => {
   .v-container.v-container--fluid {
     max-width: 100%;
   }
-}
-div.divider {
-  border-radius: 10px;
-  width: 100px;
-  height: 6px;
-  background-color: rgb(var(--v-theme-primary-darken-3));
 }
 
 // image zoom effect

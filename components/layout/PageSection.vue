@@ -7,7 +7,7 @@ const isDark = computed(() =>
 );
 
 defineProps({
-  image: { type: String, default: "/images/img3.avif" },
+  image: { type: String, default: "/images/img1.avif" },
   title: String,
   desc: String,
 });
