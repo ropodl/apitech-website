@@ -26,7 +26,7 @@
     "@vueuse/core": "^10.7.1",
     "@vite-pwa/nuxt": "^0.4.0",
     "nuxt-simple-sitemap": "^4.2.0",
-    "sass": "^1.69.5",
+    "sass": "^1.69.6",
     "typed.js": "^2.1.0",
     "vite-plugin-vuetify": "^2.0.1",
     "vue3-carousel": "^0.3.1",
