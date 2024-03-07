@@ -138,4 +138,7 @@ export default defineNuxtConfig({
       },
     },
   },
+  generate: {
+    dir: "public_html",
+  },
 });
