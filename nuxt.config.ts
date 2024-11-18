@@ -43,7 +43,7 @@ export default defineNuxtConfig({
     "@nuxtjs/google-fonts",
     "vuetify-nuxt-module",
     "nuxt-simple-sitemap",
-    // "nuxt-capo",
+    "nuxt-capo",
     "nuxt-gtag",
     "@formkit/auto-animate/nuxt",
     "nuxt-delay-hydration",
